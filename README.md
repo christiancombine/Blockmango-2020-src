@@ -2,7 +2,7 @@
 # this contains :
 - Client
 - Engine
-- a map ig?
+- maps
 
 
 # Source code to a minecraft and a roblox clone "blockmango"
