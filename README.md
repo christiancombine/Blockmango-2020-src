@@ -11,3 +11,5 @@ setup : https://www.youtube.com/watch?v=gxGYVBVoLvE
 and yea
 
 # WEBSITE SOURCE IS NOT LEAKED!
+
+# u dont have to download multiple files this is the project thing now
