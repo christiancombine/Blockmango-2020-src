@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: BedWar_ActiveAttack.xml-->
+<behavior name="BedWar_ActiveAttack" agenttype="ServerAgent" version="5">
+  <node class="DecoratorLoop" id="21">
+    <property Count="const int -1" />
+    <property DecorateWhenChildEnds="true" />
+    <property DoneWithinFrame="false" />
+    <node class="IfElse" id="14">
+      <node class="Condition" id="39">
+        <property Operator="Equal" />
+        <property Opl="Self.ServerAgent::ValueBoolean(&quot;isLife&quot;)" />
+        <property Opr="const bool true" />
+      </node>
+      <node class="SelectorLoop" id="40">
+        <property ResetChildren="false" />
+        <node class="WithPrecondition" id="1">
+          <node class="Action" id="2">
+            <property Method="Self.ServerAgent::FuncStatus(&quot;havePlayerInMeleeRange&quot;)" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+          <node class="Action" id="29">
+            <property Method="Self.ServerAgent::FuncStatus(&quot;attackClose&quot;)" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+        </node>
+        <node class="WithPrecondition" id="12">
+          <node class="Condition" id="24">
+            <property Operator="Equal" />
+            <property Opl="Self.ServerAgent::ValueBoolean(&quot;isInIdle&quot;)" />
+            <property Opr="const bool true" />
+          </node>
+          <node class="ReferencedBehavior" id="0">
+            <property ReferenceBehavior="const string &quot;BedWar_Idle&quot;" />
+          </node>
+        </node>
+        <node class="WithPrecondition" id="75">
+          <node class="Condition" id="17">
+            <property Operator="Equal" />
+            <property Opl="Self.ServerAgent::ValueBoolean(&quot;isInIdle&quot;)" />
+            <property Opr="const bool false" />
+          </node>
+          <node class="IfElse" id="5">
+            <node class="Action" id="6">
+              <property Method="Self.ServerAgent::FuncStatus(&quot;selectPlayer&quot;)" />
+              <property ResultOption="BT_INVALID" />
+            </node>
+            <node class="ReferencedBehavior" id="9">
+              <property ReferenceBehavior="const string &quot;BedWar_Fight&quot;" />
+            </node>
+            <node class="Action" id="8">
+              <property Method="Self.ServerAgent::FuncStatus(&quot;goHome&quot;)" />
+              <property ResultOption="BT_INVALID" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node class="Action" id="10">
+        <property Method="Self.ServerAgent::FuncStatus(&quot;onDie&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+    </node>
+  </node>
+</behavior>

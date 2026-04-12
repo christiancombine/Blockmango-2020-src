@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: BirdTranslateAI.xml-->
+<behavior name="BirdTranslateAI" agenttype="BirdAgent" version="5">
+  <node class="Task" id="4">
+    <property Prototype="Self.BirdAgent::translate_task()" />
+    <property IsHTN="false" />
+    <node class="Sequence" id="0">
+      <node class="Action" id="1">
+        <property Method="Self.BirdAgent::setBirdHomePosToTargetPos()" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="2">
+        <property Method="Self.BirdAgent::Move()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="3">
+        <property Method="Self.BirdAgent::translateFruit()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Wait" id="5">
+        <property Time="const float 3000" />
+      </node>
+    </node>
+  </node>
+</behavior>

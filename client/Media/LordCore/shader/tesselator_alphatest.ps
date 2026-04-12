@@ -1,0 +1,38 @@
+#version 100
+
+precision mediump float;
+
+uniform sampler2D texSampler_texture;
+uniform sampler2D texSampler_lightmap;
+uniform float blockLightEnhancement;
+
+varying vec4 oFogColor;
+varying vec4 color;
+varying vec2 texCoord_texture;
+varying vec4 texCoord_lightmap;
+varying float lightStrength;
+
+void main(void)
+{
+    vec4 textureColor = texture2D(texSampler_texture, texCoord_texture);
+	
+    if(textureColor.w < 0.2 )
+    {
+        discard;
+    }
+	vec4 lightmapColor;
+	lightmapColor.r = texture2D(texSampler_lightmap, texCoord_lightmap.yx).x;
+	lightmapColor.g = texture2D(texSampler_lightmap, texCoord_lightmap.zx).y;
+	lightmapColor.b = texture2D(texSampler_lightmap, texCoord_lightmap.wx).z;
+	lightmapColor.a = 1.0;
+
+	float minLight = min(min(texCoord_lightmap.y, texCoord_lightmap.z), texCoord_lightmap.w);
+	float maxLight = max(max(texCoord_lightmap.y, texCoord_lightmap.z), texCoord_lightmap.w);
+	float saturation = maxLight - minLight;
+    lightmapColor.rgb += texCoord_lightmap.yzw * vec3(saturation * blockLightEnhancement);
+
+	vec4 finalColor = min(textureColor * color * lightmapColor, vec4(1.0));
+	gl_FragColor = vec4(mix(oFogColor.rgb, finalColor.rgb, oFogColor.a), finalColor.a);
+	gl_FragColor.xyz*= (1.0 +lightStrength);
+}
+

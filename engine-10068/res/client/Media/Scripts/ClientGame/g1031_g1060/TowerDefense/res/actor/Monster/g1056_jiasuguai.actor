@@ -1,0 +1,55 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g1056_jiasuguai.actor" Originalscale="1 1 1" Skeleton="jiangshima.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="body" SlaveName="1" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "jiangshima.skin" ChangeColor = "2.10195e-44 9.05239e-43 1.4013e-45 0" UVSpeed = "0 0" LocalAlpha = "1">
+				</Skin>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="attack2" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "jiangshima_shifa.anim" BeginTime = "0" Times = "-1" Length = "2.033" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+				<Effect>
+					<FileName value="g1056_jiangshima_shifa.effect"/>
+					<SocketName value="Bip001"/>
+					<BeginTime value="1.1"/>
+					<Times value="-1"/>
+					<Position_X value="1.10331"/>
+					<Position_Y value="0.461025"/>
+					<Position_Z value="0.645525"/>
+					<yaw value="-23.9992"/>
+					<pitch value="0.203366"/>
+					<roll value="0.456775"/>
+					<scale value="1.5"/>
+					<TimeScale value="0.5"/>
+					<Alpha value="1"/>
+					<CycleTime value="2.033"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+				<ActorScaleChange  beginScale = "2" endScale = "2" >
+				</ActorScaleChange>
+			</Skill>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "jiangshima_zhilibudong.anim" BeginTime = "0" Times = "-1" Length = "0.366" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+				<ActorScaleChange  beginScale = "2" endScale = "2" >
+				</ActorScaleChange>
+			</Skill>
+			<Skill Name="run" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "jiangshima_zoulu.anim" BeginTime = "0" Times = "-1" Length = "1.233" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+				<ActorScaleChange  beginScale = "2" endScale = "2" >
+				</ActorScaleChange>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="jiangshima_shifa.anim"/>
+				<Anim Name="jiangshima_zhilibudong.anim"/>
+				<Anim Name="jiangshima_zoulu.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

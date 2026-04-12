@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_minecraft" default="compile.module.minecraft">
+  <dirname property="module.minecraft.basedir" file="${ant.file.module_minecraft}"/>
+  
+  <property name="module.jdk.home.minecraft" value="${jdk.home.1.8}"/>
+  <property name="module.jdk.bin.minecraft" value="${jdk.bin.1.8}"/>
+  <property name="module.jdk.classpath.minecraft" value="jdk.classpath.1.8"/>
+  
+  <property name="compiler.args.minecraft" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="minecraft.output.dir" value="${module.minecraft.basedir}/bin"/>
+  <property name="minecraft.testoutput.dir" value="${module.minecraft.basedir}/bin"/>
+  
+  <path id="minecraft.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="minecraft.module.production.classpath">
+    <path refid="${module.jdk.classpath.minecraft}"/>
+    <pathelement location="${basedir}/libs/Gson/gson-1.5.jar"/>
+    <pathelement location="${basedir}/libs/argo-3.2/argo-3.2.jar"/>
+    <pathelement location="${basedir}/libs/jopt-simple-4.5/jopt-simple-4.5.jar"/>
+    <pathelement location="${basedir}/libs/google/google-collections-1.0.jar"/>
+    <pathelement location="${basedir}/libs/Lwgjl/lwjgl.jar"/>
+    <pathelement location="${basedir}/libs/org.apache.commons/commons-lang3-3.1.jar"/>
+    <pathelement location="${basedir}/libs/Lwgjl/lwjgl_util-2.9.0.jar"/>
+    <pathelement location="${basedir}/libs/google/guava-19.0.jar"/>
+    <pathelement location="${basedir}/libs/bouncycastle/bcprov-jdk15on-1.54.jar"/>
+    <pathelement location="${basedir}/libs/org.apache.commons/commons-io-2.4.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/soundsystem-20120107.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/codecwav-20101023.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/codecjorbis-20101023.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/libraryjavasound-20101123.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/librarylwjglopenal-20100824.jar"/>
+  </path>
+  
+  <path id="minecraft.runtime.production.module.classpath">
+    <pathelement location="${minecraft.output.dir}"/>
+    <pathelement location="${basedir}/libs/Gson/gson-1.5.jar"/>
+    <pathelement location="${basedir}/libs/argo-3.2/argo-3.2.jar"/>
+    <pathelement location="${basedir}/libs/jopt-simple-4.5/jopt-simple-4.5.jar"/>
+    <pathelement location="${basedir}/libs/google/google-collections-1.0.jar"/>
+    <pathelement location="${basedir}/libs/Lwgjl/lwjgl.jar"/>
+    <pathelement location="${basedir}/libs/org.apache.commons/commons-lang3-3.1.jar"/>
+    <pathelement location="${basedir}/libs/Lwgjl/lwjgl_util-2.9.0.jar"/>
+    <pathelement location="${basedir}/libs/google/guava-19.0.jar"/>
+    <pathelement location="${basedir}/libs/bouncycastle/bcprov-jdk15on-1.54.jar"/>
+    <pathelement location="${basedir}/libs/org.apache.commons/commons-io-2.4.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/soundsystem-20120107.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/codecwav-20101023.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/codecjorbis-20101023.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/libraryjavasound-20101123.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/librarylwjglopenal-20100824.jar"/>
+  </path>
+  
+  <path id="minecraft.module.classpath">
+    <pathelement location="${minecraft.output.dir}"/>
+    <path refid="${module.jdk.classpath.minecraft}"/>
+    <pathelement location="${basedir}/libs/Gson/gson-1.5.jar"/>
+    <pathelement location="${basedir}/libs/argo-3.2/argo-3.2.jar"/>
+    <pathelement location="${basedir}/libs/jopt-simple-4.5/jopt-simple-4.5.jar"/>
+    <pathelement location="${basedir}/libs/google/google-collections-1.0.jar"/>
+    <pathelement location="${basedir}/libs/Lwgjl/lwjgl.jar"/>
+    <pathelement location="${basedir}/libs/org.apache.commons/commons-lang3-3.1.jar"/>
+    <pathelement location="${basedir}/libs/Lwgjl/lwjgl_util-2.9.0.jar"/>
+    <pathelement location="${basedir}/libs/google/guava-19.0.jar"/>
+    <pathelement location="${basedir}/libs/bouncycastle/bcprov-jdk15on-1.54.jar"/>
+    <pathelement location="${basedir}/libs/org.apache.commons/commons-io-2.4.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/soundsystem-20120107.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/codecwav-20101023.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/codecjorbis-20101023.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/libraryjavasound-20101123.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/librarylwjglopenal-20100824.jar"/>
+  </path>
+  
+  <path id="minecraft.runtime.module.classpath">
+    <pathelement location="${minecraft.output.dir}"/>
+    <pathelement location="${basedir}/libs/Gson/gson-1.5.jar"/>
+    <pathelement location="${basedir}/libs/argo-3.2/argo-3.2.jar"/>
+    <pathelement location="${basedir}/libs/jopt-simple-4.5/jopt-simple-4.5.jar"/>
+    <pathelement location="${basedir}/libs/google/google-collections-1.0.jar"/>
+    <pathelement location="${basedir}/libs/Lwgjl/lwjgl.jar"/>
+    <pathelement location="${basedir}/libs/org.apache.commons/commons-lang3-3.1.jar"/>
+    <pathelement location="${basedir}/libs/Lwgjl/lwjgl_util-2.9.0.jar"/>
+    <pathelement location="${basedir}/libs/google/guava-19.0.jar"/>
+    <pathelement location="${basedir}/libs/bouncycastle/bcprov-jdk15on-1.54.jar"/>
+    <pathelement location="${basedir}/libs/org.apache.commons/commons-io-2.4.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/soundsystem-20120107.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/codecwav-20101023.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/codecjorbis-20101023.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/libraryjavasound-20101123.jar"/>
+    <pathelement location="${basedir}/libs/soundsystem/librarylwjglopenal-20100824.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.minecraft">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.minecraft">
+    <patternset refid="excluded.from.module.minecraft"/>
+  </patternset>
+  
+  <path id="minecraft.module.sourcepath">
+    <dirset dir="${module.minecraft.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.minecraft" depends="compile.module.minecraft.production,compile.module.minecraft.tests" description="Compile module minecraft"/>
+  
+  <target name="compile.module.minecraft.production" depends="register.custom.compilers" description="Compile module minecraft; production classes">
+    <mkdir dir="${minecraft.output.dir}"/>
+    <javac2 destdir="${minecraft.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.minecraft}/javac">
+      <compilerarg line="${compiler.args.minecraft}"/>
+      <bootclasspath refid="minecraft.module.bootclasspath"/>
+      <classpath refid="minecraft.module.production.classpath"/>
+      <src refid="minecraft.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.minecraft"/>
+    </javac2>
+    
+    <copy todir="${minecraft.output.dir}">
+      <fileset dir="${module.minecraft.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.minecraft.tests" depends="register.custom.compilers,compile.module.minecraft.production" description="compile module minecraft; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.minecraft" description="cleanup module">
+    <delete dir="${minecraft.output.dir}"/>
+    <delete dir="${minecraft.testoutput.dir}"/>
+  </target>
+</project>

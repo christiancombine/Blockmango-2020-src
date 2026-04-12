@@ -1,0 +1,22 @@
+#version 100
+
+precision mediump float;
+
+uniform sampler2D texSampler_texture;
+uniform sampler2D texSampler_texture_background;
+
+varying vec4 color;
+varying vec2 texCoord;
+
+void main(void)
+{
+	vec4 temp = vec4(1.0, 1.0, 1.0, texture2D(texSampler_texture, texCoord).a);
+	vec4 temp_bg = texture2D(texSampler_texture_background, texCoord);
+	vec4 result = temp * temp_bg * color;
+	if (result.a < 0.3)
+	{
+		discard;
+	}
+
+	gl_FragColor = result;
+}

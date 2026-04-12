@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: SlyAlien.xml-->
+<behavior name="SlyAlien" agenttype="BaseAgent" version="5">
+  <node class="Sequence" id="1">
+    <node class="Action" id="2">
+      <property Method="Self.BaseAgent::FindTarget()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Action" id="3">
+      <property Method="Self.BaseAgent::Move()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Action" id="4">
+      <property Method="Self.BaseAgent::Attack()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

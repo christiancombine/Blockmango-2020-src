@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<meta>
+  <types />
+  <agents>
+    <agent classfullname="behaviac::Agent" DisplayName="behaviac::Agent" Desc="behaviac::Agent" IsRefType="true" IsImplemented="true">
+      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+      </Method>
+      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
+      </Method>
+      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
+      </Method>
+      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
+      </Method>
+      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+      </Method>
+      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
+      </Method>
+    </agent>
+    <agent classfullname="ServerAgent" base="behaviac::Agent" DisplayName="ServerAgent" Desc="ServerAgent" IsRefType="true" IsCustomized="true">
+      <Method Name="FuncBoolean" DisplayName="FuncBoolean" Desc="FuncBoolean" Class="ServerAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="FuncName" Type="const string&amp;" TypeFullName="System.String" IsRef="true" IsConst="true" DisplayName="FuncName" Desc="FuncName" />
+      </Method>
+      <Method Name="FuncStatus" DisplayName="FuncStatus" Desc="FuncStatus" Class="ServerAgent" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="true" istask="false">
+        <Param Name="FuncName" Type="const string&amp;" TypeFullName="System.String" IsRef="true" IsConst="true" DisplayName="FuncName" Desc="FuncName" />
+      </Method>
+      <Method Name="FuncVoid" DisplayName="FuncVoid" Desc="FuncVoid" Class="ServerAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="FuncName" Type="const string&amp;" TypeFullName="System.String" IsRef="true" IsConst="true" DisplayName="FuncName" Desc="FuncName" />
+      </Method>
+      <Method Name="FuncInt" DisplayName="FuncInt" Desc="FuncInt" Class="ServerAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="FuncName" Type="const string&amp;" TypeFullName="System.String" IsRef="true" IsConst="true" DisplayName="FuncName" Desc="FuncName" />
+      </Method>
+      <Method Name="ValueBoolean" DisplayName="ValueBoolean" Desc="ValueBoolean" Class="ServerAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="ValueName" Type="const string&amp;" TypeFullName="System.String" IsRef="true" IsConst="true" DisplayName="ValueName" Desc="ValueName" />
+      </Method>
+      <Method Name="ValueInt" DisplayName="ValueInt" Desc="ValueInt" Class="ServerAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="ValueName" Type="const string&amp;" TypeFullName="System.String" IsRef="true" IsConst="true" DisplayName="ValueName" Desc="ValueName" />
+      </Method>
+    </agent>
+    <agent classfullname="BaseAgent" base="behaviac::Agent" DisplayName="BaseAgent" Desc="BaseAgent" IsRefType="true" IsCustomized="true">
+      <Method Name="FindTarget" DisplayName="FindTarget" Desc="寻找目标" Class="BaseAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="Attack" DisplayName="Attack" Desc="攻击" Class="BaseAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="Move" DisplayName="Move" Desc="Move" Class="BaseAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="IsAlive" DisplayName="IsAlive" Desc="IsAlive" Class="BaseAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false" />
+      <Method Name="BossFreeSkill" DisplayName="BossFreeSkill" Desc="BossFreeSkill" Class="BaseAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="MultipleAttack" DisplayName="MultipleAttack" Desc="MultipleAttack" Class="BaseAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="findTargetPlayer" DisplayName="findTargetPlayer" Desc="findTargetPlayer" Class="BaseAgent" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="true" istask="false" />
+      <Method Name="gotoHome" DisplayName="gotoHome" Desc="return to home position" Class="BaseAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="FindEnemy" DisplayName="FindEnemy" Desc="FindEnemy" Class="BaseAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false" />
+    </agent>
+    <agent classfullname="CommonAgent" base="BaseAgent" DisplayName="CommonAgent" Desc="CommonAgent" IsRefType="true" IsCustomized="true">
+      <Member Name="attackRange" DisplayName="attackRange" Desc="攻击范围" Class="CommonAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="false" Readonly="false" />
+      <Member Name="chaseRange" DisplayName="chaseRange" Desc="追击范围" Class="CommonAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="false" Readonly="false" />
+      <Member Name="senseRange" DisplayName="senseRange" Desc="senseRange" Class="CommonAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="false" Readonly="false" />
+      <Member Name="isReturning" DisplayName="isReturning" Desc="isReturning" Class="CommonAgent" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="false" Readonly="false" />
+      <Method Name="checkReturning" DisplayName="checkReturning" Desc="checkReturning" Class="CommonAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="false" istask="false" />
+    </agent>
+    <agent classfullname="MonsterG1049" base="BaseAgent" DisplayName="MonsterG1049" Desc="MonsterG1049" IsRefType="true" IsCustomized="true" ExportLocation="../../../dev/server/src/Behaviac/behaviac_generated/types/internal">
+      <Member Name="patrolType" DisplayName="patrolType" Desc="patrolType" Class="MonsterG1049" Type="int" TypeFullName="System.Int32" defaultvalue="1" Static="false" Public="true" Readonly="false" />
+      <Member Name="patrolInterval" DisplayName="patrolInterval" Desc="patrolInterval" Class="MonsterG1049" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="false" Readonly="false" />
+      <Member Name="patrolRange" DisplayName="patrolRange" Desc="patrolRange" Class="MonsterG1049" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="false" Readonly="false" />
+      <Member Name="alertTime" DisplayName="alertTime" Desc="alertTime" Class="MonsterG1049" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="searchEnemyIntervalFrames" DisplayName="searchEnemyIntervalFrames" Desc="searchEnemyIntervalFrames" Class="MonsterG1049" Type="int" TypeFullName="System.Int32" defaultvalue="10" Static="false" Public="true" Readonly="false" />
+      <Member Name="hasBeAttacked" DisplayName="hasBeAttacked" Desc="hasBeAttacked" Class="MonsterG1049" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
+      <Member Name="jumpSearchEnemyFrames" DisplayName="jumpSearchEnemyFrames" Desc="jumpSearchEnemyFrames" Class="MonsterG1049" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="attackCD" DisplayName="attackCD" Desc="attackCD" Class="MonsterG1049" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="inBattle" DisplayName="inBattle" Desc="inBattle" Class="MonsterG1049" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
+      <Member Name="inQuitBattle" DisplayName="inQuitBattle" Desc="inQuitBattle" Class="MonsterG1049" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
+      <Member Name="inResponseGatherEvent" DisplayName="inResponseGatherEvent" Desc="inResponseGatherEvent" Class="MonsterG1049" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
+      <Method Name="selectPatrolTargetPos" DisplayName="selectPatrolTargetPos" Desc="选择巡逻目标点" Class="MonsterG1049" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="startMoveToPatrolPos" DisplayName="startMoveToPatrolPos" Desc="startMoveToPatrolPos" Class="MonsterG1049" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false" />
+      <Method Name="waitMoveOver" DisplayName="waitMoveOver" Desc="waitMoveOver" Class="MonsterG1049" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="false" istask="false" />
+      <Method Name="enterAlert" DisplayName="enterAlert" Desc="enterAlert" Class="MonsterG1049" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="isEnemyInvalid" DisplayName="isEnemyInvalid" Desc="isEnemyInvalid" Class="MonsterG1049" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false" />
+      <Method Name="attackEnemy" DisplayName="attackEnemy" Desc="attackEnemy" Class="MonsterG1049" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false" />
+      <Method Name="isEnemyInAttackRange" DisplayName="isEnemyInAttackRange" Desc="isEnemyInAttackRange" Class="MonsterG1049" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false" />
+      <Method Name="findEnemyInViewRange" DisplayName="findEnemyInViewRange" Desc="findEnemyInEyeRange" Class="MonsterG1049" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false" />
+      <Method Name="followEnemy" DisplayName="followEnemy" Desc="followEnemy" Class="MonsterG1049" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="prepareBattle" DisplayName="prepareBattle" Desc="prepareBattle" Class="MonsterG1049" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="isEnemyInPursueRange" DisplayName="isEnemyInPursueRange" Desc="isEnemyInPursueRange" Class="MonsterG1049" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false" />
+      <Method Name="quitBattle" DisplayName="quitBattle" Desc="quitBattle" Class="MonsterG1049" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false" />
+      <Method Name="resetPatrolPosBeforBattle" DisplayName="resetPatrolPosBeforBattle" Desc="resetPatrolPosBeforBattle" Class="MonsterG1049" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="resetPatroTargetPos" DisplayName="resetPatroTargetPos" Desc="resetPatroTargetPos" Class="MonsterG1049" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="backToPatrolPosBeforBattle" DisplayName="backToPatrolPosBeforBattle" Desc="backToPatrolPosBeforBattle" Class="MonsterG1049" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false" />
+      <Method Name="setIdleAction" DisplayName="setIdleAction" Desc="setIdleAction" Class="MonsterG1049" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false" />
+      <Method Name="prepareAttack" DisplayName="prepareAttack" Desc="prepareAttack" Class="MonsterG1049" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false" />
+      <Method Name="stopRun" DisplayName="stopRun" Desc="stopRun" Class="MonsterG1049" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="checkNeedPatrolByRandom" DisplayName="checkNeedPatrolByRandom" Desc="checkNeedPatrolByRandom" Class="MonsterG1049" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false" />
+      <Method Name="startMovetoGatherPos" DisplayName="startMovetoGatherPos" Desc="startMovetoGatherPos" Class="MonsterG1049" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+    </agent>
+  </agents>
+  <instances />
+</meta>

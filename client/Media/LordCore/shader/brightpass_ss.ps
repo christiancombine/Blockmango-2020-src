@@ -1,0 +1,18 @@
+#version 100
+
+precision mediump float;
+
+uniform sampler2D texSampler;
+uniform vec3 bloomParam;
+
+varying vec2 texCoord;
+
+void main(void)
+{
+	float bloomThreshold = bloomParam.x;
+	vec4 textureColor = texture2D(texSampler, texCoord);
+	vec4 output_shader;
+	output_shader.rgb = clamp(textureColor.rgb - bloomThreshold, 0.0, 1.0) / (1.0 - bloomThreshold); 
+	output_shader.a = 1.0;
+	gl_FragColor = output_shader;
+}

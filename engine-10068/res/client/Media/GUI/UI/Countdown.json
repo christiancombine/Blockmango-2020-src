@@ -1,0 +1,326 @@
+{
+    "Dialog": {
+        "Window": {
+            "Type": "Layout",
+            "Name": "Countdown",
+            "Property": [
+                {
+                    "Name": "Area",
+                    "Value": "{{0,0},{0,0},{1,0},{1,0}}"
+                },
+                {
+                    "Name": "Touchable",
+                    "Value": "false"
+                },
+                {
+                    "Name": "BackgroundColor",
+                    "Value": "0 0 0 0.254902"
+                },
+                {
+                    "Name": "WndOpenSound",
+                    "Value": "0"
+                },
+                {
+                    "Name": "WndCloseSound",
+                    "Value": "0"
+                },
+                {
+                    "Name": "TextColorLeftTop",
+                    "Value": "1 1 0 1"
+                },
+                {
+                    "Name": "TextColorRightTop",
+                    "Value": "1 1 0 1"
+                },
+                {
+                    "Name": "TextColorLeftBottom",
+                    "Value": "1 1 0 1"
+                },
+                {
+                    "Name": "TextColorRightBottom",
+                    "Value": "1 1 0 1"
+                },
+                {
+                    "Name": "EnableLongTouch",
+                    "Value": "true"
+                }
+            ],
+            "Window": [
+                {
+                    "Type": "StaticText",
+                    "Name": "Countdown-Last-Time",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,0},{-0.0416667,0},{0,0},{-0.0416667,0}}"
+                        },
+                        {
+                            "Name": "VerticalAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "HorizontalAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "Text",
+                            "Value": "5"
+                        },
+                        {
+                            "Name": "Font",
+                            "Value": "HT160"
+                        },
+                        {
+                            "Name": "AutoSize",
+                            "Value": "true"
+                        },
+                        {
+                            "Name": "WndOpenSound",
+                            "Value": "0"
+                        },
+                        {
+                            "Name": "WndCloseSound",
+                            "Value": "0"
+                        },
+                        {
+                            "Name": "TextColorLeftTop",
+                            "Value": "1 1 0 1"
+                        },
+                        {
+                            "Name": "TextColorRightTop",
+                            "Value": "1 1 0 1"
+                        },
+                        {
+                            "Name": "TextColorLeftBottom",
+                            "Value": "1 1 0 1"
+                        },
+                        {
+                            "Name": "TextColorRightBottom",
+                            "Value": "1 1 0 1"
+                        },
+                        {
+                            "Name": "TextColor",
+                            "Value": "1 0 0 1"
+                        },
+                        {
+                            "Name": "TextHorzAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "TextVertAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "TextWordWrap",
+                            "Value": "true"
+                        },
+                        {
+                            "Name": "TextShadow",
+                            "Value": "true"
+                        },
+                        {
+                            "Name": "TextShadowColor",
+                            "Value": "1 1 0 1"
+                        },
+                        {
+                            "Name": "TextBorderColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "TextLineExtraSpace",
+                            "Value": "0"
+                        },
+                        {
+                            "Name": "TextAutoOmission",
+                            "Value": "false"
+                        }
+                    ]
+                },
+                {
+                    "Type": "StaticText",
+                    "Name": "Countdown-Respawn",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0.5,-136},{0.5,123},{0.5,134},{0.5,173}}"
+                        },
+                        {
+                            "Name": "Text",
+                            "Value": "等待复活"
+                        },
+                        {
+                            "Name": "Font",
+                            "Value": "HT20"
+                        },
+                        {
+                            "Name": "WndOpenSound",
+                            "Value": "0"
+                        },
+                        {
+                            "Name": "WndCloseSound",
+                            "Value": "0"
+                        },
+                        {
+                            "Name": "TextHorzAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "TextVertAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "TextShadow",
+                            "Value": "true"
+                        },
+                        {
+                            "Name": "TextLineExtraSpace",
+                            "Value": "0"
+                        },
+                        {
+                            "Name": "TextAutoOmission",
+                            "Value": "false"
+                        }
+                    ]
+                },
+                {
+                    "Type": "StaticText",
+                    "Name": "Countdown-BedWar-Respawn",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{-0.02,0},{0.3,0},{0.08,0},{0.4,0}}"
+                        },
+                        {
+                            "Name": "VerticalAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "HorizontalAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "Text",
+                            "Value": "复活倒计时"
+                        },
+                        {
+                            "Name": "Font",
+                            "Value": "HT20"
+                        },
+                        {
+                            "Name": "WndOpenSound",
+                            "Value": "0"
+                        },
+                        {
+                            "Name": "WndCloseSound",
+                            "Value": "0"
+                        },
+                        {
+                            "Name": "TextHorzAlignment",
+                            "Value": "Right"
+                        },
+                        {
+                            "Name": "TextVertAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "TextShadow",
+                            "Value": "true"
+                        },
+                        {
+                            "Name": "TextLineExtraSpace",
+                            "Value": "0"
+                        },
+                        {
+                            "Name": "TextAutoOmission",
+                            "Value": "false"
+                        }
+                    ],
+                    "Window": [
+                        {
+                            "Type": "StaticText",
+                            "Name": "Countdown-BedWar-Last-Time",
+                            "Property": [
+                                {
+                                    "Name": "Area",
+                                    "Value": "{{0.078125,0},{0,0},{0.078125,0},{0,0}}"
+                                },
+                                {
+                                    "Name": "VerticalAlignment",
+                                    "Value": "Centre"
+                                },
+                                {
+                                    "Name": "HorizontalAlignment",
+                                    "Value": "Right"
+                                },
+                                {
+                                    "Name": "Text",
+                                    "Value": "5"
+                                },
+                                {
+                                    "Name": "Font",
+                                    "Value": "HT32"
+                                },
+                                {
+                                    "Name": "AutoSize",
+                                    "Value": "true"
+                                },
+                                {
+                                    "Name": "WndOpenSound",
+                                    "Value": "0"
+                                },
+                                {
+                                    "Name": "WndCloseSound",
+                                    "Value": "0"
+                                },
+                                {
+                                    "Name": "TextColorLeftTop",
+                                    "Value": "1 1 0 1"
+                                },
+                                {
+                                    "Name": "TextColorRightTop",
+                                    "Value": "1 1 0 1"
+                                },
+                                {
+                                    "Name": "TextColorLeftBottom",
+                                    "Value": "1 1 0 1"
+                                },
+                                {
+                                    "Name": "TextColorRightBottom",
+                                    "Value": "1 1 0 1"
+                                },
+                                {
+                                    "Name": "TextColor",
+                                    "Value": "1 0 0 1"
+                                },
+                                {
+                                    "Name": "TextVertAlignment",
+                                    "Value": "Centre"
+                                },
+                                {
+                                    "Name": "TextWordWrap",
+                                    "Value": "true"
+                                },
+                                {
+                                    "Name": "TextShadowColor",
+                                    "Value": "1 1 0 1"
+                                },
+                                {
+                                    "Name": "TextBorderColor",
+                                    "Value": "1 1 1 1"
+                                },
+                                {
+                                    "Name": "TextLineExtraSpace",
+                                    "Value": "0"
+                                },
+                                {
+                                    "Name": "TextAutoOmission",
+                                    "Value": "false"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

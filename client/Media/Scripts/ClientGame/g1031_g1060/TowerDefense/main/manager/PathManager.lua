@@ -1,0 +1,2 @@
+
+PathManager = class("PathManager",BasePathManager)

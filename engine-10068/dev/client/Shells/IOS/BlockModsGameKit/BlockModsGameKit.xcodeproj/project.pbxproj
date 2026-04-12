@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD0D513F1FFB65EF00F0CB48 /* DecorationShellInterfaceIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DD0D513D1FFB65EF00F0CB48 /* DecorationShellInterfaceIOS.h */; };
+		DD0D51401FFB65EF00F0CB48 /* DecorationShellInterfaceIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD0D513E1FFB65EF00F0CB48 /* DecorationShellInterfaceIOS.mm */; };
+		DD0D51591FFB73A000F0CB48 /* BMEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = DD0D51581FFB729900F0CB48 /* BMEnum.h */; };
+		DD5503691FFB937400081453 /* BMDecorationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DD5503671FFB937400081453 /* BMDecorationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD55036A1FFB937400081453 /* BMDecorationViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD5503681FFB937400081453 /* BMDecorationViewController.mm */; };
+		DD63CCAD1FD4F93800DEE3A7 /* GameLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD63CCAB1FD4F93700DEE3A7 /* GameLoadingView.m */; };
+		DD63CCAE1FD4F93800DEE3A7 /* GameLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = DD63CCAC1FD4F93700DEE3A7 /* GameLoadingView.h */; };
+		DD63CCC41FD4FCBE00DEE3A7 /* BMCacheResourceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DD63CCBE1FD4FCBE00DEE3A7 /* BMCacheResourceManager.h */; };
+		DD63CCC51FD4FCBE00DEE3A7 /* BMCacheResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD63CCBF1FD4FCBE00DEE3A7 /* BMCacheResourceManager.m */; };
+		DD63CCC61FD4FCBE00DEE3A7 /* BMFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DD63CCC01FD4FCBE00DEE3A7 /* BMFileManager.h */; };
+		DD63CCC71FD4FCBE00DEE3A7 /* BMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD63CCC11FD4FCBE00DEE3A7 /* BMFileManager.m */; };
+		DD63CCC81FD4FCBE00DEE3A7 /* BMUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = DD63CCC21FD4FCBE00DEE3A7 /* BMUtils.h */; };
+		DD63CCC91FD4FCBE00DEE3A7 /* BMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DD63CCC31FD4FCBE00DEE3A7 /* BMUtils.m */; };
+		DD63CCCC1FD502B700DEE3A7 /* BMGameViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DD63CCCA1FD502B700DEE3A7 /* BMGameViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD63CCCD1FD502B700DEE3A7 /* BMGameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD63CCCB1FD502B700DEE3A7 /* BMGameViewController.mm */; };
+		DD63CD081FD5305600DEE3A7 /* EditBoxImplIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD63CCFC1FD5305600DEE3A7 /* EditBoxImplIOS.mm */; };
+		DD63CD091FD5305600DEE3A7 /* EditBoxImplIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DD63CD071FD5305600DEE3A7 /* EditBoxImplIOS.h */; };
+		DDAD546F1FCF16C9001773F1 /* BlockModsGameKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DDAD546D1FCF16C9001773F1 /* BlockModsGameKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDAD55301FCF18E3001773F1 /* SimpleAudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = DDAD55121FCF18DE001773F1 /* SimpleAudioEngine.mm */; };
+		DDAD55321FCF18E3001773F1 /* SimpleAudioEngine_objc.h in Headers */ = {isa = PBXBuildFile; fileRef = DDAD55141FCF18DE001773F1 /* SimpleAudioEngine_objc.h */; };
+		DDAD55331FCF18E3001773F1 /* SimpleAudioEngine_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAD55151FCF18DE001773F1 /* SimpleAudioEngine_objc.m */; };
+		DDAD55351FCF18E3001773F1 /* SimpleAudioEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = DDAD55171FCF18DE001773F1 /* SimpleAudioEngine.h */; };
+		DDAD553A1FCF18E3001773F1 /* ShellInterfaceIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DDAD551C1FCF18DE001773F1 /* ShellInterfaceIOS.h */; };
+		DDAD553B1FCF18E3001773F1 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAD551D1FCF18DF001773F1 /* CocosDenshion.m */; };
+		DDAD553D1FCF18E3001773F1 /* IOSSoundEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DDAD551F1FCF18DF001773F1 /* IOSSoundEngine.cpp */; };
+		DDAD553E1FCF18E3001773F1 /* IOSSoundEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = DDAD55201FCF18DF001773F1 /* IOSSoundEngine.h */; };
+		DDAD55411FCF18E3001773F1 /* CDOpenALSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = DDAD55231FCF18E1001773F1 /* CDOpenALSupport.h */; };
+		DDAD55451FCF18E3001773F1 /* CocosDenshion.h in Headers */ = {isa = PBXBuildFile; fileRef = DDAD55271FCF18E1001773F1 /* CocosDenshion.h */; };
+		DDAD55461FCF18E3001773F1 /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAD55281FCF18E1001773F1 /* CDAudioManager.m */; };
+		DDAD55471FCF18E3001773F1 /* CDAudioManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DDAD55291FCF18E1001773F1 /* CDAudioManager.h */; };
+		DDAD55491FCF18E3001773F1 /* CDOpenALSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAD552B1FCF18E2001773F1 /* CDOpenALSupport.m */; };
+		DDAD554A1FCF18E3001773F1 /* CDConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = DDAD552C1FCF18E2001773F1 /* CDConfig.h */; };
+		DDAD554B1FCF18E3001773F1 /* ShellInterfaceIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = DDAD552D1FCF18E2001773F1 /* ShellInterfaceIOS.mm */; };
+		DDAD554C1FCF18E3001773F1 /* Export.h in Headers */ = {isa = PBXBuildFile; fileRef = DDAD552E1FCF18E2001773F1 /* Export.h */; };
+		DDCE72B41FD64BE300F30DAB /* BMEditBox.h in Headers */ = {isa = PBXBuildFile; fileRef = DDCE72B21FD64BE300F30DAB /* BMEditBox.h */; };
+		DDCE72B51FD64BE300F30DAB /* BMEditBox.mm in Sources */ = {isa = PBXBuildFile; fileRef = DDCE72B31FD64BE300F30DAB /* BMEditBox.mm */; };
+		DDCE72B81FD64BEC00F30DAB /* BMConstString.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCE72B61FD64BEC00F30DAB /* BMConstString.m */; };
+		DDCE72B91FD64BEC00F30DAB /* BMConstString.h in Headers */ = {isa = PBXBuildFile; fileRef = DDCE72B71FD64BEC00F30DAB /* BMConstString.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD0D512C1FFB442F00F0CB48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD0D51231FFB442E00F0CB48 /* Clothes.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 76A8EF8F80734C0A9B1F67B0;
+			remoteInfo = Clothes;
+		};
+		DDAD547C1FCF1706001773F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDAD54751FCF1706001773F1 /* Lord.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5D106D032B547BA951C8F8C;
+			remoteInfo = Core;
+		};
+		DDAD547E1FCF1706001773F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDAD54751FCF1706001773F1 /* Lord.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EBE6017B3695486B87ACD0D9;
+			remoteInfo = GLES2Render;
+		};
+		DDAD54861FCF1714001773F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDAD54801FCF1714001773F1 /* Client.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7397502B66924BB49AB43E6D;
+			remoteInfo = GameClient;
+		};
+		DDAD548E1FCF171C001773F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDAD54881FCF171C001773F1 /* Logic.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65DAECAB1B6544F9BC97B54E;
+			remoteInfo = Logic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD0D51231FFB442E00F0CB48 /* Clothes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Clothes.xcodeproj; path = ../../../../clothes/build/Clothes.xcodeproj; sourceTree = "<group>"; };
+		DD0D513D1FFB65EF00F0CB48 /* DecorationShellInterfaceIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecorationShellInterfaceIOS.h; sourceTree = "<group>"; };
+		DD0D513E1FFB65EF00F0CB48 /* DecorationShellInterfaceIOS.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DecorationShellInterfaceIOS.mm; sourceTree = "<group>"; };
+		DD0D51581FFB729900F0CB48 /* BMEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMEnum.h; sourceTree = "<group>"; };
+		DD5503671FFB937400081453 /* BMDecorationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMDecorationViewController.h; sourceTree = "<group>"; };
+		DD5503681FFB937400081453 /* BMDecorationViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BMDecorationViewController.mm; sourceTree = "<group>"; };
+		DD63CCAB1FD4F93700DEE3A7 /* GameLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLoadingView.m; sourceTree = "<group>"; };
+		DD63CCAC1FD4F93700DEE3A7 /* GameLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLoadingView.h; sourceTree = "<group>"; };
+		DD63CCBE1FD4FCBE00DEE3A7 /* BMCacheResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCacheResourceManager.h; sourceTree = "<group>"; };
+		DD63CCBF1FD4FCBE00DEE3A7 /* BMCacheResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCacheResourceManager.m; sourceTree = "<group>"; };
+		DD63CCC01FD4FCBE00DEE3A7 /* BMFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMFileManager.h; sourceTree = "<group>"; };
+		DD63CCC11FD4FCBE00DEE3A7 /* BMFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMFileManager.m; sourceTree = "<group>"; };
+		DD63CCC21FD4FCBE00DEE3A7 /* BMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMUtils.h; sourceTree = "<group>"; };
+		DD63CCC31FD4FCBE00DEE3A7 /* BMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMUtils.m; sourceTree = "<group>"; };
+		DD63CCCA1FD502B700DEE3A7 /* BMGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMGameViewController.h; sourceTree = "<group>"; };
+		DD63CCCB1FD502B700DEE3A7 /* BMGameViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BMGameViewController.mm; sourceTree = "<group>"; };
+		DD63CCFC1FD5305600DEE3A7 /* EditBoxImplIOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EditBoxImplIOS.mm; sourceTree = "<group>"; };
+		DD63CD071FD5305600DEE3A7 /* EditBoxImplIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditBoxImplIOS.h; sourceTree = "<group>"; };
+		DDAD546A1FCF16C9001773F1 /* BlockModsGameKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlockModsGameKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDAD546D1FCF16C9001773F1 /* BlockModsGameKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockModsGameKit.h; sourceTree = "<group>"; };
+		DDAD546E1FCF16C9001773F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDAD54751FCF1706001773F1 /* Lord.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lord.xcodeproj; path = ../../../../engine/build/Lord.xcodeproj; sourceTree = "<group>"; };
+		DDAD54801FCF1714001773F1 /* Client.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Client.xcodeproj; path = ../../../build/Client.xcodeproj; sourceTree = "<group>"; };
+		DDAD54881FCF171C001773F1 /* Logic.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Logic.xcodeproj; path = ../../../../logic/build/Logic.xcodeproj; sourceTree = "<group>"; };
+		DDAD55121FCF18DE001773F1 /* SimpleAudioEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SimpleAudioEngine.mm; sourceTree = "<group>"; };
+		DDAD55141FCF18DE001773F1 /* SimpleAudioEngine_objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine_objc.h; sourceTree = "<group>"; };
+		DDAD55151FCF18DE001773F1 /* SimpleAudioEngine_objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine_objc.m; sourceTree = "<group>"; };
+		DDAD55171FCF18DE001773F1 /* SimpleAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine.h; sourceTree = "<group>"; };
+		DDAD551C1FCF18DE001773F1 /* ShellInterfaceIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellInterfaceIOS.h; sourceTree = "<group>"; };
+		DDAD551D1FCF18DF001773F1 /* CocosDenshion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocosDenshion.m; sourceTree = "<group>"; };
+		DDAD551F1FCF18DF001773F1 /* IOSSoundEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IOSSoundEngine.cpp; sourceTree = "<group>"; };
+		DDAD55201FCF18DF001773F1 /* IOSSoundEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSSoundEngine.h; sourceTree = "<group>"; };
+		DDAD55231FCF18E1001773F1 /* CDOpenALSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDOpenALSupport.h; sourceTree = "<group>"; };
+		DDAD55271FCF18E1001773F1 /* CocosDenshion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosDenshion.h; sourceTree = "<group>"; };
+		DDAD55281FCF18E1001773F1 /* CDAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAudioManager.m; sourceTree = "<group>"; };
+		DDAD55291FCF18E1001773F1 /* CDAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAudioManager.h; sourceTree = "<group>"; };
+		DDAD552B1FCF18E2001773F1 /* CDOpenALSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDOpenALSupport.m; sourceTree = "<group>"; };
+		DDAD552C1FCF18E2001773F1 /* CDConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDConfig.h; sourceTree = "<group>"; };
+		DDAD552D1FCF18E2001773F1 /* ShellInterfaceIOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ShellInterfaceIOS.mm; sourceTree = "<group>"; };
+		DDAD552E1FCF18E2001773F1 /* Export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Export.h; sourceTree = "<group>"; };
+		DDCE72B21FD64BE300F30DAB /* BMEditBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMEditBox.h; sourceTree = "<group>"; };
+		DDCE72B31FD64BE300F30DAB /* BMEditBox.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BMEditBox.mm; sourceTree = "<group>"; };
+		DDCE72B61FD64BEC00F30DAB /* BMConstString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMConstString.m; path = BlockModsGameKit/Src/BMConstString.m; sourceTree = SOURCE_ROOT; };
+		DDCE72B71FD64BEC00F30DAB /* BMConstString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMConstString.h; path = BlockModsGameKit/Src/BMConstString.h; sourceTree = SOURCE_ROOT; };
+		DDCE73CF1FDBD82E00F30DAB /* loading_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading_1@2x.png"; sourceTree = "<group>"; };
+		DDCE73D01FDBD82F00F30DAB /* loading_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading_2@2x.png"; sourceTree = "<group>"; };
+		DDCE73D11FDBD83000F30DAB /* loading_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading_3@2x.png"; sourceTree = "<group>"; };
+		DDCE73D21FDBD83000F30DAB /* loading_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading_4@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDAD54661FCF16C9001773F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD0D51241FFB442E00F0CB48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD0D512D1FFB442F00F0CB48 /* libClothes_d.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD0D514F1FFB673D00F0CB48 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				DD63CCAC1FD4F93700DEE3A7 /* GameLoadingView.h */,
+				DD63CCAB1FD4F93700DEE3A7 /* GameLoadingView.m */,
+				DD63CCCA1FD502B700DEE3A7 /* BMGameViewController.h */,
+				DD63CCCB1FD502B700DEE3A7 /* BMGameViewController.mm */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		DD0D51501FFB674200F0CB48 /* Decoration */ = {
+			isa = PBXGroup;
+			children = (
+				DD5503671FFB937400081453 /* BMDecorationViewController.h */,
+				DD5503681FFB937400081453 /* BMDecorationViewController.mm */,
+			);
+			name = Decoration;
+			sourceTree = "<group>";
+		};
+		DD63CC8E1FD4EF4A00DEE3A7 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				DDAD55141FCF18DE001773F1 /* SimpleAudioEngine_objc.h */,
+				DDAD55151FCF18DE001773F1 /* SimpleAudioEngine_objc.m */,
+				DDAD55171FCF18DE001773F1 /* SimpleAudioEngine.h */,
+				DDAD55121FCF18DE001773F1 /* SimpleAudioEngine.mm */,
+				DDAD55291FCF18E1001773F1 /* CDAudioManager.h */,
+				DDAD55281FCF18E1001773F1 /* CDAudioManager.m */,
+				DDAD551F1FCF18DF001773F1 /* IOSSoundEngine.cpp */,
+				DDAD55201FCF18DF001773F1 /* IOSSoundEngine.h */,
+				DDAD552C1FCF18E2001773F1 /* CDConfig.h */,
+				DDAD55231FCF18E1001773F1 /* CDOpenALSupport.h */,
+				DDAD552B1FCF18E2001773F1 /* CDOpenALSupport.m */,
+				DDAD55271FCF18E1001773F1 /* CocosDenshion.h */,
+				DDAD551D1FCF18DF001773F1 /* CocosDenshion.m */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+		DD63CCAF1FD4F9C900DEE3A7 /* ShellInterface */ = {
+			isa = PBXGroup;
+			children = (
+				DDAD551C1FCF18DE001773F1 /* ShellInterfaceIOS.h */,
+				DDAD552D1FCF18E2001773F1 /* ShellInterfaceIOS.mm */,
+				DD0D513D1FFB65EF00F0CB48 /* DecorationShellInterfaceIOS.h */,
+				DD0D513E1FFB65EF00F0CB48 /* DecorationShellInterfaceIOS.mm */,
+			);
+			name = ShellInterface;
+			sourceTree = "<group>";
+		};
+		DD63CCBD1FD4FCBE00DEE3A7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DD63CCBE1FD4FCBE00DEE3A7 /* BMCacheResourceManager.h */,
+				DD63CCBF1FD4FCBE00DEE3A7 /* BMCacheResourceManager.m */,
+				DD63CCC01FD4FCBE00DEE3A7 /* BMFileManager.h */,
+				DD63CCC11FD4FCBE00DEE3A7 /* BMFileManager.m */,
+				DD63CCC21FD4FCBE00DEE3A7 /* BMUtils.h */,
+				DD63CCC31FD4FCBE00DEE3A7 /* BMUtils.m */,
+				DDCE72B71FD64BEC00F30DAB /* BMConstString.h */,
+				DDCE72B61FD64BEC00F30DAB /* BMConstString.m */,
+				DD0D51581FFB729900F0CB48 /* BMEnum.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DDAD54601FCF16C9001773F1 = {
+			isa = PBXGroup;
+			children = (
+				DDAD54751FCF1706001773F1 /* Lord.xcodeproj */,
+				DDAD54881FCF171C001773F1 /* Logic.xcodeproj */,
+				DDAD54801FCF1714001773F1 /* Client.xcodeproj */,
+				DD0D51231FFB442E00F0CB48 /* Clothes.xcodeproj */,
+				DDAD546C1FCF16C9001773F1 /* BlockModsGameKit */,
+				DDCE73C01FDBD79500F30DAB /* BlockModsGameBundle */,
+				DDAD546B1FCF16C9001773F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DDAD546B1FCF16C9001773F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDAD546A1FCF16C9001773F1 /* BlockModsGameKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDAD546C1FCF16C9001773F1 /* BlockModsGameKit */ = {
+			isa = PBXGroup;
+			children = (
+				DDAD546D1FCF16C9001773F1 /* BlockModsGameKit.h */,
+				DDAD54931FCF180E001773F1 /* Src */,
+				DDAD546E1FCF16C9001773F1 /* Info.plist */,
+			);
+			path = BlockModsGameKit;
+			sourceTree = "<group>";
+		};
+		DDAD54761FCF1706001773F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDAD547D1FCF1706001773F1 /* libLordCore_d.a */,
+				DDAD547F1FCF1706001773F1 /* libLordGLES2Render_d.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDAD54811FCF1714001773F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDAD54871FCF1714001773F1 /* libGameClient_d.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDAD54891FCF171C001773F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDAD548F1FCF171C001773F1 /* libLogic_d.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDAD54931FCF180E001773F1 /* Src */ = {
+			isa = PBXGroup;
+			children = (
+				DDAD552E1FCF18E2001773F1 /* Export.h */,
+				DDCE72A71FD64BC400F30DAB /* EditBox */,
+				DD63CCAF1FD4F9C900DEE3A7 /* ShellInterface */,
+				DD63CCBD1FD4FCBE00DEE3A7 /* Utils */,
+				DD63CC8E1FD4EF4A00DEE3A7 /* Audio */,
+				DD0D514F1FFB673D00F0CB48 /* Game */,
+				DD0D51501FFB674200F0CB48 /* Decoration */,
+			);
+			path = Src;
+			sourceTree = "<group>";
+		};
+		DDCE72A71FD64BC400F30DAB /* EditBox */ = {
+			isa = PBXGroup;
+			children = (
+				DDCE72B21FD64BE300F30DAB /* BMEditBox.h */,
+				DDCE72B31FD64BE300F30DAB /* BMEditBox.mm */,
+				DD63CD071FD5305600DEE3A7 /* EditBoxImplIOS.h */,
+				DD63CCFC1FD5305600DEE3A7 /* EditBoxImplIOS.mm */,
+			);
+			name = EditBox;
+			sourceTree = "<group>";
+		};
+		DDCE73C01FDBD79500F30DAB /* BlockModsGameBundle */ = {
+			isa = PBXGroup;
+			children = (
+				DDCE73CF1FDBD82E00F30DAB /* loading_1@2x.png */,
+				DDCE73D01FDBD82F00F30DAB /* loading_2@2x.png */,
+				DDCE73D11FDBD83000F30DAB /* loading_3@2x.png */,
+				DDCE73D21FDBD83000F30DAB /* loading_4@2x.png */,
+			);
+			path = BlockModsGameBundle;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DDAD54671FCF16C9001773F1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDAD546F1FCF16C9001773F1 /* BlockModsGameKit.h in Headers */,
+				DD63CCCC1FD502B700DEE3A7 /* BMGameViewController.h in Headers */,
+				DDAD554C1FCF18E3001773F1 /* Export.h in Headers */,
+				DDAD55411FCF18E3001773F1 /* CDOpenALSupport.h in Headers */,
+				DD5503691FFB937400081453 /* BMDecorationViewController.h in Headers */,
+				DD63CD091FD5305600DEE3A7 /* EditBoxImplIOS.h in Headers */,
+				DDAD554A1FCF18E3001773F1 /* CDConfig.h in Headers */,
+				DD0D513F1FFB65EF00F0CB48 /* DecorationShellInterfaceIOS.h in Headers */,
+				DDCE72B91FD64BEC00F30DAB /* BMConstString.h in Headers */,
+				DD63CCC81FD4FCBE00DEE3A7 /* BMUtils.h in Headers */,
+				DD0D51591FFB73A000F0CB48 /* BMEnum.h in Headers */,
+				DDAD55471FCF18E3001773F1 /* CDAudioManager.h in Headers */,
+				DDCE72B41FD64BE300F30DAB /* BMEditBox.h in Headers */,
+				DDAD55451FCF18E3001773F1 /* CocosDenshion.h in Headers */,
+				DDAD553A1FCF18E3001773F1 /* ShellInterfaceIOS.h in Headers */,
+				DD63CCAE1FD4F93800DEE3A7 /* GameLoadingView.h in Headers */,
+				DD63CCC61FD4FCBE00DEE3A7 /* BMFileManager.h in Headers */,
+				DDAD55351FCF18E3001773F1 /* SimpleAudioEngine.h in Headers */,
+				DDAD553E1FCF18E3001773F1 /* IOSSoundEngine.h in Headers */,
+				DDAD55321FCF18E3001773F1 /* SimpleAudioEngine_objc.h in Headers */,
+				DD63CCC41FD4FCBE00DEE3A7 /* BMCacheResourceManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DDAD54691FCF16C9001773F1 /* BlockModsGameKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDAD54721FCF16C9001773F1 /* Build configuration list for PBXNativeTarget "BlockModsGameKit" */;
+			buildPhases = (
+				DDAD54651FCF16C9001773F1 /* Sources */,
+				DDAD54661FCF16C9001773F1 /* Frameworks */,
+				DDAD54671FCF16C9001773F1 /* Headers */,
+				DDAD54681FCF16C9001773F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlockModsGameKit;
+			productName = BlockModsGameKit;
+			productReference = DDAD546A1FCF16C9001773F1 /* BlockModsGameKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDAD54611FCF16C9001773F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = SandboxOL;
+				TargetAttributes = {
+					DDAD54691FCF16C9001773F1 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DDAD54641FCF16C9001773F1 /* Build configuration list for PBXProject "BlockModsGameKit" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DDAD54601FCF16C9001773F1;
+			productRefGroup = DDAD546B1FCF16C9001773F1 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DDAD54811FCF1714001773F1 /* Products */;
+					ProjectRef = DDAD54801FCF1714001773F1 /* Client.xcodeproj */;
+				},
+				{
+					ProductGroup = DD0D51241FFB442E00F0CB48 /* Products */;
+					ProjectRef = DD0D51231FFB442E00F0CB48 /* Clothes.xcodeproj */;
+				},
+				{
+					ProductGroup = DDAD54891FCF171C001773F1 /* Products */;
+					ProjectRef = DDAD54881FCF171C001773F1 /* Logic.xcodeproj */;
+				},
+				{
+					ProductGroup = DDAD54761FCF1706001773F1 /* Products */;
+					ProjectRef = DDAD54751FCF1706001773F1 /* Lord.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				DDAD54691FCF16C9001773F1 /* BlockModsGameKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DD0D512D1FFB442F00F0CB48 /* libClothes_d.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libClothes_d.a;
+			remoteRef = DD0D512C1FFB442F00F0CB48 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DDAD547D1FCF1706001773F1 /* libLordCore_d.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLordCore_d.a;
+			remoteRef = DDAD547C1FCF1706001773F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DDAD547F1FCF1706001773F1 /* libLordGLES2Render_d.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLordGLES2Render_d.a;
+			remoteRef = DDAD547E1FCF1706001773F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DDAD54871FCF1714001773F1 /* libGameClient_d.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGameClient_d.a;
+			remoteRef = DDAD54861FCF1714001773F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DDAD548F1FCF171C001773F1 /* libLogic_d.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLogic_d.a;
+			remoteRef = DDAD548E1FCF171C001773F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDAD54681FCF16C9001773F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDAD54651FCF16C9001773F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDAD553D1FCF18E3001773F1 /* IOSSoundEngine.cpp in Sources */,
+				DDAD55331FCF18E3001773F1 /* SimpleAudioEngine_objc.m in Sources */,
+				DDAD554B1FCF18E3001773F1 /* ShellInterfaceIOS.mm in Sources */,
+				DD63CCC51FD4FCBE00DEE3A7 /* BMCacheResourceManager.m in Sources */,
+				DD0D51401FFB65EF00F0CB48 /* DecorationShellInterfaceIOS.mm in Sources */,
+				DD63CCC91FD4FCBE00DEE3A7 /* BMUtils.m in Sources */,
+				DD63CCCD1FD502B700DEE3A7 /* BMGameViewController.mm in Sources */,
+				DDCE72B81FD64BEC00F30DAB /* BMConstString.m in Sources */,
+				DDAD553B1FCF18E3001773F1 /* CocosDenshion.m in Sources */,
+				DD63CCC71FD4FCBE00DEE3A7 /* BMFileManager.m in Sources */,
+				DD63CCAD1FD4F93800DEE3A7 /* GameLoadingView.m in Sources */,
+				DDAD55301FCF18E3001773F1 /* SimpleAudioEngine.mm in Sources */,
+				DDCE72B51FD64BE300F30DAB /* BMEditBox.mm in Sources */,
+				DDAD55461FCF18E3001773F1 /* CDAudioManager.m in Sources */,
+				DDAD55491FCF18E3001773F1 /* CDOpenALSupport.m in Sources */,
+				DD63CD081FD5305600DEE3A7 /* EditBoxImplIOS.mm in Sources */,
+				DD55036A1FFB937400081453 /* BMDecorationViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DDAD54701FCF16C9001773F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DDAD54711FCF16C9001773F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DDAD54731FCF16C9001773F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/BlockModsGameKit/Bin/Debug";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TUWZFZTDD4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../../Src",
+					"$(PROJECT_DIR)/../../../../engine/Dependencies/g3log/ios/include",
+					"$(PROJECT_DIR)/../../../../logic/Src",
+					"$(PROJECT_DIR)/../../../../client/Src/Blockman",
+					"$(PROJECT_DIR)/../../../../client/curl/IOS/Include",
+					"$(PROJECT_DIR)/../../../../engine/Src/Core",
+					"$(PROJECT_DIR)/../../../../engine/Dependencies/rapidjson/Include",
+					"$(PROJECT_DIR)/../../../../engine/Dependencies/RapidXml/Include",
+					"$(PROJECT_DIR)/../../../../logic/dependencies/iOS",
+					"$(PROJECT_DIR)/../../../../clothes",
+				);
+				INFOPLIST_FILE = BlockModsGameKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sandboxol.BlockModsGameKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = (
+					"-Wno-deprecated-register",
+					"-Wno-conversion",
+					"-Wno-sign-conversion",
+					"-Wno-switch",
+					"-Wno-reorder",
+					"-Wno-tautological-constant-out-of-range-compare",
+					"-Wno-missing-braces",
+					"-Wno-unused-private-field",
+					"-Wno-format-security",
+					"-Wno-unused-const-variable",
+					"-Wno-format-nonliteral",
+					"-Wno-format",
+					"-Wno-unused-variable",
+					"-Wno-tautological-compare",
+					"-Wno-delete-non-virtual-dtor",
+					"-Wno-inconsistent-missing-override",
+					"-Wno-bitwise-op-parentheses",
+					"-Wno-overloaded-virtual",
+					"-Wno-logical-op-parentheses",
+					"-Wno-unused-value",
+					"-Wno-deprecated-declarations",
+					"-Wno-documentation",
+				);
+			};
+			name = Debug;
+		};
+		DDAD54741FCF16C9001773F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/BlockModsGameKit/Bin/Release";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TUWZFZTDD4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../../Src",
+					"$(PROJECT_DIR)/../../../../engine/Dependencies/g3log/ios/include",
+					"$(PROJECT_DIR)/../../../../logic/Src",
+					"$(PROJECT_DIR)/../../../../client/Src/Blockman",
+					"$(PROJECT_DIR)/../../../../client/curl/IOS/Include",
+					"$(PROJECT_DIR)/../../../../engine/Src/Core",
+					"$(PROJECT_DIR)/../../../../engine/Dependencies/rapidjson/Include",
+					"$(PROJECT_DIR)/../../../../engine/Dependencies/RapidXml/Include",
+					"$(PROJECT_DIR)/../../../../logic/dependencies/iOS",
+					"$(PROJECT_DIR)/../../../../clothes",
+				);
+				INFOPLIST_FILE = BlockModsGameKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sandboxol.BlockModsGameKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = (
+					"-Wno-deprecated-register",
+					"-Wno-conversion",
+					"-Wno-sign-conversion",
+					"-Wno-switch",
+					"-Wno-reorder",
+					"-Wno-tautological-constant-out-of-range-compare",
+					"-Wno-missing-braces",
+					"-Wno-unused-private-field",
+					"-Wno-format-security",
+					"-Wno-unused-const-variable",
+					"-Wno-format-nonliteral",
+					"-Wno-format",
+					"-Wno-unused-variable",
+					"-Wno-tautological-compare",
+					"-Wno-delete-non-virtual-dtor",
+					"-Wno-inconsistent-missing-override",
+					"-Wno-bitwise-op-parentheses",
+					"-Wno-overloaded-virtual",
+					"-Wno-logical-op-parentheses",
+					"-Wno-unused-value",
+					"-Wno-deprecated-declarations",
+					"-Wno-documentation",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDAD54641FCF16C9001773F1 /* Build configuration list for PBXProject "BlockModsGameKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDAD54701FCF16C9001773F1 /* Debug */,
+				DDAD54711FCF16C9001773F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDAD54721FCF16C9001773F1 /* Build configuration list for PBXNativeTarget "BlockModsGameKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDAD54731FCF16C9001773F1 /* Debug */,
+				DDAD54741FCF16C9001773F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDAD54611FCF16C9001773F1 /* Project object */;
+}

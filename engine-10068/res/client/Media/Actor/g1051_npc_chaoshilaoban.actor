@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g1051_npc_chaoshilaoban.actor" Originalscale="1 1 1" Skeleton="g1051_lvdianlaoban01.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="head" SlaveName="g1051_lvdianlaoban01_head.skin" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "g1051_lvdianlaoban01_head.skin" ChangeColor = "2.10195e-44 9.58488e-43 2.61926e-31 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1051_lvdianlaoban01_body.skin" ChangeColor = "2.10195e-44 1.15047e-42 2.61926e-31 0" UVSpeed = "0 0">
+				</Skin>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1051_lvdianlaoban01_idle.anim" BeginTime = "0" Times = "-1" Length = "2.033" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g1051_lvdianlaoban01_idle.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

@@ -1,0 +1,94 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g1054_touzi_donghua.actor" Originalscale="1 1 1" Skeleton="bone001.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="body" SlaveName="1" DefaultUse="false" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<StaticMesh>
+					<FileName value="g1054_touzi.mesh"/>
+					<SocketName value="bone001"/>
+					<Position_X value="-0.191884"/>
+					<Position_Y value="0.145094"/>
+					<Position_Z value="0"/>
+					<yaw value="180"/>
+					<pitch value="2.23118e-05"/>
+					<roll value="180"/>
+					<scale value="1.5"/>
+				</StaticMesh>
+			</BodyPart>
+			<BodyPart MasterName="body" SlaveName="2" DefaultUse="false" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<StaticMesh>
+					<FileName value="g1054_touzi.mesh"/>
+					<SocketName value="bone001"/>
+					<Position_X value="0.238043"/>
+					<Position_Y value="0.2342"/>
+					<Position_Z value="0.0690317"/>
+					<yaw value="-68.9086"/>
+					<pitch value="-89.972"/>
+					<roll value="-82.674"/>
+					<scale value="1.5"/>
+				</StaticMesh>
+			</BodyPart>
+			<BodyPart MasterName="body" SlaveName="3" DefaultUse="false" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<StaticMesh>
+					<FileName value="g1054_touzi.mesh"/>
+					<SocketName value="bone001"/>
+					<Position_X value="-0.0969809"/>
+					<Position_Y value="0.239361"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1.5"/>
+				</StaticMesh>
+			</BodyPart>
+			<BodyPart MasterName="body" SlaveName="4" DefaultUse="false" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<StaticMesh>
+					<FileName value="g1054_touzi.mesh"/>
+					<SocketName value="bone001"/>
+					<Position_X value="-0.0260335"/>
+					<Position_Y value="0.147018"/>
+					<Position_Z value="0.161931"/>
+					<yaw value="45"/>
+					<pitch value="89.972"/>
+					<roll value="-7.12241"/>
+					<scale value="1.5"/>
+				</StaticMesh>
+			</BodyPart>
+			<BodyPart MasterName="body" SlaveName="5" DefaultUse="false" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<StaticMesh>
+					<FileName value="g1054_touzi.mesh"/>
+					<SocketName value="bone001"/>
+					<Position_X value="-0.0204802"/>
+					<Position_Y value="0.37342"/>
+					<Position_Z value="0.0445916"/>
+					<yaw value="-90"/>
+					<pitch value="2.39057e-05"/>
+					<roll value="-90"/>
+					<scale value="1.5"/>
+				</StaticMesh>
+			</BodyPart>
+			<BodyPart MasterName="body" SlaveName="6" DefaultUse="false" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<StaticMesh>
+					<FileName value="g1054_touzi.mesh"/>
+					<SocketName value="bone001"/>
+					<Position_X value="-0.0229111"/>
+					<Position_Y value="0.0499451"/>
+					<Position_Z value="0.0531615"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="90"/>
+					<scale value="1.5"/>
+				</StaticMesh>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "bone001.anim" BeginTime = "0" Times = "-1" Length = "3.366" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="bone001.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

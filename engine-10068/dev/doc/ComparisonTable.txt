@@ -1,0 +1,85 @@
+与Entity相关的反编译模糊函数的重定义。
+
+EntityCreature::func_110175_bO  EntityCreature::hasHome
+EntityCreature::func_110172_bL	EntityCreature::getHomePosition
+EntityCreature::func_110174_bM  EntityCreature::getMaximumHomeDistance
+EntityCreature::func_110173_bK  EntityCreature::isWithinHomeDistanceCurrentPosition
+EntityCreature::func_110176_b  EntityCreature::isWithinHomeDistanceFromPosition
+EntityCreature::func_110171_b  EntityCreature::setHomePosAndDistance
+EntityCreature::func_110172_bL  EntityCreature::getHomePosition
+EntityCreature::func_110174_bM  EntityCreature::getMaximumHomeDistance
+EntityCreature::func_110177_bN  EntityCreature::detachHome
+EntityCreature::func_110175_bO  EntityCreature::hasHome
+EntityCreature::func_142017_o  EntityCreature::onLeashDistance
+EntityCreature::field_110180_bt  EntityCreature::m_hasTasks
+EntityCreature::field_110178_bs  EntityCreature::m_aiMoveTo
+
+EntityLivingBase::func_110148_a  EntityLivingBase::getEntityAttribute
+EntityLivingBase::func_110140_aT EntityLivingBase::getAttributeMap
+EntityLivingBase::func_110147_ax EntityLivingBase::applyEntityAttributes
+EntityLivingBase::func_110143_aJ EntityLivingBase::getHealth
+EntityLivingBase::func_110139_bj  EntityLivingBase::getAbsorptionAmount
+EntityLivingBase::func_110149_m  EntityLivingBase::setAbsorptionAmount
+EntityLivingBase::func_110142_aN  EntityLivingBase::getCombatTracker
+EntityLivingBase::func_94060_bK  EntityLivingBase::getAttackingEntity
+EntityLivingBase::func_110138_aP  EntityLivingBase::getMaxHealth
+EntityLivingBase::  EntityLivingBase::
+
+EntityClientSP::func_110317_t  EntityClientSP::isRidingInHorse
+EntityClientSP::func_110319_bJ  EntityClientSP::getHorseJumpPower
+EntityClientSP::func_110318_g  EntityClientSP::sendHorseJump
+
+EntityClientPlayerMP::func_92015_f EntityPlayerSPMP::closeScreenAndDropStack
+EntityClientPlayerMP::func_110322_i  EntityClientPlayerMP::openHorseInventory
+EntityClientPlayerMP::func_142020_c  EntityClientPlayerMP::setServerBrand
+EntityClientPlayerMP::func_142021_k  EntityClientPlayerMP::getServerBrand
+
+
+EntityLiving::func_110159_bB  EntityLiving::updateLeashedState
+EntityLiving::func_110165_bF  EntityLiving::recreateLeash
+EntityLiving::func_110167_bD  EntityLiving::getLeashed
+EntityLiving::func_110166_bE  EntityLiving::getLeashedToEntity
+EntityLiving::func_110162_b  EntityLiving::setLeashedToEntity
+EntityLiving::func_110160_i  EntityLiving::clearLeashed
+EntityLiving::func_110164_bC  EntityLiving::canBeLeashedTo
+EntityLiving::field_110169_bv  EntityLiving::isLeashed
+EntityLiving::field_110168_bw  EntityLiving::leashedToEntity
+EntityLiving::field_110170_bx  EntityLiving::leashNBTTag
+
+EntityPlayer::func_82243_bO  EntityPlayer::getArmorVisibility
+
+SharedMonsterAttributes::field_111267_a  SharedMonsterAttributes::EAMAX_HEALTH
+SharedMonsterAttributes::field_111265_b  SharedMonsterAttributes::FOLLOW_RANGE
+SharedMonsterAttributes::field_111266_c  SharedMonsterAttributes::KNOCKBACK_RESISTANCE
+SharedMonsterAttributes::field_111263_d  SharedMonsterAttributes::MOVEMENT_SPEED
+SharedMonsterAttributes::field_111264_e  SharedMonsterAttributes::ATTACK_DAMAGE
+
+IAttributeInstance::func_111123_a  IAttributeInstance::getAttribute
+IAttributeInstance::func_111125_b  IAttributeInstance::getBaseValue
+IAttributeInstance::func_111128_a  IAttributeInstance::setBaseValue
+IAttributeInstance::func_111122_c  IAttributeInstance::getModifiers
+IAttributeInstance::func_111127_a  IAttributeInstance::getModifiersByOperation
+IAttributeInstance::func_111121_a  IAttributeInstance::applyModifier
+IAttributeInstance::func_111124_b  IAttributeInstance::removeModifier
+IAttributeInstance::func_142049_d  IAttributeInstance::removeAllModifiers
+IAttributeInstance::func_111126_e  IAttributeInstance::getAttributeValue
+
+BaseAttributeMap::field_111154_a  IAttributeMap::attributes  
+BaseAttributeMap::field_111153_b  BaseAttributeMap::attributesByName  
+BaseAttributeMap::func_111151_a  BaseAttributeMap::getAttributeInstance  
+BaseAttributeMap::func_111152_a  BaseAttributeMap::getAttributeInstanceByName  
+BaseAttributeMap::func_111150_b  BaseAttributeMap::registerAttribute  
+BaseAttributeMap::func_111146_a  BaseAttributeMap::getAllAttributes  
+BaseAttributeMap::func_111149_a  BaseAttributeMap::onAttributeModified  
+BaseAttributeMap::func_111148_a  BaseAttributeMap::removeAttributeModifiers  
+BaseAttributeMap::func_111147_b  BaseAttributeMap::applyAttributeModifiers 
+
+TileEntityRecordPlayer::func_96097_a	TileEntityRecordPlayer::getRecord
+TileEntityRecordPlayer::func_96098_a	TileEntityRecordPlayer::setRecord
+TileEntitySign::func_142010_a  TileEntitySign::setPlayer
+TileEntitySign::func_142009_b  TileEntitySign::getPlayer
+TileEntityHopper::func_98045_j TileEntityHopper::updateHopper
+TileEntityHopper::func_102012_a  TileEntityHopper::pullItemFromSlot 
+TileEntityHopper::func_96114_a TileEntityHopper::insertItem
+TileEntityHopper::func_102014_c TileEntityHopper::insertStackInSlot
+TileEntityHopper::func_96119_a TileEntityHopper::getCaptureItem

@@ -1,0 +1,50 @@
+#version 100
+
+precision mediump float;
+
+uniform sampler2D texSampler;
+//uniform sampler2D texDepth;
+uniform vec4 gaussianFilter[7];
+varying vec2 texCoord;
+
+float nearClip = 0.1;
+float farClip = 512.0;
+
+//float depthToZ(float depth)
+//{
+//	float z = depth * 2.0 - 1.0; // back to NDC 
+//    return (2.0 * nearClip * farClip) / (farClip + nearClip - z * (farClip - nearClip));  
+//}
+
+//vec3 caculateWeightAndOffset(float depth, vec2 offset, int weightIndex)
+//{
+//	
+//	vec3 rt;
+//	rt.xy = offset;
+//	rt.z = gaussianFilter[weightIndex].z;
+//	if(depth <=0.90)
+//		return rt;
+//	
+//	float baseZ = depthToZ(0.90);
+//	float curZ = depthToZ(depth);
+//	
+//	rt.xy *=((baseZ/curZ)*2.0);
+//	return rt;
+//}
+
+void main(void)
+{
+	vec4 color = texture2D(texSampler, texCoord) * gaussianFilter[0].z;
+	float a = texture2D(texSampler, texCoord).a;
+	for( int i = 1; i < 7; i++ )
+	{
+		vec2 offset = gaussianFilter[i].xy;
+		//vec3 offsetAndWeight = caculateWeightAndOffset(depth, offset, i);
+		float weight = gaussianFilter[i].z;
+		color += texture2D(texSampler, texCoord + offset) * weight;
+		color += texture2D(texSampler, texCoord - offset) * weight;
+	}
+	
+	gl_FragColor = vec4(color.rgb, a);
+}
+

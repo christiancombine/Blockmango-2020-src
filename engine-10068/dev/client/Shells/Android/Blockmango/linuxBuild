@@ -1,0 +1,158 @@
+#!/bin/bash
+PROJECT_DIR=$(pwd)
+echo "PROJECT_DIR IS : $PROJECT_DIR"
+BUILD_TYP="0"
+APP_APP_ABI="armeabi-v7a"
+APK_NAME="app-blockmango-v0.2.16-build-16.apk"
+BUILD_ARG="assembleDebug"
+GAME_ID="Empty"
+DOMAIN="http://mods.sandboxol.com/"
+
+while getopts "t:i:g:d:" opt; do
+    case $opt in
+		t)
+		 	if [ $OPTARG == "1" ] || [ $OPTARG == 0 ]; then
+		 		BUILD_TYP=$OPTARG
+		 		echo "this is -t the arg is ! $BUILD_TYP"
+		 	else
+		 		echo "error: argument -t=$OPTARG ,-t value 1(Debug) or 0 (Release)"
+		 		exit 1
+		 	fi
+	 	;;
+	 	i)
+			if [ $OPTARG == "all" ] || [ $OPTARG == "arm64-v8a" ] || [ $OPTARG == "armeabi" ] || [ $OPTARG == "armeabi-v7a" ] || [ $OPTARG == "mips" ] || [ $OPTARG == "mips64" ] || [ $OPTARG == "x86" ] || [ $OPTARG == "x86_64" ] || [ $OPTARG == "armeabi-v7a,x86" ]|| [ $OPTARG == "x86,armeabi-v7a" ] || [ $OPTARG == "armeabi-v7a,arm64-v8a" ] || [ $OPTARG == "arm64-v8a,armeabi-v7a" ] ; then
+				APP_APP_ABI=$OPTARG
+				echo "this is -i the arg is ! $APP_APP_ABI"
+			else
+				echo "error: argument -i=$OPTARG , '-i' value is phone CPU architecture : [ all arm64-v8a armeabi armeabi-v7a mips mips64 x86 x86_64 ]"
+		 		exit 1
+			fi
+		;;
+		g)
+			GAME_ID="blockymods"
+			FORMAT="g"
+			if [[ $OPTARG =~ $FORMAT ]] || [ $OPTARG == "blockymods" ] || [ $OPTARG == "all" ]; then
+				GAME_ID=$OPTARG
+				echo "this is -g the arg is ! $GAME_ID"
+			else
+				echo "error: argument -g=$OPTARG , '-g' value is game id : [ g1001-g10.. or blockymods ]"
+				exit 1
+			fi
+		;;
+		d)
+			DOMAIN=$OPTARG
+		;;
+		?)
+			echo "unkonw argument : argument -i [ all arm64-v8a armeabi armeabi-v7a mips mips64 x86 x86_64 ], -t [ 1(Debug) 0 (Release) ], -g [ g1001-g10.. or blockymods ]"
+			exit 1
+		;;
+    esac
+done
+
+cd $PROJECT_DIR
+echo "begin pull engine core"
+bash ./pullcore.sh
+if [ $? != 0 ]; then
+	echo "error: pull engine core failed"
+	exit 1
+fi
+echo "pull engine core succesfull"
+
+rm -rf $PROJECT_DIR/app/libs/
+
+if [ $BUILD_TYP == "1" ] ; then
+	BUILD_ARG="assembleDebug"
+else
+	BUILD_ARG="assembleDebug"
+fi
+
+echo "the arg is ! $BUILD_TYP     $APP_APP_ABI   $APK_NAME    $BUILD_ARG  "
+
+
+# build FreeType FreeImage zlib libLua
+cd "$PROJECT_DIR/../../../../../engine-core/dev/libraries/ApkBuild"
+$NDK17/ndk-build NDK_DEBUG=$BUILD_TYP APP_ABI=$APP_APP_ABI -j6
+if [ $? != 0 ]; then
+	echo "error:build FreeType FreeImage zlib libLua"
+	exit 1
+fi
+
+# build LordCore LordGLES2Render
+cd "$PROJECT_DIR/../../../../../engine-core/dev/engine/NDKBuild"
+$NDK17/ndk-build NDK_DEBUG=$BUILD_TYP APP_ABI=$APP_APP_ABI -j6
+if [ $? != 0 ]; then
+	echo "error:build LordCore LordGLES2Render"
+	exit 1
+fi
+
+# build libLogic
+cd "$PROJECT_DIR/../../../../logic/ApkBuild"
+$NDK17/ndk-build NDK_DEBUG=$BUILD_TYP APP_ABI=$APP_APP_ABI -j6
+if [ $? != 0 ]; then
+	echo "error:build libLogic"
+	exit 1
+fi
+
+# build libGameClient
+cd "$PROJECT_DIR/../../../ApkBuild"
+$NDK17/ndk-build NDK_DEBUG=$BUILD_TYP APP_ABI=$APP_APP_ABI -j6
+if [ $? != 0 ]; then
+	echo "error:build libGameClient"
+	exit 1
+fi
+
+# build libClothes
+cd "$PROJECT_DIR/../../../../../engine-core/dev/clothes/ApkBuild/"
+$NDK17/ndk-build NDK_DEBUG=$BUILD_TYP APP_ABI=$APP_APP_ABI -j6
+if [ $? != 0 ]; then
+	echo "error:build libClothes"
+	exit 1
+fi
+
+# build libMineCraft
+cd "$PROJECT_DIR/app"
+$NDK17/ndk-build NDK_DEBUG=$BUILD_TYP APP_ABI=$APP_APP_ABI -j6
+if [ $? != 0 ]; then
+	echo "error:build libMineCraft"
+	exit 1
+fi
+
+rm -rf $PROJECT_DIR/app/libs/*/libtersafe2.so
+
+# build libClothesPreview
+cd "$PROJECT_DIR/../../../../../engine-core/dev/clothes/Shells/Android/ClothesPreview/app"
+$NDK17/ndk-build NDK_DEBUG=$BUILD_TYP APP_ABI=$APP_APP_ABI -j6
+if [ $? != 0 ]; then
+	echo "error:build libClothesPreview"
+	exit 1
+fi
+
+cd "$PROJECT_DIR"
+
+echo "$PROJECT_DIR"
+echo $GAME_ID
+
+if [ $GAME_ID == "Empty" ]; then
+    rm -rf $PROJECT_DIR/app/src/main/assets/resources/Media
+    cp -rf $PROJECT_DIR/../../../../../res/client/Media  $PROJECT_DIR/app/src/main/assets/resources/Media/
+	mkdir $PROJECT_DIR/app/src/main/assets/resources/Media/LordCore
+	cp -rf $PROJECT_DIR/../../../../../engine-core/res/client/Media/LordCore/shader $PROJECT_DIR/app/src/main/assets/resources/Media/LordCore/shader
+else
+    echo copy media resource start $GAME_ID
+    python copy_resource.py -g $GAME_ID -d $DOMAIN
+	if [ $? != 0 ]; then
+		echo "error:copy media resource error" $GAME_ID
+		exit 1
+	fi
+	echo copy media resource end $GAME_ID
+fi
+
+rm -rf $PROJECT_DIR/app/src/main/assets/resources/recipe
+cp -rf $PROJECT_DIR/../../../../../res/client/recipe  $PROJECT_DIR/app/src/main/assets/resources/recipe/
+cp -rf $PROJECT_DIR/../../../../../res/client/resource.cfg  $PROJECT_DIR/app/src/main/assets/resources/resource.cfg
+cp -rf $PROJECT_DIR/../../../../../res/client/version.json  $PROJECT_DIR/app/src/main/assets/resources/version.json
+
+if [ $? != 0 ]; then
+	echo "error:copy file error"
+	exit 1
+fi

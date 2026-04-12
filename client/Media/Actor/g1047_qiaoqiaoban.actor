@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g1047_qiaoqiaoban.actor" Originalscale="1 1 1" Skeleton="g1047_qiaoqiaoban.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="body" SlaveName="1" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "g1047_qiaoqiaoban.skin" ChangeColor = "2.10195e-44 9.15048e-43 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1047_qiaoqiaoban_idle_01.anim" BeginTime = "0" Times = "1" Length = "0.366" FadeTime = "0.25" Channel = "" TimeScale = "0.5">
+				</Animation>
+			</Skill>
+			<Skill Name="idle2" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1047_qiaoqiaoban_idle_02.anim" BeginTime = "0" Times = "1" Length = "0.366" FadeTime = "0.25" Channel = "" TimeScale = "0.5">
+				</Animation>
+			</Skill>
+			<Skill Name="run" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1047_qiaoqiaoban_run.anim" BeginTime = "0" Times = "-1" Length = "1.033" FadeTime = "0.25" Channel = "" TimeScale = "0.5">
+				</Animation>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g1047_qiaoqiaoban_idle_01.anim"/>
+				<Anim Name="g1047_qiaoqiaoban_idle_02.anim"/>
+				<Anim Name="g1047_qiaoqiaoban_run.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

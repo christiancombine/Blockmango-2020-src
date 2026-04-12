@@ -1,0 +1,42 @@
+=================================================
+
+
+网络延迟优化
+1：大包拆分，尽量每个包不超过512byte
+ UDP数据包理想长度
+
+理论上 UDP 报文最大长度是65507字节，实际上发送这么大的数据包效果最好吗？我们知道UDP是不可靠的传输协议，为了减少 UDP 包丢失的风险，我们最好能控制 UDP 包在下层协议的传输过程中不要被切割。相信大家都知道MTU这个概念。 MTU 最大传输单元，这个最大传输单元实际上和链路层协议有着密切的关系，EthernetII 帧的结构 DMAC + SMAC + Type + Data + CRC 由于以太网传输电气方面的限制，每个以太网帧都有最小的大小64字节，最大不能超过1518字节，对于小于或者大于这个限制的以太网帧我们都可以视之为错误的数据帧，一般的以太网转发设备会丢弃这些数据帧。由于以太网 EthernetII 最大的数据帧是1518字节，除去以太网帧的帧头（DMAC目的 MAC 地址48bit=6Bytes+SMAC源 MAC 地址48bit=6Bytes+Type域2bytes）14Bytes和帧尾CRC校验部分4Bytes那么剩下承载上层协议的地方也就是Data域最大就只能有1500字节这个值我们就把它称之为MTU。
+在下层数据链路层最大传输单元是1500字节的情况下，要想IP层不分包，那么UDP数据包的最大大小应该是1500字节 – IP头(20字节) – UDP头(8字节) = 1472字节。不过鉴于Internet上的标准MTU值为576字节，所以建议在进行Internet的UDP编程时，最好将UDP的数据长度控制在 (576-8-20)548字节以内。
+
+The Internet Protocol requires that hosts must be able to process IP datagrams of at least 576 bytes (for IPv4) or 1280 bytes (for IPv6). However, this does not preclude Data Link Layers with an MTU smaller than IP's minimum MTU from conveying IP data. For example, according to IPv6's specification, if a particular Data Link Layer physically cannot deliver an IP datagram of 1280 bytes in a single frame, then the link layer must provide its own fragmentation and reassembly mechanism, separate from IP's own fragmentation mechanism, to ensure that a 1280-byte IP datagram can be delivered, intact, to the IP layer.
+
+
+优化步骤
+1：增加recv game info统计，确定是否是由于包太多导致部分玩家收不到game info回包
+2：是的话，调小mtu为576，udp包合并；否的话只调整udp包合并
+3：packet->encode() 放收发线程
+
+-------------------------------
+
+server:
+D:/code/blockmango-client/dev/server/src/../../logic/dependencies/win32/raknet/lib
+D:/code/blockmango-client/dev/server/src/../../logic/dependencies/win32/raknet/lib/$(Configuration)
+RakNet.lib
+
+改成
+D:/test/raknet/raknet_static_lib/$(Configuration)
+raknet_static_lib.lib
+
+-------------------------------
+client:
+../../../../logic/dependencies/win32/raknet/lib/debug
+raknet.lib
+
+改成
+D:/test/raknet/raknet_static_lib/Debug
+raknet_static_lib.lib
+-------------------------------
+编译raknet库注意事项
+1：记得复制最新的头文件到对应目录
+2：记得复制修改src文件到对应目录（不清楚windows，ios编译的是哪个目录，都复制一份，这个库没管理好。。。）
+3：更改MAX_MTU_SIZE宏及mtuSizes数组都为576

@@ -1,0 +1,255 @@
+#include "GuiDef.h"
+#include "Functional/LordNewOp.h"
+#include "UI/GUIWindowFactory.h"
+#include "GUI/GuiItemStack.h"
+#include "GUI/GuiItemSlot.h"
+#include "GUI/GuiSlotTable.h"
+#include "GUI/GuiEntityWindow.h"
+#include "GUI/GuiActorWindow.h"
+#include "GUI/GuiScrollableInventory.h"
+#include "GUI/GUIShopGoods.h"
+#include "GUI/GUISummaryItem.h"
+#include "GUI/GuiPlayerItem.h"
+#include "GUI/GUIShopGridView.h"
+#include "GUI/GUICommonTeamInfo.h"
+#include "GUI/GuiAppShopItem.h"
+#include "GUI/GuiManorFurnitureItem.h"
+#include "GUI/GuiManorHouseTemplateItem.h"
+#include "GUI/GuiManorMessageItem.h"
+#include "GUI/GUISwitchablePropItem.h"
+#include "GUI/GUIUpgradePropItem.h"
+#include "GUI/GUIBuildWarGuessItem.h"
+#include "GUI/GuiTeamResourcesItem.h"
+#include "GUI/GUIEnchantmentPropItem.h"
+#include "GUI/GUISuperPropItem.h"
+#include "GUI/GUIKillMsgItem.h"
+#include "GUI/GUICustomPropItem.h"
+#include "GUI/GUICarProgress.h"
+#include "GUI/GuiRanchFunctionItem.h"
+#include "GUI/GuiRanchItem.h"
+#include "GUI/GuiRanchRankItem.h"
+#include "GUI/GuiRanchRankTab.h"
+#include "GUI/GuiRanchCommonItem.h"
+#include "GUI/GuiRanchStorageItem.h"
+#include "GUI/GuiRanchBuildItem.h"
+#include "GUI/GuiRanchBuildShortcut.h"
+#include "GUI/GuiRanchSellItem.h"
+#include "GUI/GuiRanchCommunityItem.h"
+#include "GUI/GuiRanchOrderItem.h"
+#include "GUI/GuiRanchOrderOperate.h"
+#include "GUI/GuiRanchFriendOperate.h"
+#include "GUI/GuiRanchFriendHelpItem.h"
+#include "GUI/GuiRanchMailItem.h"
+#include "GUI/GuiRanchAchievementItem.h"
+#include "GUI/GuiRanchBuildRecipes.h"
+#include "GUI/GuiRanchBuildProduct.h"
+#include "GUI/GuiRanchBuildOperation.h"
+#include "GUI/GuiRanchBuildFactoryQueue.h"
+#include "GUI/GuiRanchBuildFarmQueue.h"
+#include "GUI/GuiUrlImage.h"
+#include "GUI/GUIGunStoreTab.h"
+#include "GUI/GUIStoreGunItem.h"
+#include "GUI/GUIStorePropItem.h"
+#include "GUI/GUIStorePropertyItem.h"
+#include "GUI/GUIPixelGunHallModeSelectMapItem.h"
+#include "GUI/GUIStoreAttributeItem.h"
+#include "GUI/GUIGunStoreLevel.h"
+#include "GUI/GUIChestLotteryItem.h"
+#include "GUI/GUIChestRewardItem.h"
+#include "GUI/GUISeasonHonorItem.h"
+#include "GUI/GUISeasonRankItem.h"
+#include "GUI/GUISeasonRewardItem.h"
+#include "GUI/GUISeasonRankPanel.h"
+#include "GUI/GUIBedWarSeasonHonorItem.h"
+#include "GUI/GUIBedWarSeasonRankItem.h"
+#include "GUI/GUIBedWarSeasonRewardItem.h"
+#include "GUI/GUIBedWarSeasonRankPanel.h"
+#include "GUI/GuiBirdPack.h"
+#include "GUI/GuiBirdFuse.h"
+#include "GUI/GuiBirdPackAndFuseItem.h"
+#include "GUI/GuiBirdDressItem.h"
+#include "GUI/GuiBirdFeedItem.h"
+#include "GUI/GuiBirdPersonalShopItem.h"
+#include "GUI/GuiBirdLotteryItem.h"
+#include "GUI/GuiBirdAtlasItem.h"
+#include "GUI/GuiBirdTaskItem.h"
+#include "GUI/GuiBirdActivityItem.h"
+#include "GUI/GuiCheckinItem.h"
+#include "GUI/GuiBirdTool.h"
+#include "GUI/GUIPixelGunActiveChest.h"
+#include "GUI/GUITaskMainLineTab.h"
+#include "GUI/GUITaskPanel.h"
+#include "GUI/GUITaskInfoItem.h"
+#include "GUI/GUITaskRewardItem.h"
+#include "GUI/GuiSelectableActionItem.h"
+#include "GUI/GUIBedWarRuneItem.h"
+#include "GUI/GUIBedWarRuneTypeItem.h"
+#include "GUI/GUIAppShopAdItem.h"
+#include "GUI/GUIPixelGunSignInItem.h"
+#include "GUI/GUIBedWarReclaimRuneItem.h"
+#include "GUI/GUIBedWarRuneProItem.h"
+#include "GUI/GUIPixelGunGiftBagItem.h"
+#include "GUI/GuiEffectViewOfObtainment.h"
+#include "GUI/GuiBlockCityTigerLotteryItem.h"
+#include "GUI/GuiBlockCityFriendItem.h"
+#include "GUI/GuiBlockCityRankItem.h"
+#include "GUI/GuiBlockCityChoosePaperItem.h"
+#include "GUI/GuiBlockCityBuyFlyItem.h"
+#include "GUI/GuiBlockCityElevatorItem.h"
+#include "GUI/GuiBlockCityCharmRankItem.h"
+#include "GUI/GuiBlockCityReceiveFlowerItem.h"
+#include "GUI/GuiBlockCitySaveFileItem.h"
+#include "GUI/GUISkyBlockTaskRewardItem.h"
+#include "GUI/GUISkyBlockTaskInfoItem.h"
+#include "GUI/GUISkyBlockTaskMainLineTab.h"
+#include "GUI/GUISkyBlockTaskPanel.h"
+#include "GUI/GuiSkyBlockAppShopItem.h"
+#include "GUI/GUISkyBlockRankItem.h"
+#include "GUIGunStoreModuleItem.h"
+#include "GUIGunStoreModulePanel.h"
+#include "GUIWalkingDeadStoreTab.h"
+#include "GUIWalkingDeadStoreItem.h"
+#include "GUIWalkingDeadSupplyDescItem.h"
+#include "GUIWalkingDeadStoreSupplyItem.h"
+#include "GUI/GUIGunStoreModuleItem.h"
+#include "GUI/GUIGunStoreModulePanel.h"
+#include "GUI/GuiCommonTabGridView.h"
+#include "GUI/GuiBlockFortStoreItem.h"
+#include "GUI/GuiBlockFortManorUpgradeItem.h"
+#include "GUI/GuiBlockFortItemInfo.h"
+#include "GUI/GuiSkyBlockPrivilegeShopItem.h"
+#include "GUI/GuiSkyBlockPrivilegeRewardItem.h"
+#include "GUI/GUIDesignationItem.h"
+#include "GUI/GuiBlockCityPortalItem.h"
+#include "GUI/GUISkyBlockSignInItem.h"
+
+
+namespace BLOCKMAN
+{
+	bool registerCustomUiWidget()
+	{
+		auto factory = GUIWindowFactory::Instance();
+
+		factory->registerWindowType(GWT_ITEM_STACK, lord_new_op<GuiItemStack>());
+		factory->registerWindowType(GWT_ITEM_SLOT, lord_new_op<GuiItemSlot>());
+		factory->registerWindowType(GWT_SLOT_TABLE, lord_new_op<GuiSlotTable>());
+		factory->registerWindowType(GWT_SCROLLABLE_INVENTORY, lord_new_op<GuiScrollableInventory>());
+		factory->registerWindowType(GWT_ENTITY_WINDOW, lord_new_op<GuiEntityWindow>());
+		factory->registerWindowType(GWT_ACTOR_WINDOW, lord_new_op<GuiActorWindow>());
+		factory->registerWindowType(GWT_SHOP_GRID_VIEW, lord_new_op<GuiShopGridView>());
+		factory->registerWindowType(GWT_SHOP_GOODS, lord_new_op<GUIShopGoods>());
+		factory->registerWindowType(GWT_SUMMARY_ITEM, lord_new_op<GuiSummaryItem>());
+		factory->registerWindowType(GWT_PLYAER_ITEM, lord_new_op<GuiPlayerItem>());
+		factory->registerWindowType(GWT_COMMON_TEAM_INFO, lord_new_op<GuiCommonTeamInfo>());
+		factory->registerWindowType(GWT_APP_SHOP_ITEM, lord_new_op<GuiAppShopItem>());
+		factory->registerWindowType(GWT_APP_SHOP_AD_ITEM, lord_new_op<GUIAppShopAdItem>());
+		factory->registerWindowType(GWT_MANOR_HOUSE_TEMPLATE_ITEM, lord_new_op<GuiManorHouseTemplateItem>());
+		factory->registerWindowType(GWT_MANOR_MESSAGE_ITEM, lord_new_op<GuiManorMessageItem>());
+		factory->registerWindowType(GWT_MANOR_FURNITURE_ITEM, lord_new_op<GuiManorFurnitureItem>());
+		factory->registerWindowType(GWT_SWITCHABLE_PROP_ITEM, lord_new_op<GUISwitchablePropItem>());
+		factory->registerWindowType(GWT_UPGRADE_PROP_ITEM, lord_new_op<GUIUpgradePropItem>());
+		factory->registerWindowType(GWT_BUILDWAR_GUESS_ITEM, lord_new_op<GuiBuildWarGuessItem>());
+		factory->registerWindowType(GWT_TEAM_RESOURCES_ITEM, lord_new_op<GuiTeamResourcesItem>());
+		factory->registerWindowType(GWT_ENCHANTMENT_PROP_ITEM, lord_new_op<GUIEnchantmentPropItem>());
+		factory->registerWindowType(GWT_SUPER_PROP_ITEM, lord_new_op<GUISuperPropItem>());
+		factory->registerWindowType(GWT_KILL_MSG_ITEM, lord_new_op<GUIKillMsgItem>());
+		factory->registerWindowType(GWT_CUSTOM_PROP_ITEM, lord_new_op<GUICustomPropItem>());
+		factory->registerWindowType(GWT_CAR_PROGRESS, lord_new_op<GUICarProgress>());
+		factory->registerWindowType(GWT_RANCH_FUNCTION_ITEM, lord_new_op<GuiRanchFunctionItem>());
+		factory->registerWindowType(GWT_RANCH_ITEM, lord_new_op<GuiRanchItem>());
+		factory->registerWindowType(GWT_RANCH_RANK_ITEM, lord_new_op<GuiRanchRankItem>());
+		factory->registerWindowType(GWT_RANCH_RANK_TAB, lord_new_op<GuiRanchRankTab>());
+		factory->registerWindowType(GWT_RANCH_COMMON_ITEM, lord_new_op<GuiRanchCommonItem>());
+		factory->registerWindowType(GWT_RANCH_STORAGE_ITEM, lord_new_op<GuiRanchStorageItem>());
+		factory->registerWindowType(GWT_RANCH_BUILD_ITEM, lord_new_op<GuiRanchBuildItem>());
+		factory->registerWindowType(GWT_RANCH_BUILD_SHORTCUT, lord_new_op<GuiRanchBuildShortcut>());
+		factory->registerWindowType(GWT_RANCH_SELL_ITEM, lord_new_op<GuiRanchSellItem>());
+		factory->registerWindowType(GWT_RANCH_COMMUNITY_ITEM, lord_new_op<GuiRanchCommunityItem>());
+		factory->registerWindowType(GWT_RANCH_ORDER_ITEM, lord_new_op<GuiRanchOrderItem>());
+		factory->registerWindowType(GWT_RANCH_ORDER_OPERATE, lord_new_op<GuiRanchOrderOperate>());
+		factory->registerWindowType(GWT_RANCH_FRIEND_OPERATE, lord_new_op<GuiRanchFriendOperate>());
+		factory->registerWindowType(GWT_RANCH_FRIEND_HELP_ITEM, lord_new_op<GuiRanchFriendHelpItem>());
+		factory->registerWindowType(GWT_RANCH_MAIL_ITEM, lord_new_op<GuiRanchMailItem>());
+		factory->registerWindowType(GWT_RANCH_ACHIEVEMENT_ITEM, lord_new_op<GuiRanchAchievementItem>());
+		factory->registerWindowType(GWT_URL_IMAGE, lord_new_op<GuiUrlImage>());
+		factory->registerWindowType(GWT_EFFECT_VIEW_OF_OBTAINMENT, lord_new_op<GuiEffectViewOfObtainment>());
+		factory->registerWindowType(GWT_RANCH_BUILD_RECIPES, lord_new_op<GuiRanchBuildRecipes>());
+		factory->registerWindowType(GWT_RANCH_BUILD_PRODUCT, lord_new_op<GuiRanchBuildProduct>());
+		factory->registerWindowType(GWT_RANCH_BUILD_OPERATION, lord_new_op<GuiRanchBuildOperation>());
+		factory->registerWindowType(GWT_RANCH_BUILD_FACTORY_QUEUE, lord_new_op<GuiRanchBuildFactoryQueue>());
+		factory->registerWindowType(GWT_RANCH_BUILD_FARM_QUEUE, lord_new_op<GuiRanchBuildFarmQueue>());
+		factory->registerWindowType(GWT_GUN_STORE_TAB, lord_new_op<GUIGunStoreTab>());
+		factory->registerWindowType(GWT_STORE_GUN_ITEM, lord_new_op<GUIStoreGunItem>());
+		factory->registerWindowType(GWT_STORE_PROP_ITEM, lord_new_op<GUIStorePropItem>());
+		factory->registerWindowType(GWT_STORE_PROPERTY_ITEM, lord_new_op<GUIStorePropertyItem>());
+		factory->registerWindowType(GWT_PIXEL_GUNHALL_MODE_SELECT_MAP_ITEM, lord_new_op<GUIPixelGunHallModeSelectMapItem>());
+		factory->registerWindowType(GWT_STORE_ATTRIBUTE_ITEM, lord_new_op<GUIStoreAttributeItem>());
+		factory->registerWindowType(GWT_GUN_STORE_LEVEL, lord_new_op<GUIGunStoreLevel>());
+		factory->registerWindowType(GWT_CHEST_LOTTERY_ITEM, lord_new_op<GUIChestLotteryItem>());
+		factory->registerWindowType(GWT_CHEST_REWARD_ITEM, lord_new_op<GUIChestRewardItem>());
+		factory->registerWindowType(GWT_SEASON_HONOR_ITEM, lord_new_op<GUISeasonHonorItem>());
+		factory->registerWindowType(GWT_SEASON_RANK_ITEM, lord_new_op<GUISeasonRankItem>());
+		factory->registerWindowType(GWT_SEASON_REWARD_ITEM, lord_new_op<GUISeasonRewardItem>());
+		factory->registerWindowType(GWT_SEASON_RANK_PANEL, lord_new_op<GUISeasonRankPanel>());
+		factory->registerWindowType(GWT_BEDWAR_SEASON_HONOR_ITEM, lord_new_op<GUIBedWarSeasonHonorItem>());
+		factory->registerWindowType(GWT_BEDWAR_SEASON_RANK_ITEM, lord_new_op<GUIBedWarSeasonRankItem>());
+		factory->registerWindowType(GWT_BEDWAR_SEASON_REWARD_ITEM, lord_new_op<GUIBedWarSeasonRewardItem>());
+		factory->registerWindowType(GWT_BEDWAR_SEASON_RANK_PANEL, lord_new_op<GUIBedWarSeasonRankPanel>());
+		factory->registerWindowType(GWT_BIRD_PACK, lord_new_op<GuiBirdPack>());
+		factory->registerWindowType(GWT_BIRD_FUSE, lord_new_op<GuiBirdFuse>());
+		factory->registerWindowType(GWT_BIRD_TOOL, lord_new_op<GuiBirdTool>());
+		factory->registerWindowType(GWT_BIRD_PACK_AND_FUSE_ITEM, lord_new_op<GuiBirdPackAndFuseItem>());
+		factory->registerWindowType(GWT_BIRD_DRESS_ITEM, lord_new_op<GuiBirdDressItem>());
+		factory->registerWindowType(GWT_BIRD_FEED_ITEM, lord_new_op<GuiBirdFeedItem>());
+		factory->registerWindowType(GWT_BIRD_PERSONAL_SHOP_ITEM, lord_new_op<GuiBirdPersonalShopItem>());
+		factory->registerWindowType(GWT_BIRD_LOTTERY_ITEM, lord_new_op<GuiBirdLotteryItem>());
+		factory->registerWindowType(GWT_BIRD_ATLAS_ITEM, lord_new_op<GuiBirdAtlasItem>());
+		factory->registerWindowType(GWT_BIRD_TASK_ITEM, lord_new_op<GuiBirdTaskItem>());
+		factory->registerWindowType(GWT_BIRD_ACTIVITY_ITEM, lord_new_op<GuiBirdActivityItem>());
+		factory->registerWindowType(GWT_CHECKIN_ITEM, lord_new_op<GuiCheckinItem>());
+		factory->registerWindowType(GWT_PIXEL_GUN_ACTIVE_CHEST, lord_new_op<GUIPixelGunActiveChest>());
+		factory->registerWindowType(GWT_TASK_MAINLINE_TAB, lord_new_op<GUITaskMainLineTab>());
+		factory->registerWindowType(GWT_TASK_PANEL, lord_new_op<GUITaskPanel>());
+		factory->registerWindowType(GWT_TASK_INFO_ITEM, lord_new_op<GUITaskInfoItem>());
+		factory->registerWindowType(GWT_TASK_REWARD_ITEM, lord_new_op<GUITaskRewardItem>());
+		factory->registerWindowType(GWT_SELECTABLE_ACTION_ITEM, lord_new_op<GuiSelectableActionItem>());
+		factory->registerWindowType(GWT_BED_WAR_RUNE_TYPE_ITEM, lord_new_op<GuiBedWarRuneTypeItem>());
+		factory->registerWindowType(GWT_BED_WAR_RUNE_ITEM, lord_new_op<GuiBedWarRuneItem>());
+		factory->registerWindowType(GWT_BED_WAR_RUNE_PRO_ITEM, lord_new_op<GuiBedWarRuneProItem>());
+		factory->registerWindowType(GWT_PIXEL_GUN_SIGN_IN_ITEM, lord_new_op<GUIPixelGunSignInItem>());
+		factory->registerWindowType(GWT_BED_WAR_RECLAIM_RUNE_ITEM, lord_new_op<GuiBedWarReclaimRuneItem>());
+		factory->registerWindowType(GWT_PIXEL_GUN_GIFT_BAG_ITEM, lord_new_op<GUIPixelGunGiftBagItem>());
+		factory->registerWindowType(GWT_BLOCKCITY_TIGER_LOTTERY_ITEM, lord_new_op<GuiBlockCityTigerLotteryItem>());
+		factory->registerWindowType(GWT_BLOCKCITY_FRIEND_ITEM, lord_new_op<GuiBlockCityFriendItem>());
+		factory->registerWindowType(GWT_BLOCKCITY_RANK_ITEM, lord_new_op<GuiBlockCityRankItem>());
+		factory->registerWindowType(GWT_BLOCKCITY_CHOOSE_PAPER_ITEM, lord_new_op<GuiBlockCityChoosePaperItem>());
+		factory->registerWindowType(GWT_BLOCKCITY_BUY_FLY_ITEM, lord_new_op<GuiBlockCityBuyFlyItem>());
+		factory->registerWindowType(GWT_SKYBLOCK_TASK_REWARD_ITEM, lord_new_op<GUISkyBlockTaskRewardItem>());
+		factory->registerWindowType(GWT_SKYBLOCK_TASK_INFO_ITEM, lord_new_op<GUISkyBlockTaskInfoItem>());
+		factory->registerWindowType(GWT_SKYBLOCK_TASK_MAINLINE_TAB, lord_new_op<GUISkyBlockTaskMainLineTab>());
+		factory->registerWindowType(GWT_SKYBLOCK_TASK_PANEL, lord_new_op<GUISkyBlockTaskPanel>());
+		factory->registerWindowType(GWT_GUN_STORE_MODULE_PANEL, lord_new_op<GUIGunStoreModulePanel>());
+		factory->registerWindowType(GWT_GUN_STORE_MODULE_ITEM, lord_new_op<GUIGunStoreModuleItem>());
+		factory->registerWindowType(GWT_SKYBLOCK_APP_SHOP_ITEM, lord_new_op<GuiSkyBlockAppShopItem>());
+		factory->registerWindowType(GWT_SKYBLOCK_RANK_ITEM, lord_new_op<GUISkyBlockRankItem>());
+		factory->registerWindowType(GWT_DESIGNATION_ITEM, lord_new_op<GUIDesignationItem>());
+		factory->registerWindowType(GWT_WALKING_DEAD_STORE_TAB, lord_new_op<GUIWalkingDeadStoreTab>());
+		factory->registerWindowType(GWT_WALKING_DEAD_STORE_ITEM, lord_new_op<GUIWalkingDeadStoreItem>());
+		factory->registerWindowType(GWT_WALKING_DEAD_SUPPLY_ITEM, lord_new_op<GUIWalkingDeadSupplyDescItem>());
+		factory->registerWindowType(GWT_WALKING_DEAD_STORE_SUPPLY_ITEM, lord_new_op<GUIWalkingDeadStoreSupplyItem>());
+		factory->registerWindowType(GWT_GUI_COMMON_TAB_GRID_VIEW, lord_new_op<GuiCommonTabGridView>());
+		factory->registerWindowType(GWT_BLOCKFORT_ITEM_INFO, lord_new_op<GuiBlockFortItemInfo>());
+		factory->registerWindowType(GWT_GUI_BLOCK_FORT_STORE_ITEM_VIEW, lord_new_op<GuiBlockFortStoreItem>());
+		factory->registerWindowType(GWT_BLOCKFORT_MANOR_UPGRADE_ITEM, lord_new_op<GuiBlockFortManorUpgradeItem>());
+		factory->registerWindowType(GWT_BLOCKCITY_ELEVATOR_ITEM, lord_new_op<GuiBlockCityElevatorItem>());
+		factory->registerWindowType(GWT_BLOCKCITY_CHARM_RANK_ITEM, lord_new_op<GuiBlockCityCharmRankItem>());
+		factory->registerWindowType(GWT_BLOCKCITY_RECEIVE_FLOWER_ITEM, lord_new_op<GuiBlockCityReceiveFlowerItem>());	
+		factory->registerWindowType(GWT_BLOCKCITY_SAVE_FILE_ITEM, lord_new_op<GuiBlockCitySaveFileItem>());
+		factory->registerWindowType(GWT_BLOCKCITY_PORTAL_ITEM, lord_new_op<GuiBlockCityPortalItem>());
+		factory->registerWindowType(GWT_SKYBLOCK_PRIVILEGE_SHOP_ITEM, lord_new_op<GuiSkyBlockPrivilegeShopItem>());
+		factory->registerWindowType(GWT_SKYBLOCK_PRIVILEGE_REWARD_ITEM, lord_new_op<GuiSkyBlockPrivilegeRewardItem>());
+		factory->registerWindowType(GWT_SKYBLOCK_SIGN_IN_ITEM, lord_new_op<GUISkyBlockSignInItem>());
+
+		return true;
+	}
+}

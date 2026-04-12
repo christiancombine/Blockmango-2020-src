@@ -1,0 +1,29 @@
+#version 100
+
+precision mediump float;
+
+uniform sampler2D texSampler;
+uniform sampler2D texSampler2; 
+uniform vec3 bloomParam;
+
+varying vec2 texCoord;
+
+vec4 adjustSaturation(vec4 color, float saturation)
+{
+    float gray = dot(color.xyz, vec3(0.3, 0.59, 0.11));
+	float limitSaturation = (1.0-gray/1.0);
+    return vec4(gray, gray, gray, gray) * (1.0-saturation)*limitSaturation + color * saturation*limitSaturation; //lerp
+}
+
+void main(void)
+{
+	vec4 sceneColor = texture2D(texSampler, texCoord);
+	vec4 bloomColor = texture2D(texSampler2, texCoord);
+	float bloomSaturation = bloomParam.y;
+	float bloomIntensity = bloomParam.z;
+	
+	bloomColor = clamp(adjustSaturation(bloomColor, bloomSaturation) * bloomIntensity, 0.0, 1.0);
+	sceneColor *= (1.0 - bloomColor);
+	
+	gl_FragColor = sceneColor + bloomColor;
+}

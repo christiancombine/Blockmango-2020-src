@@ -1,0 +1,454 @@
+#coinMapping Attention:coinId=1:Book coinId=2:gold_ingot coinId=3:cash coinId=4:sand coinId=5:diamond coinId=6:emerald
+#身份是1=警察，2=逃犯，3=囚犯
+coinMapping:
+    -
+        coinId: 1
+        itemId: 340
+    -
+        coinId: 2
+        itemId: 266
+    -
+        coinId: 3
+        itemId: 10000
+    -
+        coinId: 4
+        itemId: 12
+    -
+        coinId: 5
+        itemId: 264
+    -
+        coinId: 6
+        itemId: 388
+    -
+        coinId: 7
+        itemId: 297
+    -
+        coinId: 8
+        itemId: 364
+        
+#stores config
+stores:
+    -
+        # 监狱商人，卖钥匙、吃的和铲子给囚犯、罪犯
+        initPos: [318.5, 62, 289.5, 0]
+        name: "green.merchant.name"
+        goods:
+            1: #role警察，可以买吃的
+                0: #type
+                    -
+                        desc: "item.bread.name"
+                        price: [297, 0, 3, 3, 30]
+                    -
+                        desc: "item.beefCooked.name"
+                        price: [364, 0, 3, 3, 60]
+            2: #role
+                0: #type
+                    -
+                        desc: "item.shovelIron.name"
+                        price: [256, 0, 1, 1, 10]
+                    -
+                        desc: "item.bread.name"
+                        price: [297, 0, 3, 1, 5]
+                    -
+                        desc: "item.beefCooked.name"
+                        price: [364, 0, 3, 1, 7]
+                    -
+                        desc: "jail_item_name_key"
+                        price: [452, 0, 2, 1, 15]
+    -
+        # 警局商人，出售基础武器和护甲
+        initPos: [317.5, 62, 231.5, 90]
+        name: "blue.merchant.name"
+        goods:
+            1: #role
+                1: #护甲类
+                    -
+                        desc: "item.helmetIron.name"
+                        videoAd: true
+                        price: [306, 0, 1, 3, 150]
+                    -
+                        desc: "item.chestplateIron.name"
+                        videoAd: true
+                        price: [307, 0, 1, 3, 300]
+                    -
+                        desc: "item.leggingsIron.name"
+                        videoAd: true
+                        price: [308, 0, 1, 3, 150]
+                    -
+                        desc: "item.bootsIron.name"
+                        videoAd: true
+                        price: [309, 0, 1, 3, 100]
+                2: #武器类
+                    -
+                        desc: "gui_gun_name_1.name"
+                        price: [426, 0, 1, 3, 100]
+                    -
+                        desc: "gui_gun_name_2.name"
+                        price: [427, 0, 1, 3, 800]
+                    -
+                        desc: "gui_gun_name_3.name"
+                        price: [428, 0, 1, 3, 550]
+                    -
+                        desc: "item.shouliudan.name"
+                        price: [425, 0, 1, 3, 500]
+                    -
+                        desc: "gui_gun_name_6.name"
+                        price: [430, 0, 1, 3, 2800]
+                    -
+                        desc: "gui_bullet_name_1.name"
+                        price: [441, 0, 20, 3, 16]
+                    -
+                        desc: "gui_bullet_name_2.name"
+                        price: [442, 0, 30, 3, 36]
+                    -
+                        desc: "gui_bullet_name_3.name"
+                        price: [443, 0, 45, 3, 72]
+                    -
+                        desc: "gui_bullet_name_5.name"
+                        price: [446, 0, 10, 3, 80]
+                5: #其他
+                    -
+                        desc: "item.bread.name"
+                        price: [297, 0, 10, 3, 100]
+                    -
+                        desc: "item.beefCooked.name"
+                        price: [364, 0, 10, 3, 200]
+                    -
+                        desc: "item.potion_heal.name"
+                        price: [517, 0, 1, 3, 150]
+                    -
+                        desc: "item.potion_move_speed.name"
+                        price: [519, 0, 1, 3, 100]
+                    -
+                        desc: "item.potion_jump.name"
+                        price: [514, 0, 1, 3, 150]
+                    -
+                        desc: "jail_item_name_key"
+                        price: [452, 0, 2, 3, 100]
+            2: #role
+                0: #type
+                    -
+                        desc: "item.shovelIron.name"
+                        price: [256, 0, 1, 1, 10]
+                    -
+                        desc: "item.bread.name"
+                        price: [297, 0, 3, 1, 5]
+                    -
+                        desc: "item.beefCooked.name"
+                        price: [364, 0, 3, 1, 7]
+                    -
+                        desc: "jail_item_name_key"
+                        price: [452, 0, 2, 1, 15]
+    -
+        # 黑市商人
+        initPos: [382.5, 63, 145.5, 235]
+        name: "red.merchant.name"
+        goods:
+            1: #role 警察可以买面包
+                5: #type
+                    -
+                        desc: "item.bread.name"
+                        price: [297, 0, 10, 3, 100]
+                    -
+                        desc: "item.beefCooked.name"
+                        price: [364, 0, 10, 3, 200]
+            2: #role=逃犯
+                1: #护甲类
+                    -
+                        desc: "item.helmetIron.name"
+                        videoAd: true
+                        price: [306, 0, 1, 3, 200]
+                    -
+                        desc: "item.chestplateIron.name"
+                        videoAd: true
+                        price: [307, 0, 1, 3, 400]
+                    -
+                        desc: "item.leggingsIron.name"
+                        videoAd: true
+                        price: [308, 0, 1, 3, 200]
+                    -
+                        desc: "item.bootsIron.name"
+                        videoAd: true
+                        price: [309, 0, 1, 3, 150]
+                2: #武器类
+                    -
+                        desc: "gui_gun_name_1.name"
+                        price: [426, 0, 1, 3, 100]
+                    -
+                        desc: "gui_gun_name_2.name"
+                        price: [427, 0, 1, 3, 800]
+                    -
+                        desc: "gui_gun_name_3.name"
+                        price: [428, 0, 1, 3, 600]
+                    -
+                        desc: "item.shouliudan.name"
+                        price: [425, 0, 1, 3, 600]
+                    -
+                        desc: "gui_gun_name_6.name"
+                        price: [430, 0, 1, 3, 2800]
+                    -
+                        desc: "gui_bullet_name_1.name"
+                        price: [441, 0, 20, 3, 16]
+                    -
+                        desc: "gui_bullet_name_2.name"
+                        price: [442, 0, 30, 3, 36]
+                    -
+                        desc: "gui_bullet_name_3.name"
+                        price: [443, 0, 45, 3, 72]
+                    -
+                        desc: "gui_bullet_name_5.name"
+                        price: [446, 0, 10, 3, 80]
+                5: #其他
+                    -
+                        desc: "item.cash.name"
+                        price: [10000, 0, 400, 2, 1]
+                    -
+                        desc: "item.cash.name"
+                        price: [10000, 0, 1000, 5, 1]
+                    -
+                        desc: "item.cash.name"
+                        price: [10000, 0, 700, 6, 1]
+                    -
+                        desc: "item.cash.name"
+                        price: [10000, 0, 10, 4, 1]
+                    -
+                        desc: "item.cash.name"
+                        price: [10000, 0, 10, 1, 1]
+                    -
+                        desc: "item.bread.name"
+                        price: [297, 0, 10, 3, 100]
+                    -
+                        desc: "item.beefCooked.name"
+                        price: [364, 0, 10, 3, 200]
+                    -
+                        desc: "item.potion_heal.name"
+                        price: [517, 0, 1, 3, 150]
+                    -
+                        desc: "item.potion_move_speed.name"
+                        price: [519, 0, 1, 3, 100]
+                    -
+                        desc: "item.potion_jump.name"
+                        price: [514, 0, 1, 3, 150]
+    -
+        # 隐藏商人
+        initPos: [150.5, 95, 302.5, 180]
+        name: "red.merchant.name"
+        goods:
+            1: #role 警察可以买面包
+                5: #type
+                    -
+                        desc: "item.bread.name"
+                        price: [297, 0, 10, 3, 110]
+                    -
+                        desc: "item.beefCooked.name"
+                        price: [364, 0, 10, 3, 220]
+            2: #role 逃犯拿多余的面包换钱
+                5: #type
+                    -
+                        desc: "item.cash.name"
+                        price: [10000, 0, 90, 7, 10]
+                    -
+                        desc: "item.cash.name"
+                        price: [10000, 0, 180, 8, 10]
+    -
+        # 黑翅膀
+        initPos: [217.5, 66, 41.5, 270]
+        name: "red.merchant.name"
+        goods:
+            1: #role 警察可以买面包和钥匙
+                5: #type
+                    -
+                        desc: "jail_item_name_key"
+                        price: [452, 0, 2, 3, 100]
+                    -
+                        desc: "item.bread.name"
+                        price: [297, 0, 10, 3, 100]
+                    -
+                        desc: "item.beefCooked.name"
+                        price: [364, 0, 10, 3, 200]
+            2: #role=逃犯
+                1: #护甲类
+                    -
+                        desc: "item.helmetIron.name"
+                        price: [306, 0, 1, 3, 200]
+                    -
+                        desc: "item.chestplateIron.name"
+                        price: [307, 0, 1, 3, 400]
+                    -
+                        desc: "item.leggingsIron.name"
+                        price: [308, 0, 1, 3, 200]
+                    -
+                        desc: "item.bootsIron.name"
+                        price: [309, 0, 1, 3, 150]
+                    -
+                        desc: "item.helmetDiamond.name"
+                        price: [310, 0, 1, 3, 800]
+                    -
+                        desc: "item.chestplateDiamond.name"
+                        price: [311, 0, 1, 3, 1600]
+                    -
+                        desc: "item.leggingsDiamond.name"
+                        price: [312, 0, 1, 3, 800]
+                    -
+                        desc: "item.bootsDiamond.name"
+                        price: [313, 0, 1, 3, 600]
+                2: #武器类
+                    -
+                        desc: "gui_gun_name_1.name"
+                        price: [426, 0, 1, 3, 100]
+                    -
+                        desc: "gui_gun_name_2.name"
+                        price: [427, 0, 1, 3, 800]
+                    -
+                        desc: "gui_gun_name_3.name"
+                        price: [428, 0, 1, 3, 600]
+                    -
+                        desc: "item.shouliudan.name"
+                        price: [425, 0, 1, 3, 600]
+                    -
+                        desc: "gui_gun_name_6.name"
+                        price: [430, 0, 1, 3, 2800]
+                    -
+                        desc: "gui_gun_name_9.name"
+                        price: [431, 0, 1, 3, 1800]
+                    -
+                        desc: "gui_gun_name_8.name"
+                        price: [432, 0, 1, 3, 600]
+                    -
+                        desc: "gui_gun_name_10.name"
+                        price: [434, 0, 1, 3, 4500]
+                    -
+                        desc: "gui_gun_name_11.name"
+                        price: [433, 0, 1, 3, 5000]
+                    -
+                        desc: "gui_bullet_name_1.name"
+                        price: [441, 0, 20, 3, 16]
+                    -
+                        desc: "gui_bullet_name_2.name"
+                        price: [442, 0, 30, 3, 36]
+                    -
+                        desc: "gui_bullet_name_3.name"
+                        price: [443, 0, 45, 3, 72]
+                    -
+                        desc: "gui_bullet_name_5.name"
+                        price: [446, 0, 10, 3, 80]
+                5: #其他
+                    -
+                        desc: "item.bread.name"
+                        price: [297, 0, 10, 3, 100]
+                    -
+                        desc: "item.beefCooked.name"
+                        price: [364, 0, 10, 3, 200]
+                    -
+                        desc: "item.potion_heal.name"
+                        price: [517, 0, 1, 3, 150]
+                    -
+                        desc: "item.potion_move_speed.name"
+                        price: [519, 0, 1, 3, 100]
+                    -
+                        desc: "item.potion_jump.name"
+                        price: [514, 0, 1, 3, 150]
+                    -
+                        desc: "item.potion.invisibility.name"
+                        price: [512, 0, 1, 3, 2000]
+    -
+    # 白翅膀，警察的终极商店
+        initPos: [217.5, 66, 52.5, 270]
+        name: "blue.merchant.name"
+        goods:
+            1: #role
+                1: #护甲类
+                    -
+                        desc: "item.helmetIron.name"
+                        price: [306, 0, 1, 3, 150]
+                    -
+                        desc: "item.chestplateIron.name"
+                        price: [307, 0, 1, 3, 300]
+                    -
+                        desc: "item.leggingsIron.name"
+                        price: [308, 0, 1, 3, 150]
+                    -
+                        desc: "item.bootsIron.name"
+                        price: [309, 0, 1, 3, 100]
+                    -
+                        desc: "item.helmetDiamond.name"
+                        price: [310, 0, 1, 3, 800]
+                    -
+                        desc: "item.chestplateDiamond.name"
+                        price: [311, 0, 1, 3, 1600]
+                    -
+                        desc: "item.leggingsDiamond.name"
+                        price: [312, 0, 1, 3, 800]
+                    -
+                        desc: "item.bootsDiamond.name"
+                        price: [313, 0, 1, 3, 600]
+                2: #武器类
+                    -
+                        desc: "gui_gun_name_1.name"
+                        price: [426, 0, 1, 3, 100]
+                    -
+                        desc: "gui_gun_name_2.name"
+                        price: [427, 0, 1, 3, 800]
+                    -
+                        desc: "gui_gun_name_3.name"
+                        price: [428, 0, 1, 3, 550]
+                    -
+                        desc: "item.shouliudan.name"
+                        price: [425, 0, 1, 3, 500]
+                    -
+                        desc: "gui_gun_name_6.name"
+                        price: [430, 0, 1, 3, 2800]
+                    -
+                        desc: "gui_gun_name_9.name"
+                        price: [431, 0, 1, 3, 1800]
+                    -
+                        desc: "gui_gun_name_8.name"
+                        price: [432, 0, 1, 3, 600]
+                    -
+                        desc: "gui_gun_name_10.name"
+                        price: [434, 0, 1, 3, 4500]
+                    -
+                        desc: "gui_gun_name_11.name"
+                        price: [433, 0, 1, 3, 5000]
+                    -
+                        desc: "gui_bullet_name_1.name"
+                        price: [441, 0, 20, 3, 16]
+                    -
+                        desc: "gui_bullet_name_2.name"
+                        price: [442, 0, 30, 3, 36]
+                    -
+                        desc: "gui_bullet_name_3.name"
+                        price: [443, 0, 45, 3, 72]
+                    -
+                        desc: "gui_bullet_name_5.name"
+                        price: [446, 0, 10, 3, 80]
+                5: #其他
+                    -
+                        desc: "item.bread.name"
+                        price: [297, 0, 10, 3, 100]
+                    -
+                        desc: "item.beefCooked.name"
+                        price: [364, 0, 10, 3, 200]
+                    -
+                        desc: "item.potion_heal.name"
+                        price: [517, 0, 1, 3, 150]
+                    -
+                        desc: "item.potion_move_speed.name"
+                        price: [519, 0, 1, 3, 100]
+                    -
+                        desc: "item.potion_jump.name"
+                        price: [514, 0, 1, 3, 150]
+                    -
+                        desc: "item.potion.invisibility.name"
+                        price: [512, 0, 1, 3, 2000]
+            2: #role 匪徒可以买面包和钥匙
+                5: #type
+                    -
+                        desc: "jail_item_name_key"
+                        price: [452, 0, 2, 3, 100]
+                    -
+                        desc: "item.bread.name"
+                        price: [297, 0, 10, 3, 100]
+                    -
+                        desc: "item.beefCooked.name"
+                        price: [364, 0, 10, 3, 200]

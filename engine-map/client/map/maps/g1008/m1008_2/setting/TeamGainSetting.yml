@@ -1,0 +1,93 @@
+#队伍增益效果配置
+TeamGains:
+  -
+    Id: "1001"
+    Name: "IronForgeGain"
+    Remark: "铁锻炉生产效率"
+    MaxLv: 4
+    InitLv: 0
+  -
+    Id: "1002"
+    Name: "ToolItemGain"
+    Remark: "为全队成员的工具添加永久的急迫附魔"
+    InitLv: 0
+    Gains:
+        -
+            EnchantId: 32
+            EnchantLv: 1
+        -
+            EnchantId: 32
+            EnchantLv: 2
+        -
+            EnchantId: 32
+            EnchantLv: 3
+        -
+            EnchantId: 32
+            EnchantLv: 4
+        -
+            EnchantId: 32
+            EnchantLv: 4
+  -
+    Id: "1003"
+    Name: "ArmorItemGain"
+    Remark: "为全队成员的防具添加永久的保护附魔"
+    InitLv: 0
+    Gains:
+        -
+            EnchantId: 0
+            EnchantLv: 1
+        -
+            EnchantId: 0
+            EnchantLv: 2
+        -
+            EnchantId: 0
+            EnchantLv: 3
+        -
+            EnchantId: 0
+            EnchantLv: 4
+        -
+            EnchantId: 0
+            EnchantLv: 4
+  -
+    Id: "1004"
+    Name: "SwordItemGain"
+    Remark: "为全队成员的剑添加永久的锋利附魔"
+    InitLv: 0
+    Gains:
+        -
+            EnchantId: 16
+            EnchantLv: 1
+        -
+            EnchantId: 16
+            EnchantLv: 2
+        -
+            EnchantId: 16
+            EnchantLv: 3
+        -
+            EnchantId: 16
+            EnchantLv: 4
+        -
+            EnchantId: 16
+            EnchantLv: 4
+  -
+    Id: "1005"
+    Name: "AddHPGain"
+    Remark: "全队成员在家里可以持续回复生命值"
+    InitLv: 0
+    Gains:
+        -
+            Interval: 4
+            AddHP: 1
+        -
+            Interval: 3
+            AddHP: 1
+        -
+            Interval: 2
+            AddHP: 1
+        -
+            Interval: 1
+            AddHP: 1
+        -
+            Interval: 1
+            AddHP: 1
+    

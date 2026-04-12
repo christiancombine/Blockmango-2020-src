@@ -1,0 +1,49 @@
+HotBar:
+  Background:
+    ImageName: "set:pixel_gun_item_slot.json image:bg"
+    Area: "{{0, 0},{0,0},{0,640}, {0,81}}"
+    StretchOffset: "120 120 0 0"
+    StretchType: "NineGrid"
+  VisibleBar:
+    Area: "{{0, 0},{0,0},{0,640}, {0,81}}"
+    StretchType: "NineGrid"
+  ToggleButton:
+    Area: "{{0,0 },{0,0},{0,0},{0,0}}"
+    NorImage: "set:new_gui_material.json image:diaochucaidananniu"
+    PreImage: "set:new_gui_material.json image:diaochucaidananniu"
+  SlotTable:
+    SlotStyle: "10000"
+    Area: "{{0, 28.5},{0,2},{0,611.5}, {1,0}}"
+    HorizontalInterval: "2"
+    SlotWidth: "63"
+    SlotHeight: "63"
+  SlotItem:
+    NorImage: "set:pixel_gun_item_slot.json image:slot"
+    PreImage: "set:pixel_gun_item_slot.json image:select"
+    NorStretchOffset: "6 6 6 6"
+    PreStretchOffset: "7 8 7 8"
+
+PlayerExp:
+  ProgressBackImage: "set:new_gui_material.json image:playerExpBg"
+  ProgressImage: "set:new_gui_material.json image:playerExpValue"
+  StretchOffset: "3 3 3 3"
+
+SlotItem:
+  -
+    SlotStyle: "10001"
+    NorImage: "set:pixelgun_kuang.json image:b_03"
+    PreImage: "set:pixelgun_kuang.json image:b_12"
+    NorStretchOffset: "6 6 6 6"
+    PreStretchOffset: "7 8 7 8"
+  -
+    SlotStyle: "10002"
+    NorImage: "set:pixelgun_kuang.json image:b_05"
+    PreImage: "set:pixelgun_kuang.json image:b_12"
+    NorStretchOffset: "6 6 6 6"
+    PreStretchOffset: "7 8 7 8"
+  -
+    SlotStyle: "10003"
+    NorImage: "set:pixelgun_kuang.json image:b_07"
+    PreImage: "set:pixelgun_kuang.json image:b_12"
+    NorStretchOffset: "6 6 6 6"
+    PreStretchOffset: "7 8 7 8"

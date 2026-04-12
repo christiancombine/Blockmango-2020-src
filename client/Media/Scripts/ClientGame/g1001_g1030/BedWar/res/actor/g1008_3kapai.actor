@@ -1,0 +1,35 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g1008_3kapai.actor" Originalscale="1 1 1" Skeleton="jingzhi.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="body" SlaveName="1" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "kapai.skin" ChangeColor = "2.10195e-44 9.01035e-43 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="close" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1008_close.anim" BeginTime = "0" Times = "1" Length = "0.7" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "jingzhi.anim" BeginTime = "0" Times = "-1" Length = "0.7" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="open" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1008_open.anim" BeginTime = "0" Times = "1" Length = "0.7" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="touch" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "kapai.anim" BeginTime = "0" Times = "1" Length = "0.533" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g1008_open.anim"/>
+				<Anim Name="g1008_close.anim"/>
+				<Anim Name="jingzhi.anim"/>
+				<Anim Name="kapai.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

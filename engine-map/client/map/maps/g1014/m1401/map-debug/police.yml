@@ -1,0 +1,98 @@
+initPos:
+    -
+        x: 307.5
+        y: 62
+        z: 247.5
+
+confineRoomPos:
+    -
+        x: 310
+        y: 68
+        z: 254
+
+inventory:
+    -
+        id: 426
+        num: 1
+    -
+        id: 441
+        num: 64
+    -
+        id: 451
+        num: 1
+    -
+        id: 297
+        num: 10
+
+actor: 
+    -
+        first: "custom_hair"
+        second: 1000
+    -
+        first: "clothes_tops"
+        second: 1004
+    -
+        first: "clothes_pants"
+        second: 1004
+    -
+        first: "custom_shoes"
+        second: 4
+
+data:
+    -
+        lv: 1
+        name: "Officer"
+        nameKey: "Officer"
+        merit: 0
+        wage: 100
+        maxWage: 1500
+    -
+        lv: 2
+        name: "Detective"
+        nameKey: "Detective"
+        merit: 200
+        wage: 150
+        maxWage: 3000
+    -
+        lv: 3
+        name: "Sergeant"
+        nameKey: "Sergeant"
+        merit: 1400
+        wage: 180
+        maxWage: 3500
+    -
+        lv: 4
+        name: "Lieutenant"
+        nameKey: "Lieutenant"
+        merit: 3600
+        wage: 200
+        maxWage: 5000
+    -
+        lv: 5
+        name: "Captain"
+        nameKey: "Captain"
+        merit: 6000
+        wage: 220
+        maxWage: 6000
+    -
+        lv: 6
+        name: "Commander"
+        nameKey: "Commander"
+        merit: 10800
+        wage: 240
+        maxWage: 7000
+
+wageTime: 120
+
+#功勋 = 罪犯威胁值 * meritMultiple + meritValue
+#警察功勋固定值
+meritValue: 5
+
+#警察功勋比例值
+meritMultiple: 0.25
+
+#警察杀死囚犯扣掉的固定值
+subMeritValue: 40
+
+#警察犯罪时扣功勋比例值
+subMeritMultiple: 2

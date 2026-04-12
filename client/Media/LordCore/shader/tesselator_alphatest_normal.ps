@@ -1,0 +1,41 @@
+#version 100
+
+precision mediump float;
+
+uniform sampler2D texSampler_texture;
+uniform sampler2D texSampler_lightmap;
+uniform vec4 fogColor;
+uniform float blockLightEnhancement;
+
+varying vec4 lightColor;
+varying vec4 lightmapUV;
+varying vec2 texCoord_texture;
+varying float lightStrength;
+void main(void)
+{
+    vec4 albedo = texture2D(texSampler_texture, texCoord_texture);   
+	if(albedo.w < 0.2)
+	{
+		discard;
+	}
+	
+	vec4 lightmapColor;
+	lightmapColor.r = texture2D(texSampler_lightmap, lightmapUV.yx).x;
+	lightmapColor.g = texture2D(texSampler_lightmap, lightmapUV.zx).y;
+	lightmapColor.b = texture2D(texSampler_lightmap, lightmapUV.wx).z;
+	lightmapColor.a = 1.0;
+
+	float minLight = min(min(lightmapUV.y, lightmapUV.z), lightmapUV.w);
+	float maxLight = max(max(lightmapUV.y, lightmapUV.z), lightmapUV.w);
+	float saturation = maxLight - minLight;
+    lightmapColor.rgb += lightmapUV.yzw * vec3(saturation * blockLightEnhancement);
+
+	vec3 result = min(albedo.xyz * lightmapColor.xyz * lightColor.xyz, vec3(1.0));
+
+	// add fog.
+	result = mix(fogColor.xyz, result, lightColor.w);
+	gl_FragColor.xyz = result;
+	gl_FragColor.w = albedo.a;
+	gl_FragColor.xyz*= (1.0 +lightStrength);
+}
+

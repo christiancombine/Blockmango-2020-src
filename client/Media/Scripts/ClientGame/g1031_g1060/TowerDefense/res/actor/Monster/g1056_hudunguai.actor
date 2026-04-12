@@ -1,0 +1,49 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g1056_hudunguai.actor" Originalscale="1 1 1" Skeleton="g1056_wanglingjunzhu.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="body" SlaveName="1" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "g1056_wanglingjunzhu.skin" ChangeColor = "2.10195e-44 9.19252e-43 1.4013e-45 0" UVSpeed = "0 0" LocalAlpha = "1">
+				</Skin>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="attack2" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1056_wanglingjunzhu_shifa.anim" BeginTime = "0" Times = "-1" Length = "2.233" FadeTime = "0.05" Channel = "" TimeScale = "1.5">
+				</Animation>
+				<Effect>
+					<FileName value="g1056_wanglingjunzhu_shifa.effect"/>
+					<SocketName value="Bip001_R_Hand"/>
+					<BeginTime value="0.3"/>
+					<Times value="-1"/>
+					<Position_X value="0.0680829"/>
+					<Position_Y value="0.148279"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="0.4"/>
+					<TimeScale value="0.8"/>
+					<Alpha value="1"/>
+					<CycleTime value="1.48"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1056_wanglingjunzhu_zhangli.anim" BeginTime = "0" Times = "-1" Length = "0.2" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="run" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1056_wanglingjunzhu_feixing.anim" BeginTime = "0" Times = "-1" Length = "1.7" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g1056_wanglingjunzhu_feixing.anim"/>
+				<Anim Name="g1056_wanglingjunzhu_shifa.anim"/>
+				<Anim Name="g1056_wanglingjunzhu_zhangli.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

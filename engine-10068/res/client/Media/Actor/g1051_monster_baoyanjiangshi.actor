@@ -1,0 +1,105 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g1051_monster_baoyanjiangshi.actor" Originalscale="1 1 1" Skeleton="g1051_huojiangshi.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="head" SlaveName="g1051_huojiangshi_head.skin" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "g1051_huojiangshi_head.skin" ChangeColor = "2.10195e-44 1.33123e-42 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1051_huojiangshi_weapon.skin" ChangeColor = "2.10195e-44 3.50184e-42 2.93769e+26 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1051_huojiangshi_body.skin" ChangeColor = "2.10195e-44 9.3887e-43 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Effect>
+					<FileName value="huoyan_zi_ok.effect"/>
+					<SocketName value="Bone001"/>
+					<Position_X value="0.323122"/>
+					<Position_Y value="-0.5938"/>
+					<Position_Z value="0.589882"/>
+					<yaw value="0"/>
+					<pitch value="68.5"/>
+					<roll value="0"/>
+					<scale value="1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+				</Effect>
+				<Effect>
+					<FileName value="huoyan_zi_ok.effect"/>
+					<SocketName value="Bip001_L_Hand"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="81"/>
+					<scale value="1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+				</Effect>
+				<Effect>
+					<FileName value="huoyan_zi_ok.effect"/>
+					<SocketName value="Bip001_R_Hand"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="91"/>
+					<scale value="1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+				</Effect>
+				<Effect>
+					<FileName value="jiayuantexiao01_jianzhushengji01_jierenwu_green.effect"/>
+					<SocketName value="Bip001"/>
+					<Position_X value="0"/>
+					<Position_Y value="-0.512492"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="0.6"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+				</Effect>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="attack" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1051_huojiangshi_attack_01.anim" BeginTime = "0" Times = "1" Length = "3" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+				<ActorScaleChange  beginScale = "1.3" endScale = "1.3" >
+				</ActorScaleChange>
+			</Skill>
+			<Skill Name="attack2" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1051_huojiangshi_attack_02.anim" BeginTime = "0" Times = "1" Length = "3.6" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+				<ActorScaleChange  beginScale = "1.3" endScale = "1.3" >
+				</ActorScaleChange>
+			</Skill>
+			<Skill Name="hitdown" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1051_huojiangshi_death.anim" BeginTime = "0" Times = "1" Length = "2.033" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+				<ActorScaleChange  beginScale = "1.3" endScale = "0.6" >
+				</ActorScaleChange>
+			</Skill>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1051_huojiangshi_walk.anim" BeginTime = "0" Times = "-1" Length = "1.366" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+				<ActorScaleChange  beginScale = "1.3" endScale = "1.3" >
+				</ActorScaleChange>
+			</Skill>
+			<Skill Name="walk" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1051_huojiangshi_walk.anim" BeginTime = "0" Times = "-1" Length = "1.366" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+				<ActorScaleChange  beginScale = "1.3" endScale = "1.3" >
+				</ActorScaleChange>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g1051_huojiangshi_walk.anim"/>
+				<Anim Name="g1051_huojiangshi_attack_01.anim"/>
+				<Anim Name="g1051_huojiangshi_attack_02.anim"/>
+				<Anim Name="g1051_huojiangshi_death.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

@@ -1,0 +1,191 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+import com.google.gson.Gson
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+    }
+}
+
+plugins {
+    id "de.undercouch.download" version "3.3.0"
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+
+    ext {
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+String getFileString(File file) {
+    try {
+        InputStreamReader inputStream = new InputStreamReader(new FileInputStream(file))
+        ByteArrayOutputStream baos = new ByteArrayOutputStream()
+        int i = -1
+        while ((i = inputStream.read()) != -1) {
+            baos.write(i)
+        }
+        String str = baos.toString()
+        baos.close()
+        inputStream.close()
+
+        return str
+    } catch (Exception e) {
+        return null
+    }
+}
+
+void outFile(File file, String str) {
+    FileOutputStream fos = new FileOutputStream(file)
+    PrintWriter pw = new PrintWriter(fos)
+    pw.write(str.toCharArray())
+    pw.flush()
+    fos.close()
+    println('outFile content: ' + str)
+}
+
+class Version {
+    String fileName
+    String fileUrl
+    String resVersion
+    int incrVersion
+    int engineVersion
+}
+
+class ResVersion {
+    String version
+    String filelistmd5
+
+    ResVersion(String ver, String md5) {
+        version = ver
+        filelistmd5 = md5
+    }
+}
+
+class IncrVersion {
+    int version
+
+    IncrVersion(int v) {
+        version = v
+    }
+}
+
+class EngineVersion {
+    long engineVersion
+
+    EngineVersion(long v) {
+        engineVersion = v
+    }
+}
+
+void initRes() {
+    String urlPath = "test_1"
+//    String urlPath = "oversea"
+    String versionFileUrl = 'https://ks3-cn-shanghai.ksyun.com/sandbox-region/blockman-so/'+ urlPath + '/res_version.json'
+    println('versionFileUrl ：' + versionFileUrl)
+    download {
+        src versionFileUrl
+        dest new File(buildDir, '/../app/build/res_version.json')
+    }
+
+    File versionFile = new File(buildDir, '/../app/build/res_version.json')
+    if (versionFile.exists()) {
+        String str = getFileString(versionFile)
+        println('versionFile content: ' + str)
+
+        Version fileVersion = new Gson().fromJson(str, Version.class)
+        String zipFileName = fileVersion.fileName
+        String zipFileUrl = fileVersion.fileUrl
+        String resVer = fileVersion.resVersion
+        int incrVer = fileVersion.incrVersion
+
+        File zipFile = new File(buildDir, '/../app/build/' + zipFileName)
+        File resVersionFile = new File(buildDir, '/../app/src/main/assets/resources/res.version')
+        boolean isDownloadFile = true
+        if (resVersionFile.exists()) {
+            String fileStr = getFileString(resVersionFile)
+            if (fileStr != null) {
+                ResVersion res = new Gson().fromJson(fileStr, ResVersion.class)
+                isDownloadFile = !res.version.equals(resVer)
+            }
+        }
+
+        if (!zipFile.exists() || isDownloadFile) {
+            println('start download =======================================')
+            download {
+                src zipFileUrl
+                dest zipFile
+            }
+            println('start delete =======================================')
+            delete {
+                delete 'app/build/resources', 'app/build/libs', 'app/src/main/assets/resources', 'app/libs/armeabi-v7a/libBlockMan.so'
+            }
+            println('start unzip =======================================')
+            copy {
+                from zipTree(zipFile.getPath())
+                into new File(buildDir, '/../app/build')
+            }
+            println('start copy armeabi-v7a =======================================')
+            copy {
+                from 'app/build/libs/armeabi-v7a/'
+                into 'app/libs/armeabi-v7a/'
+            }
+
+            delete {
+                delete 'app/libs/armeabi-v7a/libClothesPreview.so'
+            }
+
+            copy {
+                from 'app/build/resources'
+                into 'app/src/main/assets/resources'
+            }
+            println('copy done =======================================')
+        } else {
+            println('zipFile exists =======================================')
+        }
+
+        if (!resVersionFile.exists()) {
+            resVersionFile.createNewFile()
+        }
+
+        File incrVersionFile = new File(buildDir, '/../app/src/main/assets/resources/version.json')
+        if (!incrVersionFile.exists()) {
+            incrVersionFile.createNewFile()
+        }
+
+        if (fileVersion.engineVersion != 0) {
+            File engineVersionFile= new File(buildDir, '/../app/src/main/assets/resources/Media/engineVersion.json')
+            if (!engineVersionFile.exists()) {
+                engineVersionFile.createNewFile()
+            }
+            outFile(engineVersionFile, new Gson().toJson(new EngineVersion(fileVersion.engineVersion)))
+        }
+
+        outFile(resVersionFile, new Gson().toJson(new ResVersion(resVer, "f9bd6e2dd5d090f008ebaa8eed275bb9")))
+        outFile(incrVersionFile, new Gson().toJson(new IncrVersion(incrVer)))
+
+    } else {
+        println('versionFile not exists =======================================')
+    }
+}
+
+afterEvaluate {
+    initRes()
+    File engineVersionFile = new File(buildDir, '/../app/src/main/assets/resources/Media/engineVersion.json')
+    EngineVersion engines = new Gson().fromJson(getFileString(engineVersionFile), EngineVersion.class)
+    ext {
+        engineVersion =  engines.engineVersion
+    }
+}

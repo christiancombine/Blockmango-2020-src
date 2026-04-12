@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: BedWar_RushBed.xml-->
+<behavior name="BedWar_RushBed" agenttype="ServerAgent" version="5">
+  <node class="Sequence" id="0">
+    <node class="IfElse" id="1">
+      <node class="Sequence" id="2">
+        <node class="Action" id="4">
+          <property Method="Self.ServerAgent::FuncStatus(&quot;targetNotBreak&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Condition" id="39">
+          <property Operator="Equal" />
+          <property Opl="Self.ServerAgent::ValueBoolean(&quot;isLife&quot;)" />
+          <property Opr="const bool true" />
+        </node>
+      </node>
+      <node class="SelectorLoop" id="5">
+        <property ResetChildren="false" />
+        <node class="WithPrecondition" id="6">
+          <node class="DecoratorNot" id="10">
+            <property DecorateWhenChildEnds="false" />
+            <node class="Action" id="13">
+              <property Method="Self.ServerAgent::FuncStatus(&quot;inRushRange&quot;)" />
+              <property ResultOption="BT_INVALID" />
+            </node>
+          </node>
+          <node class="Action" id="15">
+            <property Method="Self.ServerAgent::FuncStatus(&quot;goRushBed&quot;)" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+        </node>
+        <node class="WithPrecondition" id="7">
+          <node class="Sequence" id="11">
+            <node class="Action" id="21">
+              <property Method="Self.ServerAgent::FuncStatus(&quot;inRushRange&quot;)" />
+              <property ResultOption="BT_INVALID" />
+            </node>
+            <node class="Action" id="19">
+              <property Method="Self.ServerAgent::FuncStatus(&quot;selectBlockList&quot;)" />
+              <property ResultOption="BT_INVALID" />
+            </node>
+            <node class="Action" id="14">
+              <property Method="Self.ServerAgent::FuncStatus(&quot;needBreakBlock&quot;)" />
+              <property ResultOption="BT_INVALID" />
+            </node>
+          </node>
+          <node class="Action" id="17">
+            <property Method="Self.ServerAgent::FuncStatus(&quot;moveToNextPos&quot;)" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+        </node>
+        <node class="WithPrecondition" id="8">
+          <node class="Sequence" id="12">
+            <node class="Action" id="16">
+              <property Method="Self.ServerAgent::FuncStatus(&quot;targetNotBreak&quot;)" />
+              <property ResultOption="BT_INVALID" />
+            </node>
+            <node class="DecoratorNot" id="22">
+              <property DecorateWhenChildEnds="false" />
+              <node class="Action" id="20">
+                <property Method="Self.ServerAgent::FuncStatus(&quot;needBreakBlock&quot;)" />
+                <property ResultOption="BT_INVALID" />
+              </node>
+            </node>
+          </node>
+          <node class="Action" id="18">
+            <property Method="Self.ServerAgent::FuncStatus(&quot;moveToTargetBed&quot;)" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+        </node>
+      </node>
+      <node class="Noop" id="3" />
+    </node>
+  </node>
+</behavior>

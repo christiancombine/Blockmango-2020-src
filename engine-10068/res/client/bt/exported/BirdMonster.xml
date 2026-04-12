@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: BirdMonster.xml-->
+<behavior name="BirdMonster" agenttype="BaseAgent" version="5">
+  <node class="Selector" id="4">
+    <node class="Sequence" id="0">
+      <node class="Action" id="1">
+        <property Method="Self.BaseAgent::findTargetPlayer()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="2">
+        <property Method="Self.BaseAgent::Move()" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+      <node class="Action" id="3">
+        <property Method="Self.BaseAgent::Attack()" />
+        <property ResultOption="BT_SUCCESS" />
+      </node>
+    </node>
+    <node class="Action" id="5">
+      <property Method="Self.BaseAgent::gotoHome()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

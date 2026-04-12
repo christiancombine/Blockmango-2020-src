@@ -1,0 +1,766 @@
+
+#圣诞礼物领取倒计时时长（秒）
+waitTime: 28800
+#圣诞活动结束时间戳
+christmasFinishTime: 4102470000
+
+#浮空岛初始坐标朝向
+genislandPosYaw: [1034, 64, 511, -120]
+
+#是否在浮空岛等级
+genislandLevel: 4
+
+#饥饿扣血[值,时间间隔]
+hungerSubHP: [2,5]
+
+#满饱食度回血[回血值,扣饱食度值,饱食度回血最低值（配0会触发饥饿扣血）,每隔几秒扣食和回血###最好都配整数]
+maxFoodAddHp: [4,1,16,1]
+
+#初始血量
+initHP : 40
+
+#死亡线(Y坐标低于传送）
+deathLineY: 3
+
+#一堆金钱的数量
+monetaryUnit: 200
+
+#创建派队成功提示
+createPartySuccessTip: "create_party_success_tip"
+
+#空气墙上限高度
+airWall_MaxY: 254
+
+#岩浆秒伤系数
+lavaDamageCoe: 0.15
+
+#岩浆着火时间
+lavaFireTime: 6
+
+#燃烧伤害
+onFireDamage: 1
+
+#烧制时间（固定时间）
+furnaceTime: 10
+
+#熔炉上限
+furnaceLimit: 10
+
+#泥块变为草块时间
+dirtTime: 80
+
+#领地最大范围(x,y,z同)
+manorMax: 200
+
+#领地分区域读取方块数据范围(x,y,z同)
+manorChunk: 25
+
+#加载所在区块周边几个区块的数据(x,y,z同,共(x+1)*(y+1)*(z+1)个周边区块)
+manorNear: 1
+
+#加载数据后一个tick最多处理方块数量
+manorHandleBlockMax: 2000
+
+#初始切片
+initSchemetic: "island_side45_x100_y99_z100.schematic"
+
+#初始切片偏移
+initSchematicOffset: 22
+
+#领地起点（个数与后台经营类配置人数相同）
+manorStart:
+    -
+        index: 1
+        origin_pos: [101, 103, 101]
+        init_pos: [103, 103, 101]
+    -
+        index: 2
+        origin_pos: [401, 103, 101]
+        init_pos: [403, 103, 101]
+    -
+        index: 3
+        origin_pos: [701, 103, 101]
+        init_pos: [703, 103, 101]
+    -
+        index: 4
+        origin_pos: [101, 103, 401]
+        init_pos: [103, 103, 401]
+    -
+        index: 5
+        origin_pos: [401, 103, 401]
+        init_pos: [403, 103, 401]
+    -
+        index: 6
+        origin_pos: [701, 103, 401]
+        init_pos: [703, 103, 401]
+    -
+        index: 7
+        origin_pos: [101, 103, 701]
+        init_pos: [103, 103, 701]
+    -
+        index: 8
+        origin_pos: [401, 103, 701]
+        init_pos: [403, 103, 701]
+    -
+        index: 9
+        origin_pos: [701, 103, 701]
+        init_pos: [703, 103, 701]
+        
+#其余岛屿切片
+#file文件名
+#pos相对位置
+#offset边长的一半
+OtherSchmetic: 
+    -   
+        file: "100_island01_side9_x142_y103_z90.schematic"
+        pos: [42, 4, -10]
+        offset: 4
+    -
+        file: "100_island02_side5_x131_y116_z58.schematic"
+        pos: [31, 17, -42]
+        offset: 2
+    -
+        file: "100_island03_side3_x63_y118_z68.schematic"
+        pos: [-37, 19, -32]
+        offset: 1
+    -
+        file: "100_island04_side3_x62_y95_z130.schematic"
+        pos: [-38, -4, 30]
+        offset: 1
+    -
+        file: "100_island05_side7_x100_y111_z137.schematic"
+        pos: [0, 12, 37]
+        offset: 3
+    -
+        file: "150_island01_side3_x165_y101_z159.schematic"
+        pos: [65, 2, 59]
+        offset: 1
+    -
+        file: "150_island02_side5_x161_y115_z121.schematic"
+        pos: [61, 16, 21]
+        offset: 2
+    -
+        file: "150_island03_side5_x164_y129_z66.schematic"
+        pos: [64, 30, -34]
+        offset: 2
+    -
+        file: "150_island04_side5_x116_y116_z33.schematic"
+        pos: [16, 17, -67]
+        offset: 2
+    -
+        file: "150_island05_side3_x75_y112_z34.schematic"
+        pos: [-25, 12, -66]
+        offset: 1
+    -
+        file: "150_island06_side3_x37_y129_z100.schematic"
+        pos: [-63, 30, 0]
+        offset: 1
+    -
+        file: "150_island07_side5_x41_y148_z134.schematic"
+        pos: [-59, 49, 34]
+        offset: 2
+    -
+        file: "150_island08_side5_x80_y139_z165.schematic"
+        pos: [-20, 40, 65]
+        offset: 2
+    -
+        file: "200_island01_side5_x189_y101_z187.schematic"
+        pos: [89, 2, 87]
+        offset: 2
+    -
+        file: "200_island02_side7_x191_y157_z84.schematic"
+        pos: [91, 58, -16]
+        offset: 3
+    -
+        file: "200_island03_side9_x183_y103_z29.schematic"
+        pos: [83, 4, -71]
+        offset: 4
+    -
+        file: "200_island04_side3_x152_y100_z9.schematic"
+        pos: [52, 1, -91]
+        offset: 1
+    -
+        file: "200_island05_side3_x100_y149_z11.schematic"
+        pos: [0, 50, -89]
+        offset: 1
+    -
+        file: "200_island06_side7_x30_y175_z13.schematic"
+        pos: [-70, 76, -87]
+        offset: 3
+    -
+        file: "200_island07_side7_x9_y114_z72.schematic"
+        pos: [-91, 15, -28]
+        offset: 3
+    -
+        file: "200_island08_side9_x11_y176_z154.schematic"
+        pos: [-89, 77, 54]
+        offset: 4
+    -
+        file: "200_island09_side5_x49_y138_z190.schematic"
+        pos: [-51, 39, 91]
+        offset: 2
+    -
+        file: "200_island10_side7_x131_y129_z187.schematic"
+        pos: [31, 30, 87]
+        offset: 3        
+        
+
+
+#刷新任务
+refreshDareTask:
+    -
+        coinId: 1 
+        coinNum: 3
+        msg: "refresh_dare_task_cost_money"
+        nextTime: 14400    #多少时间刷新1次
+        freeTimes: 1    #最多可攒多少次数
+#购买任务完成次数
+buyDaretask:
+    -
+        coinId: 1
+        coinNum: 1      #购买价格
+        buyMsg: "buy_dare_task_times_cost_money"
+        maxTimes: "buy_dare_task_times_cost_money" 
+        initCount: 6    #每天可完成数量上限
+        
+#读书开启星空变化
+maxBook: 8
+
+#月亮文件
+moonName: "moon_phases_1.png"
+
+#太阳文件
+sunName: "sun_1.png"
+       
+#回家冷却时间，三个图要一致
+homeCD: 5
+
+#大厅按钮冷却时间
+hallCD: 5
+
+#跳转矿区冷却时间
+miningAreaCD: 5
+
+#跳转自动化地区冷却时间
+productCD: 5
+
+#复活无敌时间
+invinciblyCD: 6
+
+#排行榜
+ranks:
+    -
+       id: 1
+       key: "week"
+    -
+       id: 2
+       key: "forever"
+  
+  
+#箱子上限
+boxLimit: 50
+
+#初始箱子（数量无法超过箱子上限, 地图相应位置有箱子）
+boxInit:
+  -
+   pos: [100, 100, 101]
+   items:
+       -
+          id: 79
+          num: 3
+          meta: 0
+       -
+          id: 325
+          num: 1
+          meta: 0
+       -
+          id: 6
+          num: 3
+          meta: 0
+       -
+          id: 300
+          num: 1
+          meta: 0
+       -
+          id: 301
+          num: 1
+          meta: 0
+       -
+          id: 299
+          num: 1
+          meta: 0
+       -
+          id: 298
+          num: 1
+          meta: 0
+       -
+          id: 957
+          num: 10
+          meta: 0
+       -
+          id: 270
+          num: 1
+          meta: 0
+       -
+          id: 271
+          num: 1
+          meta: 0
+       -
+          id: 2287
+          num: 1
+          meta: 0
+       -
+          id: 2288
+          num: 1
+          meta: 0
+       -
+          id: 2289
+          num: 1
+          meta: 0
+  -
+   pos: [106, 99, 93]
+   items:
+       -
+          id: 297
+          num: 10
+          meta: 0
+  -
+   pos: [91, 100, 91]
+   items:
+       -
+          id: 264
+          num: 1
+          meta: 0
+       -
+          id: 272
+          num: 1
+          meta: 0
+       -
+          id: 261
+          num: 1
+          meta: 0
+       -
+          id: 262
+          num: 12
+          meta: 0
+       -
+          id: 2290
+          num: 1
+          meta: 0
+  -
+   pos: [94, 97, 107]
+   items:
+       -
+          id: 79
+          num: 3
+          meta: 0
+  -
+   pos: [120, 103, 106]
+   items:
+       -
+          id: 283
+          num: 1
+          meta: 0
+       -
+          id: 2291
+          num: 1
+          meta: 0
+       -
+          id: 2292
+          num: 1
+          meta: 0
+       -
+          id: 294
+          num: 1
+          meta: 0
+       -
+          id: 61
+          num: 1
+          meta: 0
+  -
+   pos: [143, 102, 90]
+   items:
+       -
+          id: 278
+          num: 1
+          meta: 0
+       -
+          id: 24
+          num: 40
+          meta: 0
+  -
+   pos: [133, 117, 58]
+   items:
+       -
+          id: 279
+          num: 1
+          meta: 0
+       -
+          id: 155
+          num: 30
+          meta: 0
+       -
+          id: 2294
+          num: 1
+          meta: 0
+  -
+   pos: [65, 120, 68]
+   items:
+       -
+          id: 351
+          num: 3
+          meta: 5
+       -
+          id: 17
+          num: 50
+          meta: 2
+       -
+          id: 2293
+          num: 1
+          meta: 0
+  -
+   pos: [65, 97, 130]
+   items:
+       -
+          id: 2500
+          num: 4
+          meta: 0
+       -
+          id: 45
+          num: 10
+          meta: 0
+  -
+   pos: [102, 111, 137]
+   items:
+       -
+          id: 80
+          num: 10
+          meta: 0
+       -
+          id: 264
+          num: 3
+          meta: 0
+  -
+   pos: [168, 102, 159]
+   items:
+       -
+          id: 47
+          num: 12
+          meta: 0
+       -
+          id: 171
+          num: 8
+          meta: 13
+  -
+   pos: [164, 116, 121]
+   items:
+       -
+          id: 168
+          num: 1
+          meta: 0
+  -
+   pos: [166, 132, 66]
+   items:
+       -
+          id: 351
+          num: 4
+          meta: 4
+       -
+          id: 264
+          num: 5
+          meta: 0
+  -
+   pos: [118, 117, 33]
+   items:
+       -
+          id: 215
+          num: 6
+          meta: 0
+  -
+   pos: [77, 113, 34]
+   items:
+       -
+          id: 2420
+          num: 3
+          meta: 0
+  -
+   pos: [39, 131, 100]
+   items:
+       -
+          id: 35
+          num: 20
+          meta: 0
+       -
+          id: 388
+          num: 5
+          meta: 0
+  -
+   pos: [43, 148, 134]
+   items:
+       -
+          id: 2421
+          num: 3
+          meta: 0
+       -
+          id: 409
+          num: 6
+          meta: 0
+  -
+   pos: [82, 140, 165]
+   items:
+       -
+          id: 251
+          num: 4
+          meta: 5
+  -
+   pos: [191, 102, 187]
+   items:
+       -
+          id: 133
+          num: 4
+          meta: 0
+  -
+   pos: [193, 157, 83]
+   items:
+       -
+          id: 57
+          num: 6
+          meta: 0
+  -
+   pos: [184, 102, 29]
+   items:
+       -
+          id: 215
+          num: 30
+          meta: 0
+       -
+          id: 89
+          num: 3
+          meta: 0
+  -
+   pos: [154, 101, 9]
+   items:
+       -
+          id: 168
+          num: 3
+          meta: 0
+  -
+   pos: [102, 151, 10]
+   items:
+       -
+          id: 351
+          num: 25
+          meta: 11
+  -
+   pos: [32, 175, 14]
+   items:
+       -
+          id: 351
+          num: 25
+          meta: 14
+  -
+   pos: [12, 114, 72]
+   items:
+       -
+          id: 351
+          num: 25
+          meta: 12
+  -
+   pos: [13, 175, 154]
+   items:
+       -
+          id: 351
+          num: 25
+          meta: 9
+  -
+   pos: [51, 139, 190]
+   items:
+       -
+          id: 351
+          num: 25
+          meta: 7
+  -
+   pos: [133, 129, 187]
+   items:
+       -
+          id: 351
+          num: 25
+          meta: 1
+          
+#多少级可以点赞
+giveLoveNumLevel: 1
+
+#聚会最大人数
+partyMaxPlayer: 16
+
+#有文字的告示牌数量上限
+signPostNum: 50
+
+#大厅文字提示
+welcomeText:
+    -
+        #文字位置
+        pos: [989.5 ,66.5 ,511.5]
+        #文字朝向
+        yaw: 90
+        #文字多语言
+        text: "welcomeText_01"
+        #文字缩放比例
+        scale: 4
+    -
+        pos: [953.5 ,66.5 ,511.5]
+        yaw: 90
+        text: "welcomeText_02"
+        scale: 4
+    -
+        pos: [1081.5 ,66.5 ,511.5]
+        yaw: -90
+        text: "welcomeText_03"
+        scale: 4
+    -
+        pos: [1132.5 ,66 ,515.5]
+        yaw: 0
+        text: "welcomeText_04"
+        scale: 4
+    -
+        pos: [1131.5 ,66 ,507.5]
+        yaw: 180
+        text: "welcomeText_05"
+        scale: 4
+    -
+        pos: [1034.5 ,66.5 ,553.5]
+        yaw: 0
+        text: "welcomeText_06"
+        scale: 4
+    -
+        pos: [1034.5 ,66.5 ,595.5]
+        yaw: 0
+        text: "welcomeText_07"
+        scale: 4
+    -
+        pos: [1034.5 ,66.5 ,466.5]
+        yaw: 180
+        text: "welcomeText_08"
+        scale: 4
+    -
+        pos: [1045 ,69 ,501]
+        yaw: 226
+        text: "SkyBlock_NpcName_1"
+        scale: 2
+    -
+        pos: [1045 ,69 ,521]
+        yaw: 317
+        text: "SkyBlock_NpcName_2"
+        scale: 2
+    -
+        pos: [1024 ,70 ,521]
+        yaw: 416
+        text: "SkyBlock_NpcName_3"
+        scale: 2
+    
+#签到开始日期
+signInStartTime: "2019-12-31"
+#签到结束日期
+signInEndTime: "2019-2-1"
+
+#一次金魔方数量
+onceBuyMoneyCost: 60
+
+#最大数量：
+maxBuyMoneyCost: 600
+
+#一次购买的金币数量
+onceMoneyNum: 100000
+
+#可放置item列表,ID范围2801~2900
+canPlaceItem : 
+    -
+        itemId: 2801
+        itemActor: "g1048_christmas_tree.actor"
+        lightBlock: 0
+    -
+        itemId: 2810
+        itemActor: "g1048_fountain_red_low.actor"
+        lightBlock: 1361
+    -
+        itemId: 2811
+        itemActor: "g1048_fountain_green_low.actor"
+        lightBlock: 1362
+    -
+        itemId: 2812
+        itemActor: "g1048_fountain_blue_low.actor"
+        lightBlock: 1363
+    -
+        itemId: 2813
+        itemActor: "g1048_fountain_cyan_low.actor"
+        lightBlock: 1364
+    -
+        itemId: 2814
+        itemActor: "g1048_fountain_purple_low.actor"
+        lightBlock: 1365
+    -
+        itemId: 2815
+        itemActor: "g1048_fountain_yellow_low.actor"
+        lightBlock: 1366
+    -
+        itemId: 2816
+        itemActor: "g1048_fountain_colourless_low.actor"
+        lightBlock: 0
+    -
+        itemId: 2817
+        itemActor: "g1048_fountain_red_middle.actor"
+        lightBlock: 1361
+    -
+        itemId: 2818
+        itemActor: "g1048_fountain_green_middle.actor"
+        lightBlock: 1362
+    -
+        itemId: 2819
+        itemActor: "g1048_fountain_blue_middle.actor"
+        lightBlock: 1363
+    -
+        itemId: 2820
+        itemActor: "g1048_fountain_cyan_middle.actor"
+        lightBlock: 1364
+    -
+        itemId: 2821
+        itemActor: "g1048_fountain_purple_middle.actor"
+        lightBlock: 1365
+    -
+        itemId: 2822
+        itemActor: "g1048_fountain_yellow_middle.actor"
+        lightBlock: 1366
+    -
+        itemId: 2823
+        itemActor: "g1048_fountain_colourless_middle.actor"
+        lightBlock: 0
+    -
+        itemId: 2824
+        itemActor: "g1048_fountain_red_high.actor"
+        lightBlock: 1361
+    -
+        itemId: 2825
+        itemActor: "g1048_fountain_green_high.actor"
+        lightBlock: 1362
+    -
+        itemId: 2826
+        itemActor: "g1048_fountain_blue_high.actor"
+        lightBlock: 1363
+    -
+        itemId: 2827
+        itemActor: "g1048_fountain_cyan_high.actor"
+        lightBlock: 1364
+    -
+        itemId: 2828
+        itemActor: "g1048_fountain_purple_high.actor"
+        lightBlock: 1365
+    -
+        itemId: 2829
+        itemActor: "g1048_fountain_yellow_high.actor"
+        lightBlock: 1366
+    -
+        itemId: 2830
+        itemActor: "g1048_fountain_colourless_high.actor"
+        lightBlock: 0    
+#可放置的ACTOR数量上限
+canPlaceActorLimit : 50

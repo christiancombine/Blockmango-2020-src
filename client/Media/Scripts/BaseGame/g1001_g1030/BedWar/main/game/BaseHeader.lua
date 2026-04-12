@@ -1,0 +1,5 @@
+require "common.config.Define"
+require "game.config.Area"
+require "game.config.BaseGameConfig"
+require "game.data.BaseMessage"
+require "common.manager.BaseInfoManager"

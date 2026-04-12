@@ -1,0 +1,15 @@
+#version 100
+
+uniform samplerCube texSampler;
+uniform mediump vec4 transition;
+
+varying mediump vec3 TexCoords;
+
+void main(void)
+{
+	mediump vec4 cube = textureCube(texSampler, TexCoords);
+	gl_FragColor = cube * transition.a;
+	//gl_FragColor = vec4(cube.rgb * cube.a * transition.a, cube.a * transition.a);
+}
+
+

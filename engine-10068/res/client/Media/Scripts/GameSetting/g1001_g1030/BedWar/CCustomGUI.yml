@@ -1,0 +1,45 @@
+HotBar:
+  Background:
+    ImageName: "set:bed_war_item_solt.json image:bar_bg"
+    Area: "{{0, 0},{0, -16},{0,646}, {0,59}}"
+    StretchOffset: "15 15 15 15"
+    StretchType: "NineGrid"
+  VisibleBar:
+    Area: "{{0, 0},{0,-23},{0,630}, {0,40}}"
+    StretchType: "NineGrid"
+  ToggleButton:
+    Area: "{{1,-63},{0,1},{1,0},{0,63}}"
+    NorImage: "set:bed_war_item_solt.json image:inv_normal"
+    PreImage: "set:bed_war_item_solt.json image:inv_press"
+  SlotTable:
+    SlotStyle: "10000"
+    Area: "{{0, 0},{0,0},{1,-63}, {1,0}}"
+    HorizontalInterval: "6"
+    SlotWidth: "57"
+    SlotHeight: "57"
+  SlotItem:
+    NorImage: "set:bed_war_item_solt.json image:item_nor"
+    PreImage: "set:bed_war_item_solt.json image:item_select"
+    NorStretchOffset: "5 5 5 5"
+    PreStretchOffset: "15 15 15 15"
+
+PlayerExp:
+  ProgressBackImage: "set:new_gui_material.json image:playerExpBg"
+  ProgressImage: "set:new_gui_material.json image:playerExpValue"
+  StretchOffset: "3 3 3 3"
+
+ArmorPanel:
+  EquipArmors:
+    SlotStyle: "10001"
+    SlotItem:
+      NorImage: "set:bed_war_player_inventory.json image:armor_bg"
+      PreImage: "set:bed_war_player_inventory.json image:armor_bg"
+      NorStretchOffset: "3 3 3 3"
+      PreStretchOffset: "3 3 3 3"
+  Inventory:
+    SlotStyle: "10002"
+    SlotItem:
+      NorImage: "set:bed_war_player_inventory.json image:grid"
+      PreImage: "set:bed_war_item_solt.json image:item_select"
+      NorStretchOffset: "0 0 0 0"
+      PreStretchOffset: "15 15 15 15"

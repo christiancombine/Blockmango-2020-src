@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: WalkingDead.xml-->
+<behavior name="WalkingDead" agenttype="CommonAgent" fsm="true" version="5">
+  <node class="FSM" id="-1">
+    <property initialid="1" />
+    <node class="State" id="1">
+      <property IsEndState="false" />
+      <property Method="Self.CommonAgent::RunPatrolState()" />
+      <attachment class="Transition" id="5" flag="transition">
+        <property Operator="Equal" />
+        <property Opl="Self.CommonAgent::StateChangeCondition1()" />
+        <property Opr2="const bool true" />
+        <property TargetFSMNodeId="2" />
+      </attachment>
+    </node>
+    <node class="State" id="2">
+      <property IsEndState="false" />
+      <property Method="Self.CommonAgent::RunChaseState()" />
+      <attachment class="Transition" id="7" flag="transition">
+        <property Operator="Equal" />
+        <property Opl="Self.CommonAgent::StateChangeCondition3()" />
+        <property Opr2="const bool true" />
+        <property TargetFSMNodeId="4" />
+      </attachment>
+      <attachment class="Transition" id="6" flag="transition">
+        <property Operator="Equal" />
+        <property Opl="Self.CommonAgent::StateChangeCondition2()" />
+        <property Opr2="const bool true" />
+        <property TargetFSMNodeId="3" />
+      </attachment>
+    </node>
+    <node class="State" id="3">
+      <property IsEndState="false" />
+      <property Method="Self.CommonAgent::RunAttackState()" />
+      <attachment class="Transition" id="9" flag="transition">
+        <property Operator="Equal" />
+        <property Opl="Self.CommonAgent::StateChangeCondition5()" />
+        <property Opr2="const bool true" />
+        <property TargetFSMNodeId="2" />
+      </attachment>
+    </node>
+    <node class="State" id="4">
+      <property IsEndState="false" />
+      <property Method="Self.CommonAgent::RunReturnState()" />
+      <attachment class="Transition" id="8" flag="transition">
+        <property Operator="Equal" />
+        <property Opl="Self.CommonAgent::StateChangeCondition4()" />
+        <property Opr2="const bool true" />
+        <property TargetFSMNodeId="1" />
+      </attachment>
+    </node>
+  </node>
+</behavior>

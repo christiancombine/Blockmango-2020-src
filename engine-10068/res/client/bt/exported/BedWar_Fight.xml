@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: BedWar_Fight.xml-->
+<behavior name="BedWar_Fight" agenttype="ServerAgent" version="5">
+  <node class="Sequence" id="0">
+    <node class="IfElse" id="22">
+      <node class="Sequence" id="1">
+        <node class="Condition" id="39">
+          <property Operator="Equal" />
+          <property Opl="Self.ServerAgent::ValueBoolean(&quot;isLife&quot;)" />
+          <property Opr="const bool true" />
+        </node>
+      </node>
+      <node class="SelectorLoop" id="23">
+        <property ResetChildren="false" />
+        <node class="WithPrecondition" id="4">
+          <node class="Sequence" id="5">
+            <node class="Condition" id="7">
+              <property Operator="Equal" />
+              <property Opl="Self.ServerAgent::ValueBoolean(&quot;canDoRangedAttack&quot;)" />
+              <property Opr="const bool true" />
+            </node>
+            <node class="Action" id="11">
+              <property Method="Self.ServerAgent::FuncStatus(&quot;checkRangedAttackRange&quot;)" />
+              <property ResultOption="BT_INVALID" />
+            </node>
+          </node>
+          <node class="ReferencedBehavior" id="12">
+            <property ReferenceBehavior="const string &quot;BedWar_RangedAttack&quot;" />
+          </node>
+        </node>
+        <node class="WithPrecondition" id="37">
+          <node class="True" id="3" />
+          <node class="Action" id="19">
+            <property Method="Self.ServerAgent::FuncStatus(&quot;followEnemy&quot;)" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+        </node>
+      </node>
+      <node class="False" id="2" />
+    </node>
+  </node>
+</behavior>

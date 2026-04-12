@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: BedWar_Idle.xml-->
+<behavior name="BedWar_Idle" agenttype="ServerAgent" version="5">
+  <node class="SelectorLoop" id="40">
+    <property ResetChildren="false" />
+    <node class="WithPrecondition" id="12">
+      <node class="Condition" id="23">
+        <property Operator="Equal" />
+        <property Opl="Self.ServerAgent::ValueBoolean(&quot;isActivity&quot;)" />
+        <property Opr="const bool false" />
+      </node>
+      <node class="IfElse" id="28">
+        <node class="Action" id="29">
+          <property Method="Self.ServerAgent::FuncStatus(&quot;isInHome&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="30">
+          <property Method="Self.ServerAgent::FuncStatus(&quot;idle&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="31">
+          <property Method="Self.ServerAgent::FuncStatus(&quot;goHome&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+      </node>
+    </node>
+    <node class="WithPrecondition" id="41">
+      <node class="Condition" id="3">
+        <property Operator="Equal" />
+        <property Opl="Self.ServerAgent::ValueBoolean(&quot;isActivity&quot;)" />
+        <property Opr="const bool true" />
+      </node>
+      <node class="IfElse" id="0">
+        <node class="Sequence" id="1">
+          <node class="Action" id="26">
+            <property Method="Self.ServerAgent::FuncStatus(&quot;getEnemy&quot;)" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+          <node class="Condition" id="20">
+            <property Operator="Equal" />
+            <property Opl="Self.ServerAgent::ValueBoolean(&quot;needDefense&quot;)" />
+            <property Opr="const bool true" />
+          </node>
+        </node>
+        <node class="ReferencedBehavior" id="27">
+          <property ReferenceBehavior="const string &quot;BedWar_Fight&quot;" />
+        </node>
+        <node class="Action" id="7">
+          <property Method="Self.ServerAgent::FuncStatus(&quot;randomPatrol&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+      </node>
+    </node>
+  </node>
+</behavior>

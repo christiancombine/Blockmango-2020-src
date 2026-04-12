@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g1054_fangkuai.actor" Originalscale="1 1 1" Skeleton="g1054_fangkuai.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="body" SlaveName="1" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "g1054_fangkuai.skin" ChangeColor = "2.10195e-44 9.10844e-43 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1054_fangkuai_idle.anim" BeginTime = "0" Times = "-1" Length = "3.366" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="static" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1054_fangkuai_shake.anim" BeginTime = "0" Times = "-1" Length = "0.366" FadeTime = "0.25" Channel = "" TimeScale = "0.5">
+				</Animation>
+				<Effect>
+					<FileName value="172_fangkuai01.effect"/>
+					<SocketName value="Bone002"/>
+					<BeginTime value="0.24"/>
+					<Times value="1"/>
+					<Position_X value="0"/>
+					<Position_Y value="-0.16"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g1054_fangkuai_idle.anim"/>
+				<Anim Name="g1054_fangkuai_static.anim"/>
+				<Anim Name="g1054_fangkuai_shake.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

@@ -1,0 +1,137 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g1056_redgaoda.actor" Originalscale="0.7 0.7 0.7" Skeleton="g1056_gaoda.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="body" SlaveName="1" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "g1056_gaoda_red.skin" ChangeColor = "2.10195e-44 7.61746e-42 2.231e-30 0" UVSpeed = "0 0" LocalAlpha = "1">
+				</Skin>
+			</BodyPart>
+			<BodyPart MasterName="gun" SlaveName="g1056_jinglingqiu.mesh" DefaultUse="false" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<StaticMesh LocalAlpha = "1">
+					<FileName value="g1056_jinglingqiu.mesh"/>
+					<SocketName value="b_r_hand"/>
+					<Position_X value="0.0670843"/>
+					<Position_Y value="0.0247537"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1.6"/>
+				</StaticMesh>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="attack2" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1056_gaoda_dianji.anim" BeginTime = "0" Times = "1" Length = "0.566" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="g1056_fangzhi" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1056_gaoda_fangzhi.anim" BeginTime = "0" Times = "1" Length = "1.6" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+				<Effect>
+					<FileName value="g1056_pengshe_purple.effect"/>
+					<SocketName value="s_pensheqi"/>
+					<BeginTime value="0.02"/>
+					<Times value="1"/>
+					<Position_X value="0.63722"/>
+					<Position_Y value="0"/>
+					<Position_Z value="-0.171294"/>
+					<yaw value="90"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1.5"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="g1056_fly" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1056_gaoda_fly.anim" BeginTime = "0" Times = "-1" Length = "1.366" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+				<Effect>
+					<FileName value="g1056_pengshe_purple.effect"/>
+					<SocketName value="s_pensheqi"/>
+					<BeginTime value="0.02"/>
+					<Times value="-1"/>
+					<Position_X value="0.607984"/>
+					<Position_Y value="-0.00121526"/>
+					<Position_Z value="-0.1722"/>
+					<yaw value="90"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1.5"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="g1056_fly_idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1056_gaoda_fly_idle.anim" BeginTime = "0" Times = "-1" Length = "1.366" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+				<Effect>
+					<FileName value="g1056_pengshe_purple.effect"/>
+					<SocketName value="s_pensheqi"/>
+					<BeginTime value="0.02"/>
+					<Times value="-1"/>
+					<Position_X value="0.6"/>
+					<Position_Y value="0"/>
+					<Position_Z value="-0.182129"/>
+					<yaw value="90"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1.5"/>
+					<TimeScale value="0.8"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1055_gaoda_yuandidaiji.anim" BeginTime = "0" Times = "-1" Length = "1.366" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="jump1" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1056_gaoda_ jump1.anim" BeginTime = "0" Times = "1" Length = "0.433" FadeTime = "0.1" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="jump2" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1056_gaoda_ jump2.anim" BeginTime = "0" Times = "-1" Length = "0.333" FadeTime = "0.1" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="jump3" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1056_gaoda_ jump3.anim" BeginTime = "0" Times = "1" Length = "0.633" FadeTime = "0.1" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="run" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1055_gaoda_paobu.anim" BeginTime = "0" Times = "-1" Length = "0.633" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="walk" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1055_gaoda_zoulu.anim" BeginTime = "0" Times = "-1" Length = "0.966" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g1056_gaoda_fly_idle.anim"/>
+				<Anim Name="g1056_gaoda_tiaoqi.anim"/>
+				<Anim Name="g1055_gaoda_yuandidaiji.anim"/>
+				<Anim Name="g1055_gaoda_zoulu.anim"/>
+				<Anim Name="g1056_gaoda_fangzhi.anim"/>
+				<Anim Name="g1056_gaoda_fly.anim"/>
+				<Anim Name="g1056_gaoda_luoxia.anim"/>
+				<Anim Name="g1055_gaoda_paobu.anim"/>
+				<Anim Name="g1056_gaoda_dianji.anim"/>
+				<Anim Name="g1056_gaoda_ jump2.anim"/>
+				<Anim Name="g1056_gaoda_ jump3.anim"/>
+				<Anim Name="g1056_gaoda_ jump1.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

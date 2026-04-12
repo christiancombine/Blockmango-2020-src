@@ -1,0 +1,72 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="npc103.actor" Originalscale="1 1 1" Skeleton="boy_01.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="body" SlaveName="1" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "3002_trousers_widget.skin" ChangeColor = "2.10195e-44 1.82322e-40 3.44643e+30 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "35_trunk_widget.skin" ChangeColor = "2.10195e-44 1.89273e-40 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "3002_shoes_l_widget.skin" ChangeColor = "2.10195e-44 1.82294e-40 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "3002_shoes_r_widget.skin" ChangeColor = "2.10195e-44 1.82061e-40 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Effect>
+					<FileName value="effect_gun_mortar_bullet.effect"/>
+					<SocketName value="s_hand_r"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="0.3"/>
+					<TimeScale value="0.5"/>
+					<Alpha value="1"/>
+				</Effect>
+				<StaticMesh>
+					<FileName value="15_face_boy.mesh"/>
+					<SocketName value="s_head"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1"/>
+				</StaticMesh>
+				<StaticMesh>
+					<FileName value="04_hair_boy.mesh"/>
+					<SocketName value="s_head"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1"/>
+				</StaticMesh>
+				<StaticMesh>
+					<FileName value="bed_fire.mesh"/>
+					<SocketName value="s_hand_r"/>
+					<Position_X value="0.0928083"/>
+					<Position_Y value="0.106076"/>
+					<Position_Z value="-0.0575995"/>
+					<yaw value="-90"/>
+					<pitch value="1.70755e-06"/>
+					<roll value="60"/>
+					<scale value="1"/>
+				</StaticMesh>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="aim3" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "boy_attack02_c.anim" BeginTime = "0" Times = "1" Length = "0.433" FadeTime = "0.05" Channel = "upper" TimeScale = "1">
+				</Animation>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="boy_attack02_c.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

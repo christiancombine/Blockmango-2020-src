@@ -1,0 +1,125 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g1008_pet_9.actor" Originalscale="1 1 1" Skeleton="g1008_pet_9.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="pet" SlaveName="body" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "g1008_pet_9.skin" ChangeColor = "2.10195e-44 9.08041e-43 1.4013e-45 0" UVSpeed = "0 0" LocalAlpha = "1" UseBloom = "false">
+				</Skin>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1008_pet_9_idle.anim" BeginTime = "0" Times = "-1" Length = "1.366" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="run" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1008_pet_9_run.anim" BeginTime = "0" Times = "-1" Length = "0.833" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="taunt" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1008_pet_9_taunt.anim" BeginTime = "0" Times = "1" Length = "3.466" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+				<Effect>
+					<FileName value="g1008_pet_9_1.effect"/>
+					<SocketName value="BuSuiFu"/>
+					<BeginTime value="0.6"/>
+					<Times value="1"/>
+					<Position_X value="0.0972231"/>
+					<Position_Y value="0.47353"/>
+					<Position_Z value="0"/>
+					<yaw value="59.1651"/>
+					<pitch value="-56.3383"/>
+					<roll value="27.3283"/>
+					<scale value="1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+				<Effect>
+					<FileName value="g1008_pet_9_1.effect"/>
+					<SocketName value="BuSuiFu"/>
+					<BeginTime value="0.96"/>
+					<Times value="1"/>
+					<Position_X value="-0.0231762"/>
+					<Position_Y value="0.547238"/>
+					<Position_Z value="0"/>
+					<yaw value="108.254"/>
+					<pitch value="43.0795"/>
+					<roll value="14.5108"/>
+					<scale value="1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+				<Effect>
+					<FileName value="g1008_pet_9_1.effect"/>
+					<SocketName value="BuSuiFu"/>
+					<BeginTime value="1.4"/>
+					<Times value="1"/>
+					<Position_X value="-0.112732"/>
+					<Position_Y value="0.597674"/>
+					<Position_Z value="0"/>
+					<yaw value="104.682"/>
+					<pitch value="39.4106"/>
+					<roll value="7.47812"/>
+					<scale value="1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+				<Effect>
+					<FileName value="g1008_pet_9_1.effect"/>
+					<SocketName value="BuSuiFu"/>
+					<BeginTime value="2.04"/>
+					<Times value="1"/>
+					<Position_X value="0"/>
+					<Position_Y value="0.414946"/>
+					<Position_Z value="0.072139"/>
+					<yaw value="64.0236"/>
+					<pitch value="-46.431"/>
+					<roll value="19.9795"/>
+					<scale value="1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+				<Effect>
+					<FileName value="g1008_pet_9_1.effect"/>
+					<SocketName value="BuSuiFu"/>
+					<BeginTime value="2.5"/>
+					<Times value="1"/>
+					<Position_X value="0"/>
+					<Position_Y value="0.271574"/>
+					<Position_Z value="0.128641"/>
+					<yaw value="142.845"/>
+					<pitch value="69.4053"/>
+					<roll value="52.0254"/>
+					<scale value="1.25"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g1008_pet_9_idle.anim"/>
+				<Anim Name="g1008_pet_9_run.anim"/>
+				<Anim Name="g1008_pet_9_taunt.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

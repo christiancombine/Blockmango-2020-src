@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: BirdMain.xml-->
+<behavior name="BirdMain" agenttype="BirdAgent" version="5">
+  <node class="Selector" id="12">
+    <node class="Sequence" id="15">
+      <attachment class="Precondition" id="16" flag="precondition">
+        <property BinaryOperator="And" />
+        <property Operator="Equal" />
+        <property Opl="Self.BirdAgent::FindTarget()" />
+        <property Opr2="const bool false" />
+        <property Phase="Update" />
+      </attachment>
+      <node class="Selector" id="0">
+        <attachment class="Event" id="11" flag="event">
+          <property ReferenceFilename="BirdTranslateAI" />
+          <property Task="Self.BirdAgent::translate_task()" />
+          <property TriggeredOnce="false" />
+          <property TriggerMode="Return" />
+        </attachment>
+        <node class="IfElse" id="1">
+          <node class="Condition" id="2">
+            <property Operator="Equal" />
+            <property Opl="Self.BirdAgent::isNeedGather()" />
+            <property Opr="const bool true" />
+          </node>
+          <node class="Sequence" id="3">
+            <node class="Action" id="5">
+              <property Method="Self.BirdAgent::Gather()" />
+              <property ResultOption="BT_SUCCESS" />
+            </node>
+            <node class="Wait" id="4">
+              <property Time="const float 3000" />
+            </node>
+          </node>
+          <node class="DecoratorAlwaysFailure" id="10">
+            <property DecorateWhenChildEnds="false" />
+            <node class="Noop" id="6" />
+          </node>
+        </node>
+        <node class="Sequence" id="17">
+          <attachment class="Precondition" id="21" flag="precondition">
+            <property BinaryOperator="And" />
+            <property Operator="Equal" />
+            <property Opl="Self.BirdAgent::isLeaveMaster()" />
+            <property Opr2="const bool true" />
+            <property Phase="Both" />
+          </attachment>
+          <node class="Action" id="18">
+            <property Method="Self.BirdAgent::findFollowPos()" />
+            <property ResultOption="BT_SUCCESS" />
+          </node>
+          <node class="DecoratorNot" id="23">
+            <property DecorateWhenChildEnds="false" />
+            <node class="Action" id="19">
+              <property Method="Self.BirdAgent::tryTeleportToMaster()" />
+              <property ResultOption="BT_INVALID" />
+            </node>
+          </node>
+          <node class="Action" id="20">
+            <property Method="Self.BirdAgent::Move()" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+        </node>
+        <node class="Sequence" id="7">
+          <attachment class="Precondition" id="24" flag="precondition">
+            <property BinaryOperator="And" />
+            <property Operator="Equal" />
+            <property Opl="Self.BirdAgent::isLeaveMaster()" />
+            <property Opr2="const bool false" />
+            <property Phase="Both" />
+          </attachment>
+          <node class="Action" id="8">
+            <property Method="Self.BirdAgent::findPatrolPos()" />
+            <property ResultOption="BT_SUCCESS" />
+          </node>
+          <node class="Action" id="9">
+            <property Method="Self.BirdAgent::Move()" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+          <node class="Wait" id="22">
+            <property Time="const float 3000" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node class="DecoratorLoopUntil" id="14">
+      <property Count="const int -1" />
+      <property DecorateWhenChildEnds="true" />
+      <property Until="true" />
+      <node class="Action" id="13">
+        <property Method="Self.BirdAgent::Attack()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+    </node>
+  </node>
+</behavior>

@@ -1,0 +1,41 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g1051_monster_xiaozhizhu.actor" Originalscale="1 1 1" Skeleton="g1051_spider.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="head" SlaveName="g1051_spider1_body.skin" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "g1051_spider1_body.skin" ChangeColor = "2.10195e-44 1.33123e-42 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1051_spider1_foot.skin" ChangeColor = "2.10195e-44 3.50184e-42 2.93769e+26 0" UVSpeed = "0 0">
+				</Skin>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="attack" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1051_spider_attack_01.anim" BeginTime = "0" Times = "1" Length = "1.366" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="attack2" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1051_spider_attack_02.anim" BeginTime = "0" Times = "1" Length = "2.2" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="hitdown" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1051_spider_death.anim" BeginTime = "0" Times = "1" Length = "1.833" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1051_spider_walk.anim" BeginTime = "0" Times = "-1" Length = "0.566" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="walk" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1051_spider_walk.anim" BeginTime = "0" Times = "-1" Length = "0.566" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g1051_spider_walk.anim"/>
+				<Anim Name="g1051_spider_attack_01.anim"/>
+				<Anim Name="g1051_spider_attack_02.anim"/>
+				<Anim Name="g1051_spider_death.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

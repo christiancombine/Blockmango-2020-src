@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: BedWar_RangedAttack.xml-->
+<behavior name="BedWar_RangedAttack" agenttype="ServerAgent" version="5">
+  <node class="IfElse" id="2">
+    <node class="Action" id="7">
+      <property Method="Self.ServerAgent::FuncStatus(&quot;checkHaveWall&quot;)" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="IfElse" id="0">
+      <node class="Sequence" id="13">
+        <node class="Action" id="6">
+          <property Method="Self.ServerAgent::FuncStatus(&quot;checkWallCanBreak&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="14">
+          <property Method="Self.ServerAgent::FuncStatus(&quot;readyFlareBomb&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+      </node>
+      <node class="Action" id="3">
+        <property Method="Self.ServerAgent::FuncStatus(&quot;useFlareBomb&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="19">
+        <property Method="Self.ServerAgent::FuncStatus(&quot;followEnemy&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+    </node>
+    <node class="IfElse" id="5">
+      <node class="Action" id="10">
+        <property Method="Self.ServerAgent::FuncStatus(&quot;readyArchery&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="8">
+        <property Method="Self.ServerAgent::FuncStatus(&quot;archery&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Noop" id="1" />
+    </node>
+  </node>
+</behavior>

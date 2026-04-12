@@ -1,0 +1,228 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g1056_mohuangirl.actor" Originalscale="1 1 1" Skeleton="girl_01.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="body" SlaveName="1" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "g1056_mohuan_girl.skin" ChangeColor = "2.10195e-44 9.01035e-43 1.4013e-45 0" UVSpeed = "0 0" LocalAlpha = "1">
+				</Skin>
+				<StaticMesh LocalAlpha = "1">
+					<FileName value="g1056_knapsack.mesh"/>
+					<SocketName value="s_back"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0.139323"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1"/>
+				</StaticMesh>
+			</BodyPart>
+			<BodyPart MasterName="gun" SlaveName="g1056_jinglingqiu.mesh" DefaultUse="false" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<StaticMesh LocalAlpha = "1">
+					<FileName value="g1056_jinglingqiu.mesh"/>
+					<SocketName value="s_hand_r"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1"/>
+				</StaticMesh>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="attack2" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "boy_attack03.anim" BeginTime = "0" Times = "1" Length = "0.333" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="g1056_fangzhi" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1056_fangzhi.anim" BeginTime = "0" Times = "1" Length = "1.3" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+				<Effect>
+					<FileName value="g1056_pengshe01_purple.effect"/>
+					<SocketName value="s_back"/>
+					<BeginTime value="0.02"/>
+					<Times value="-1"/>
+					<Position_X value="-0.349677"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0.497585"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="180"/>
+					<scale value="0.6"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="g1056_fly" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1056_feixing.anim" BeginTime = "0" Times = "-1" Length = "1.033" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+				<Effect>
+					<FileName value="g1056_pengshe01_purple.effect"/>
+					<SocketName value="s_back"/>
+					<BeginTime value="0.02"/>
+					<Times value="-1"/>
+					<Position_X value="-0.316303"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0.498484"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="180"/>
+					<scale value="0.8"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+				<Effect>
+					<FileName value="g1056_pengshe01_purple.effect"/>
+					<SocketName value="s_back"/>
+					<BeginTime value="0.04"/>
+					<Times value="1"/>
+					<Position_X value="-0.407322"/>
+					<Position_Y value="-0.493677"/>
+					<Position_Z value="0.310336"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="180"/>
+					<scale value="0.4"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+				<Effect>
+					<FileName value="g1056_pengshe01_purple.effect"/>
+					<SocketName value="s_back"/>
+					<BeginTime value="0.06"/>
+					<Times value="1"/>
+					<Position_X value="-0.426413"/>
+					<Position_Y value="0.491761"/>
+					<Position_Z value="0.318728"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="180"/>
+					<scale value="0.4"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="g1056_fly_idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1056_fukong.anim" BeginTime = "0" Times = "-1" Length = "1.533" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+				<Effect>
+					<FileName value="g1056_pengshe01_purple.effect"/>
+					<SocketName value="s_back"/>
+					<BeginTime value="0.02"/>
+					<Times value="-1"/>
+					<Position_X value="-0.309833"/>
+					<Position_Y value="-0.0101786"/>
+					<Position_Z value="0.500208"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="180"/>
+					<scale value="0.8"/>
+					<TimeScale value="0.8"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+				<Effect>
+					<FileName value="g1056_pengshe01_purple.effect"/>
+					<SocketName value="s_back"/>
+					<BeginTime value="0.04"/>
+					<Times value="-1"/>
+					<Position_X value="-0.386398"/>
+					<Position_Y value="-0.505225"/>
+					<Position_Z value="0.363617"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="180"/>
+					<scale value="0.4"/>
+					<TimeScale value="0.8"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+				<Effect>
+					<FileName value="g1056_pengshe01_purple.effect"/>
+					<SocketName value="s_back"/>
+					<BeginTime value="0.06"/>
+					<Times value="1"/>
+					<Position_X value="-0.391365"/>
+					<Position_Y value="0.47557"/>
+					<Position_Z value="0.366847"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="180"/>
+					<scale value="0.4"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "girl_stand05.anim" BeginTime = "0" Times = "-1" Length = "2.033" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="jump1" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "girl_jump01_d.anim" BeginTime = "0" Times = "1" Length = "0.3" FadeTime = "0.1" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="jump2" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "girl_jump01_e.anim" BeginTime = "0" Times = "-1" Length = "0.433" FadeTime = "0.1" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="jump3" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "girl_jump01_f.anim" BeginTime = "0" Times = "1" Length = "0.633" FadeTime = "0.1" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="run" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "girl_walk01.anim" BeginTime = "0" Times = "-1" Length = "0.633" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="walk" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "girl_walk02.anim" BeginTime = "0" Times = "-1" Length = "1.1" FadeTime = "0.05" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g1056_fangzhi.anim"/>
+				<Anim Name="boy_attack03.anim"/>
+				<Anim Name="girl_jump01_a.anim"/>
+				<Anim Name="girl_jump01_b.anim"/>
+				<Anim Name="girl_jump01_c.anim"/>
+				<Anim Name="girl_stand05.anim"/>
+				<Anim Name="girl_walk01.anim"/>
+				<Anim Name="girl_walk02.anim"/>
+				<Anim Name="g1056_feixing.anim"/>
+				<Anim Name="g1056_fukong.anim"/>
+				<Anim Name="boy_jump01_c.anim"/>
+				<Anim Name="boy_jump01_b.anim"/>
+				<Anim Name="boy_jump01_a.anim"/>
+				<Anim Name="girl_jump01_f.anim"/>
+				<Anim Name="girl_jump01_e.anim"/>
+				<Anim Name="girl_jump01_d.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

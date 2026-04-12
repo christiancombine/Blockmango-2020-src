@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: MonsterG1049.xml-->
+<behavior name="MonsterG1049" agenttype="MonsterG1049" version="5">
+  <node class="DecoratorLoop" id="3">
+    <property Count="const int -1" />
+    <property DecorateWhenChildEnds="true" />
+    <property DoneWithinFrame="false" />
+    <node class="SelectorLoop" id="0">
+      <property ResetChildren="false" />
+      <node class="WithPrecondition" id="5">
+        <node class="Selector" id="19">
+          <node class="Condition" id="7">
+            <property Operator="Equal" />
+            <property Opl="bool Self.MonsterG1049::inBattle" />
+            <property Opr="const bool true" />
+          </node>
+          <node class="Condition" id="9">
+            <property Operator="Equal" />
+            <property Opl="bool Self.MonsterG1049::hasBeAttacked" />
+            <property Opr="const bool true" />
+          </node>
+          <node class="IfElse" id="17">
+            <node class="Condition" id="12">
+              <property Operator="NotEqual" />
+              <property Opl="int Self.MonsterG1049::jumpSearchEnemyFrames" />
+              <property Opr="int Self.MonsterG1049::searchEnemyIntervalFrames" />
+            </node>
+            <node class="DecoratorAlwaysFailure" id="15">
+              <property DecorateWhenChildEnds="false" />
+              <node class="Compute" id="14">
+                <property Operator="Add" />
+                <property Opl="int Self.MonsterG1049::jumpSearchEnemyFrames" />
+                <property Opr1="int Self.MonsterG1049::jumpSearchEnemyFrames" />
+                <property Opr2="const int 1" />
+              </node>
+            </node>
+            <node class="Sequence" id="16">
+              <node class="Assignment" id="11">
+                <property CastRight="false" />
+                <property Opl="int Self.MonsterG1049::jumpSearchEnemyFrames" />
+                <property Opr="const int 0" />
+              </node>
+              <node class="Condition" id="8">
+                <property Operator="Equal" />
+                <property Opl="Self.MonsterG1049::findEnemyInViewRange()" />
+                <property Opr="const bool true" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node class="Sequence" id="13">
+          <node class="Action" id="22">
+            <property Method="Self.MonsterG1049::prepareBattle()" />
+            <property ResultOption="BT_SUCCESS" />
+          </node>
+          <node class="Selector" id="20">
+            <node class="ReferencedBehavior" id="2">
+              <property ReferenceBehavior="const string &quot;Fight&quot;" />
+              <attachment class="Precondition" id="21" flag="precondition">
+                <property BinaryOperator="And" />
+                <property Operator="Equal" />
+                <property Opl="Self.MonsterG1049::isEnemyInvalid()" />
+                <property Opr2="const bool true" />
+                <property Phase="Both" />
+              </attachment>
+            </node>
+            <node class="Action" id="27">
+              <property Method="Self.MonsterG1049::quitBattle()" />
+              <property ResultOption="BT_SUCCESS" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node class="WithPrecondition" id="6">
+        <node class="Condition" id="18">
+          <property Operator="Equal" />
+          <property Opl="bool Self.MonsterG1049::inQuitBattle" />
+          <property Opr="const bool true" />
+        </node>
+        <node class="Sequence" id="35">
+          <node class="Action" id="30">
+            <property Method="Self.MonsterG1049::stopRun()" />
+            <property ResultOption="BT_SUCCESS" />
+          </node>
+          <node class="Selector" id="36">
+            <node class="Condition" id="37">
+              <property Operator="Equal" />
+              <property Opl="bool Self.MonsterG1049::inResponseGatherEvent" />
+              <property Opr="const bool true" />
+            </node>
+            <node class="Sequence" id="23">
+              <node class="Action" id="24">
+                <property Method="Self.MonsterG1049::backToPatrolPosBeforBattle()" />
+                <property ResultOption="BT_SUCCESS" />
+              </node>
+              <node class="Action" id="25">
+                <property Method="Self.MonsterG1049::waitMoveOver()" />
+                <property ResultOption="BT_INVALID" />
+              </node>
+              <node class="Wait" id="28">
+                <property Time="const float 600" />
+              </node>
+              <node class="Action" id="29">
+                <property Method="Self.MonsterG1049::setIdleAction()" />
+                <property ResultOption="BT_SUCCESS" />
+              </node>
+              <node class="Action" id="26">
+                <property Method="Self.MonsterG1049::resetPatrolPosBeforBattle()" />
+                <property ResultOption="BT_SUCCESS" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node class="WithPrecondition" id="31">
+        <node class="Condition" id="32">
+          <property Operator="Equal" />
+          <property Opl="bool Self.MonsterG1049::inResponseGatherEvent" />
+          <property Opr="const bool true" />
+        </node>
+        <node class="Sequence" id="33">
+          <node class="Action" id="34">
+            <property Method="Self.MonsterG1049::startMovetoGatherPos()" />
+            <property ResultOption="BT_SUCCESS" />
+          </node>
+          <node class="Action" id="38">
+            <property Method="Self.MonsterG1049::waitMoveOver()" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+          <node class="Wait" id="39">
+            <property Time="const float 500" />
+          </node>
+          <node class="Action" id="40">
+            <property Method="Self.MonsterG1049::setIdleAction()" />
+            <property ResultOption="BT_SUCCESS" />
+          </node>
+        </node>
+      </node>
+      <node class="WithPrecondition" id="4">
+        <node class="True" id="10" />
+        <node class="ReferencedBehavior" id="1">
+          <property ReferenceBehavior="const string &quot;Patrol&quot;" />
+        </node>
+      </node>
+    </node>
+  </node>
+</behavior>

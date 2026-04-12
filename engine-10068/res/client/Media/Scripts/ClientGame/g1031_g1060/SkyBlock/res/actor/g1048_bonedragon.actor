@@ -1,0 +1,79 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g1048_bonedragon.actor" Originalscale="1 1 1" Skeleton="g1048_bonedragon.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="body" SlaveName="1" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "g1048_bonedragon_body.skin" ChangeColor = "2.10195e-44 9.12245e-43 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1048_bonedragon_head.skin" ChangeColor = "2.10195e-44 1.09722e-42 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="attack" EnableWound="true" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1048_bonedragon_attack_01.anim" BeginTime = "0" Times = "1" Length = "1.4" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+				<Effect>
+					<FileName value="g1048_bonedragon_longxi.effect"/>
+					<SocketName value="Bip001_Head"/>
+					<BeginTime value="0"/>
+					<Times value="1"/>
+					<Position_X value="0.741689"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="90"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="attack2" EnableWound="true" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1048_bonedragon_attack_02.anim" BeginTime = "0" Times = "1" Length = "0.9" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+				<Effect>
+					<FileName value="g1048_bonedragon_longxi.effect"/>
+					<SocketName value="Bip001_Head"/>
+					<BeginTime value="0"/>
+					<Times value="1"/>
+					<Position_X value="0.613596"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="90"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="idle" EnableWound="true" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1048_bonedragon_idle.anim" BeginTime = "0" Times = "-1" Length = "1.1" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="run" EnableWound="true" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1048_bonedragon_walk.anim" BeginTime = "0" Times = "1" Length = "3.5" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="walk" EnableWound="true" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1048_bonedragon_walk.anim" BeginTime = "0" Times = "-1" Length = "3.5" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g1048_bonedragon_attack_01.anim"/>
+				<Anim Name="g1048_bonedragon_attack_02.anim"/>
+				<Anim Name="g1048_bonedragon_idle.anim"/>
+				<Anim Name="g1048_bonedragon_walk.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

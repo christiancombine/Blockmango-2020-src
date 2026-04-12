@@ -1,0 +1,126 @@
+--DbUtil.lua
+DbUtil = {}
+DbUtil.TAG_SHAREDATA = "ShareData"
+DbUtil.TAG_MIAN_LINE = "main_line"
+
+DBManager:addMustLoadSubKey(DbUtil.TAG_SHAREDATA)
+DBManager:addMustLoadSubKey(DbUtil.TAG_MIAN_LINE)
+
+function DbUtil:getPlayerData(userId)
+    DBManager:getPlayerData(userId, DbUtil.TAG_SHAREDATA)
+    DBManager:getPlayerData(userId, DbUtil.TAG_MIAN_LINE)
+end
+
+function DbUtil:onPlayerGetDataFinish(player, data, subKey)
+    -- DBManager:addCache(player.userId, subKey, data)
+    if subKey == DbUtil.TAG_SHAREDATA then
+        player:initShareDataFromDB(data)
+        player.taskController:init()
+    end
+
+    if subKey == DbUtil.TAG_MIAN_LINE then
+        player:initMainLineDataFromDB(data)
+        player.taskController:init()
+    end
+
+end
+
+function DbUtil:savePlayerData(player, immediate)
+    if player == nil then
+        return
+    end
+    DbUtil:SavePlayerShareData(player, immediate)
+    DbUtil:SavePlayerMainLineData(player, immediate)
+
+    if DbUtil:CanSavePlayerData(player, DbUtil.TAG_SHAREDATA) then
+        if player.money and player.exp and player.level and player.area and player.off_lineTime and player.other_unlockTime then
+
+            HostApi.log("SavePlayerShareData userId: " .. tostring(player.userId) .. " money: " .. player.money .. " exp: " .. player.exp .. " level: " .. player.level
+            .. " area: " .. player.area .. " off_lineTime: " .. player.off_lineTime .. " other_unlockTime: " .. player.other_unlockTime)
+        end
+
+        if player.products then
+            for _, npc in pairs(player.products) do
+                if npc.Id and npc.level and npc.Time then
+                    HostApi.log("SavePlayerShareData product: npcId: " .. npc.Id .. " npcLevel: " .. npc.level .. " npcTime: " .. npc.Time)
+                end
+            end
+        end
+    end
+
+    player:LogInventoryInfo()
+end
+
+function DbUtil:SavePlayerShareData(player, immediate)
+    local subKey = DbUtil.TAG_SHAREDATA
+    if not DBManager:isLoadDataFinished(player.userId, subKey) then
+        return
+    end
+    local data = {}
+    if player.isLife then
+        data.hp = player:getHealth()
+        data.maxHp = player:getMaxHealth()
+    else
+        data.hp = GameConfig.initHP
+        data.maxHp = GameConfig.initHP
+    end
+    data.foodLevel = player.foodLevel
+    player:setInventory()
+    data.inventory = player.inventory--InventoryUtil:getPlayerInventoryInfo(player)
+    -- player.money = player:getCurrency()
+    data.money = player.money
+    data.current_day_money = player.current_day_money
+    if data.money < 0 then
+        data.money = 0
+    end
+    data.score = player.score
+    data.exp = player.exp
+    data.level = player.level
+    data.area = player.area
+    data.products = player.products
+    data.books = player.books
+    data.getRewardTick = player.getRewardTick
+    data.off_lineTime = player.off_lineTime
+    data.other_unlockTime = player.other_unlockTime
+    data.backMiningAreaTime = player.backMiningAreaTime 
+    data.backProductTime = player.backProductTime
+    data.privilege = player.privilege
+    data.isSky = player.isSky
+    data.signIn_dayKey = player.signIn_dayKey
+    data.signIn_id = player.signIn_id
+    data.signIn_start = player.signIn_start
+    data.signIn_end = player.signIn_end
+    data.havePriImgList = player.havePriImgList
+    data.notShowSwitchRed = player.notShowSwitchRed
+    data.notShowRichRed = player.notShowRichRed
+    DBManager:savePlayerData(player.userId, DbUtil.TAG_SHAREDATA, data, immediate)
+end
+
+function DbUtil:SavePlayerMainLineData(player, immediate)
+    if not DbUtil:CanSavePlayerData(player, DbUtil.TAG_MIAN_LINE) or not DbUtil:CanSavePlayerData(player, DbUtil.TAG_SHAREDATA) then
+        return
+    end
+    
+    player.taskController:transformToPlayerTaskData(player)
+    local data = {}
+    data.progressesLevel = player.progressesLevel
+    data.mainline_tasks = player.mainline_tasks
+    data.dare_tasks = player.dare_tasks
+    data.maxDareTimes = player.maxDareTimes
+    data.curDareTimes = player.curDareTimes
+    data.nextTaskTime = player.nextTaskTime
+    data.LastLoginDate = player.LastLoginDate
+    data.free_refresh_times = player.free_refresh_times
+    data.dareIsUnLock = player.dareIsUnLock
+    data.taskIsLandLevel = player.taskIsLandLevel
+    
+    --HostApi.log("SavePlayerMainLineData")
+
+    DBManager:savePlayerData(player.userId, DbUtil.TAG_MIAN_LINE, data, immediate)
+end
+
+function DbUtil:CanSavePlayerData(player, subKey)
+    return DBManager:isLoadDataFinished(player.userId, subKey)
+end
+
+return DbUtil

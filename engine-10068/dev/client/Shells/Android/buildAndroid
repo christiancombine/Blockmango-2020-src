@@ -1,0 +1,96 @@
+#!/usr/bin/env bash
+PROJECT_DIR="$(pwd)/MineCraft"
+echo $PROJECT_DIR
+
+BUILD_TYP="0"
+APP_APP_ABI="armeabi-v7a"
+
+while getopts "t:i:" opt; do
+    case $opt in
+		t)
+		 	if [ $OPTARG == "1" ] || [ $OPTARG == 0 ]; then
+		 		BUILD_TYP=$OPTARG
+		 		echo "this is -t the arg is ! $BUILD_TYP"
+		 	else
+		 		echo "error: argument -t=$OPTARG ,-t value 1(Debug) or 0 (Release)"
+		 		exit 1
+		 	fi
+	 	;;
+	 	i)
+			if [ $OPTARG == "all" ] || [ $OPTARG == "arm64-v8a" ] || [ $OPTARG == "armeabi" ] || [ $OPTARG == "armeabi-v7a" ] || [ $OPTARG == "mips" ] || [ $OPTARG == "mips64" ] || [ $OPTARG == "x86" ] || [ $OPTARG == "x86_64" ]  ; then
+				APP_APP_ABI=$OPTARG
+				echo "this is -i the arg is ! $APP_APP_ABI"
+			else
+				echo "error: argument -i=$OPTARG , '-i' value is phone CPU architecture : [ all arm64-v8a armeabi armeabi-v7a mips mips64 x86 x86_64 ]"
+		 		exit 1
+			fi
+		;;
+		?)
+			echo "unkonw argument : argument -i [ all arm64-v8a armeabi armeabi-v7a mips mips64 x86 x86_64 ]  , -t [ 1(Debug)   0 (Release) ]"
+			exit 1
+		;;
+    esac
+done
+
+echo "the arg is ! $BUILD_TYP     $APP_APP_ABI  "
+
+
+#build Common
+cd "$PROJECT_DIR/../../../../common/ApkBuild/jni/"
+ndk-build NDK_DEBUG=$BUILD_TYP APP_ABI=$APP_APP_ABI
+if [ $? != 0 ]; then
+	echo "error:build Common"
+	exit 1
+fi
+
+
+#build LordCore LordGLES2Render zlib
+cd "$PROJECT_DIR/../../../../engine/NDKBuild/jni/"
+ndk-build NDK_DEBUG=$BUILD_TYP APP_ABI=$APP_APP_ABI
+if [ $? != 0 ]; then
+	echo "error:build LordCore LordGLES2Render zlib"
+	exit 1
+fi
+
+#build FreeType FreeImage
+cd "$PROJECT_DIR/../../../../engine/NDKBuild/DepBuild/jni/"
+ndk-build NDK_DEBUG=$BUILD_TYP APP_ABI=$APP_APP_ABI
+if [ $? != 0 ]; then
+	echo "error:build FreeType FreeImage"
+	exit 1
+fi
+
+#build LordGLES2Render libLordCore
+cd "$PROJECT_DIR/../../../../engine/ApkBuild/jni/"
+ndk-build NDK_DEBUG=$BUILD_TYP APP_ABI=$APP_APP_ABI
+if [ $? != 0 ]; then
+	echo "error:build LordGLES2Render libLordCore"
+	exit 1
+fi
+
+#build libLogic
+cd "$PROJECT_DIR/../../../../logic/ApkBuild/jni/"
+ndk-build NDK_DEBUG=$BUILD_TYP APP_ABI=$APP_APP_ABI
+if [ $? != 0 ]; then
+	echo "error:build libLogic"
+	exit 1
+fi
+
+#build libGameClient
+cd "$PROJECT_DIR/../../../ApkBuild/jni/"
+ndk-build NDK_DEBUG=$BUILD_TYP APP_ABI=$APP_APP_ABI
+if [ $? != 0 ]; then
+	echo "error:build libGameClient"
+	exit 1
+fi
+
+
+#build libMineCraft
+cd "$PROJECT_DIR/app/jni/"
+ndk-build NDK_DEBUG=$BUILD_TYP APP_ABI=$APP_APP_ABI
+if [ $? != 0 ]; then
+	echo "error:build libMineCraft"
+	exit 1
+fi
+
+

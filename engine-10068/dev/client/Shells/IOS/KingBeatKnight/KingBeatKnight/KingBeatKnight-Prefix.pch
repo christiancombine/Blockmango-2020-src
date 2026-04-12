@@ -1,0 +1,33 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#define YMTXRECORDSDK
+
+//微信
+#define WXAppKey         @"wx683a15ad46db5703"
+#define WXDescription    @"WeRec"
+//新浪微博
+#define XLAppKey         @"2045436852"
+#define XLRedirectURI    @"http://www.sina.com"
+//Qzone
+#define QZoneAppId       @"1104682027"
+
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+# define NSLog(...) {}
+#endif

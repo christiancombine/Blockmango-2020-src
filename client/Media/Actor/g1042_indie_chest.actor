@@ -1,0 +1,72 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g1008_chest.actor" Originalscale="1 1 1" Skeleton="g1008_chest_bone.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="body" SlaveName="g1008_chest_01" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "g1008_chest_01.skin" ChangeColor = "2.10195e-44 9.01035e-43 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+			</BodyPart>
+			<BodyPart MasterName="body" SlaveName="g1008_chest_02" DefaultUse="false" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "g1008_chest_02.skin" ChangeColor = "2.10195e-44 4.03994e-42 1.68972e+22 0" UVSpeed = "0 0">
+				</Skin>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="active" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1008_chest_idle.anim" BeginTime = "0" Times = "-1" Length = "1.033" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+				<Effect>
+					<FileName value="g1008_chest_idle.effect"/>
+					<SocketName value="BuSuiFu"/>
+					<BeginTime value="0.2"/>
+					<Times value="1"/>
+					<Position_X value="-0.0199673"/>
+					<Position_Y value="0.204083"/>
+					<Position_Z value="-0.850208"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1008_chest_ui_active.anim" BeginTime = "0" Times = "-1" Length = "0.7" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="open" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1008_chest_open.anim" BeginTime = "0" Times = "1" Length = "3.266" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+				<Effect>
+					<FileName value="g1008_chestopen2.effect"/>
+					<SocketName value="BuSuiFu"/>
+					<BeginTime value="0.08"/>
+					<Times value="1"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g1008_chest_idle.anim"/>
+				<Anim Name="g1008_chest_open.anim"/>
+				<Anim Name="g1008_chest_ui_active.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

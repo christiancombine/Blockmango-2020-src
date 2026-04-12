@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: BirdFightAI.xml-->
+<behavior name="BirdFightAI" agenttype="BirdAgent" version="5">
+  <node class="Task" id="1">
+    <property Prototype="Self.BirdAgent::Attack_Task()" />
+    <property IsHTN="false" />
+    <node class="DecoratorLoopUntil" id="0">
+      <property Count="const int -1" />
+      <property DecorateWhenChildEnds="true" />
+      <property Until="true" />
+      <node class="Action" id="2">
+        <property Method="Self.BirdAgent::Attack()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+    </node>
+  </node>
+</behavior>

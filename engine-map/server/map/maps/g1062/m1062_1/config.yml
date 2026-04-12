@@ -1,0 +1,467 @@
+
+# 等待时间
+waitingPlayerTime: 90
+
+#等待时间2
+waitingPlayerTime2: 20
+
+# 准备开始时间
+prepareTime: 0
+
+# 是否打开商店自动弹窗(1开）
+openAppShopSwitch: 0
+
+# 游戏时间
+gameTime: 2400
+
+# 游戏结束之后多久关闭服务器
+gameOverTime: 180
+
+# 开始游戏之后多久还能进玩家
+timeToEnter: 1
+
+# task giveup Time (x小时)
+taskGiveUpCD: 0
+
+#出生点随机范围
+initPosRange: 3
+
+#  task refresh Time （0~24小时）
+taskRefreshTime: 0
+
+#出生点随机范围
+initPosRange: 3
+
+# 货币表
+coinMapping:
+    -
+        coinId: 1
+        itemId: 265
+    -
+        coinId: 2
+        itemId: 266
+    -
+        coinId: 3
+        itemId: 264
+    -
+        coinId: 4
+        itemId: 388
+
+# 搭桥蛋
+bridge:
+    -
+        id: 467
+        len: 20
+        blockId: 35
+
+# 买活
+respawn:
+    -
+        time: 10
+        price: [1, 13, 100]
+        times: 3
+    -
+        time: 10
+        price: [1, 20, 200]
+        times: 2
+    -
+        time: 10
+        price: [1, 30, 600]
+        times: 1
+
+# 自动加血
+autoAddHp:
+    -
+        countDown: 15
+        addHpValue: 1
+        
+# 金苹果 
+goldApple:
+    -
+        # 加血持续
+        hpCountDown: 1
+        addHpValue: 1
+        armorDuration: 4
+        
+        # 金苹果值持续
+        armoraddDuration: 60
+        addarmor: 4
+        
+# 5个阶段时间
+status: [1, 360, 720, 1080, 1440]
+
+# 花XX魔方开启快速搭建，每次搭X个
+quicklyBuildBlockCost: 5
+quicklyBuildBlockNum: 3
+
+#最少开始人数
+startPlayers: 16
+#私人派对开始人数
+partyStartPlayers: 2
+
+#每个队伍的人数
+teamPlayers: 2
+
+# 死亡线Y坐标
+deathLineY: 1
+
+# 爆炸箭爆炸范围
+explosionSize: 2
+
+# 爆炸箭爆炸伤害
+explosionDamageFactor: 0.5
+
+# 惊吓手雷爆炸范围
+grenadeExplosionSize: 3
+
+# 惊吓手雷爆炸伤害系数
+grenadeExplosionDamageFactor: 0.2
+
+# 惊吓手雷击退距离系数
+grenadeExplosionRepelDistanceFactor: 1.0
+
+# 中途退出扣积分（负数）
+quitSubHonor: -12
+
+#玩家没有完成整局游戏系数
+notGameOver: 0
+
+#玩家完成整局游戏系数
+isGameOver: 1
+
+#玩家游戏获取胜利系数
+playerWin: 1
+
+#玩家游戏失败或者平局系数
+playerLos: 1
+
+#暴击基础额外伤害
+critExtraHurt: 6
+
+#暴击基础概率(0~10000)
+critExtraHurtPro: 0
+
+#剑攻击后火焰伤害概率(0~100)
+swordFirePro: 0
+
+# 燃烧持续时间（s）
+fire_time: 3
+
+# 是否打开抽奖自动弹窗（1开/ 与商店自动弹窗不可共存）
+openLotterySwitch: 1
+
+# ai对玩家的伤害系数
+aiDamageCoefficient: 0.3
+
+#走路边缘判断,往下的格子数（0就是不检测）
+runLimitCheck: 7
+
+#奔跑边缘判断,往下的格子数（0就是不检测）
+sprintLimitCheck: 0
+
+#判断版本不同用的
+updateTipsVersion: 0
+
+
+#世界时间,维持时间点不变.
+worldTime: 6000
+
+
+#超出区域的伤害
+outOfAreaHurt: 2
+
+#检测AI是否被卡住的参数（AI在X秒内没有位移超过X个方块，会自动死亡（不包括在家待机和收集资源待机））
+checkAIStuckTime: 40
+checkAIStuckDistance: 10
+
+#建造分统计参数, 普通放置,防御塔,防御墙,搭桥蛋
+buildScore: [1, 8, 10, 40]
+
+#复活无敌保护时间
+invincibleTime: 3
+
+#无敌特效
+invincibleEffect: "130_wudi.effect"
+
+# 符文映射表
+RuneMapping:
+    -
+        temRuneId: 22503
+        realRuneId: 12503
+    -
+        temRuneId: 22503
+        realRuneId: 12503
+    -
+        temRuneId: 20101
+        realRuneId: 10101
+    -
+        temRuneId: 20102
+        realRuneId: 10102
+    -
+        temRuneId: 20103
+        realRuneId: 10103
+    -
+        temRuneId: 20201
+        realRuneId: 10201
+    -
+        temRuneId: 20202
+        realRuneId: 10202
+    -
+        temRuneId: 20203
+        realRuneId: 10203
+    -
+        temRuneId: 20301
+        realRuneId: 10301
+    -
+        temRuneId: 20302
+        realRuneId: 10302
+    -
+        temRuneId: 20303
+        realRuneId: 10303
+    -
+        temRuneId: 20401
+        realRuneId: 10401
+    -
+        temRuneId: 20402
+        realRuneId: 10402
+    -
+        temRuneId: 20403
+        realRuneId: 10403
+    -
+        temRuneId: 20501
+        realRuneId: 10501
+    -
+        temRuneId: 20502
+        realRuneId: 10502
+    -
+        temRuneId: 20503
+        realRuneId: 10503
+    -
+        temRuneId: 20601
+        realRuneId: 10601
+    -
+        temRuneId: 20602
+        realRuneId: 10602
+    -
+        temRuneId: 20603
+        realRuneId: 10603
+    -
+        temRuneId: 20701
+        realRuneId: 10701
+    -
+        temRuneId: 20702
+        realRuneId: 10702
+    -
+        temRuneId: 20703
+        realRuneId: 10703
+    -
+        temRuneId: 20801
+        realRuneId: 10801
+    -
+        temRuneId: 20802
+        realRuneId: 10802
+    -
+        temRuneId: 20803
+        realRuneId: 10803
+    -
+        temRuneId: 20901
+        realRuneId: 10901
+    -
+        temRuneId: 20902
+        realRuneId: 10902
+    -
+        temRuneId: 20903
+        realRuneId: 10903
+    -
+        temRuneId: 21001
+        realRuneId: 11001
+    -
+        temRuneId: 21002
+        realRuneId: 11002
+    -
+        temRuneId: 21003
+        realRuneId: 11003
+    -
+        temRuneId: 21101
+        realRuneId: 11101
+    -
+        temRuneId: 21102
+        realRuneId: 11102
+    -
+        temRuneId: 21103
+        realRuneId: 11103
+    -
+        temRuneId: 21201
+        realRuneId: 11201
+    -
+        temRuneId: 21202
+        realRuneId: 11202
+    -
+        temRuneId: 21203
+        realRuneId: 11203
+    -
+        temRuneId: 21301
+        realRuneId: 11301
+    -
+        temRuneId: 21302
+        realRuneId: 11302
+    -
+        temRuneId: 21303
+        realRuneId: 11303
+    -
+        temRuneId: 21401
+        realRuneId: 11401
+    -
+        temRuneId: 21402
+        realRuneId: 11402
+    -
+        temRuneId: 21403
+        realRuneId: 11403
+    -
+        temRuneId: 21501
+        realRuneId: 11501
+    -
+        temRuneId: 21502
+        realRuneId: 11502
+    -
+        temRuneId: 21503
+        realRuneId: 11503
+    -
+        temRuneId: 21601
+        realRuneId: 11601
+    -
+        temRuneId: 21602
+        realRuneId: 11602
+    -
+        temRuneId: 21603
+        realRuneId: 11603
+    -
+        temRuneId: 21701
+        realRuneId: 11701
+    -
+        temRuneId: 21702
+        realRuneId: 11702
+    -
+        temRuneId: 21703
+        realRuneId: 11703
+    -
+        temRuneId: 21801
+        realRuneId: 11801
+    -
+        temRuneId: 21802
+        realRuneId: 11802
+    -
+        temRuneId: 21803
+        realRuneId: 11803
+    -
+        temRuneId: 21901
+        realRuneId: 11901
+    -
+        temRuneId: 21902
+        realRuneId: 11902
+    -
+        temRuneId: 21903
+        realRuneId: 11903
+    -
+        temRuneId: 22001
+        realRuneId: 12001
+    -
+        temRuneId: 22002
+        realRuneId: 12002
+    -
+        temRuneId: 22003
+        realRuneId: 12003
+    -
+        temRuneId: 22101
+        realRuneId: 12101
+    -
+        temRuneId: 22102
+        realRuneId: 12102
+    -
+        temRuneId: 22103
+        realRuneId: 12103
+    -
+        temRuneId: 22201
+        realRuneId: 12201
+    -
+        temRuneId: 22202
+        realRuneId: 12202
+    -
+        temRuneId: 22203
+        realRuneId: 12203
+    -
+        temRuneId: 22301
+        realRuneId: 12301
+    -
+        temRuneId: 22302
+        realRuneId: 12302
+    -
+        temRuneId: 22303
+        realRuneId: 12303
+    -
+        temRuneId: 22401
+        realRuneId: 12401
+    -
+        temRuneId: 22402
+        realRuneId: 12402
+    -
+        temRuneId: 22403
+        realRuneId: 12403
+    -
+        temRuneId: 22501
+        realRuneId: 12501
+    -
+        temRuneId: 22502
+        realRuneId: 12502
+    -
+        temRuneId: 22503
+        realRuneId: 12503
+
+#药水
+WitchPotionId: 599
+#回城
+BackHomeReelId: 598
+#铁傀儡
+IronPuppetId: 597
+#囊虫
+SilverfishId: 596
+#虚空方块生效高度 , 相对中心岛出生点y
+useHollowBlockHeight: -33
+#开启滑翔高度, 相对中心岛出生点y
+startGlideHeight: 12
+#滑翔移动加速度
+glideMoveAddition: -0.9
+#滑翔下落阻力
+glideDropResistance: 0.3
+#滑翔持续时间
+glideDuration : 3.5
+
+# 忍者鞋跳跃高度 的加速度  默认是0.42
+NinjaShoesJumpHeight: 0.5
+
+# 忍者鞋移动速度 默认0
+NinjaShoesSpeedLevel: 0
+
+#龙破坏方块需要时间
+breakBlockTime: 0.7
+#龙破坏方块受到伤害
+breakBlockHurt: 0.4
+#龙撞人伤害
+DragonHurt: 2
+#龙撞人伤害间隔时间
+DragonHurtTime: 2
+
+#范围倍数：基础是4
+tntExplosionSize : 0.5
+#伤害倍数
+tntExplosionDamageFactor : 3
+#击退
+tntExplosionRepelDistanceFactor : 0.15
+
+#鱼钩命中伤害
+FishHookDamage: 2
+
+#受击特效持续时间
+beAttackEffectTime: 0.5
+#受击特效
+beAttackEffect: "g1008_hit.effect"

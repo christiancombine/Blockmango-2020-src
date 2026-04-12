@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: BirdAI.xml-->
+<behavior name="BirdAI" agenttype="BirdAgent" version="5">
+  <node class="Sequence" id="0">
+    <node class="Action" id="1">
+      <property Method="Self.BirdAgent::Move()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Action" id="2">
+      <property Method="Self.BirdAgent::Patrol()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Action" id="3">
+      <property Method="Self.BirdAgent::Gather()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Action" id="4">
+      <property Method="Self.BirdAgent::Attack()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+    <node class="Action" id="5">
+      <property Method="Self.BirdAgent::MakeCoin()" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
+  </node>
+</behavior>

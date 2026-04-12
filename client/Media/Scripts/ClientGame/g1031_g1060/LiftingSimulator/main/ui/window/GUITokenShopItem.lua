@@ -1,0 +1,202 @@
+GUITokenShopItem = class("GUITokenShopItem", IGUIWindow)
+
+TokenItemBuyStatus = {
+    Lock = 1, --未解锁
+    Unlock = 2, --解锁
+    Buy = 3, --购买
+    Used = 4, --使用
+}
+
+function GUITokenShopItem:onLoad()
+    self.kind = TabKind.NotKind
+    self.itemId = 0
+    self.selectMode = TokenItemBuyStatus.NotSelect
+    self.itemStatus = ItemBuyStatus.Lock
+    self.effect = "#"
+    self.moneyType = Define.MoneyType.DiamondGolds1
+    self.llItem = DynamicCast.dynamicCastWindow(GUIType.Layout, self.root)
+    self.tvItemTitle = self:getChildWindow(0, GUIType.StaticText)
+    self.ivItemIcon = self:getChildWindow(1, GUIType.StaticImage)
+    self.ivItemState = self:getChildWindow(2, GUIType.StaticImage)
+    self.tvItemStateText = self:getChildWindow(0, GUIType.StaticText, self.ivItemState)
+    self.tvItemMoneyNum = self:getChildWindow(3, GUIType.StaticText)
+    self.ivItemMoneyIcon = self:getChildWindow(4, GUIType.StaticImage)
+    self.tvItemUsedText = self:getChildWindow(5, GUIType.StaticText)
+    self.ivItemLockIcon =  self:getChildWindow(6, GUIType.StaticImage)
+    self.ivNotHave =  self:getChildWindow(7, GUIType.StaticImage)
+    self.tvNotHaveText = self:getChildWindow(0, GUIType.StaticText, self.ivNotHave)
+    self.tvNotHaveText:SetText(Lang:getString("out_of_print"))
+
+
+    self.ivNotHave:SetVisible(false)
+    self.tvItemUsedText:SetVisible(false)
+    self.ivItemLockIcon:SetVisible(false)
+
+    self.llItem:registerEvent(GUIEvent.Click,function()
+        self:onClickItem()
+    end)
+end
+
+function GUITokenShopItem:SetVisible(value)
+    if self.llItem then
+        self.llItem:SetVisible(value)
+        self.llItem:SetAlpha(value and 1 or 0)
+    end
+end
+
+function GUITokenShopItem:hideGUIWindow()
+    if self.llItem then
+        self.llItem:SetVisible(false)
+        self.llItem:SetAlpha(0)
+        self.llItem:SetBackImage("")
+        self.llItem:SetEnabled(false)
+        self.llItem:removeAllEvents()
+    end
+
+    if self.tvItemStateText then
+        self.tvItemStateText:SetAlpha(0)
+        self.tvItemStateText:SetText("")
+    end
+
+    if self.tvNotHaveText then
+        self.tvNotHaveText:SetAlpha(0)
+        self.tvNotHaveText:SetText("")
+    end
+
+    --for i = 0, 7 do
+    --    local window = self:getChildWindow(i, nil)
+    --    if window then
+    --        window:SetAlpha(0)
+    --    end
+    --end
+
+    self.ivItemState:SetAlpha(0)
+    self.tvItemMoneyNum:SetAlpha(0)
+    self.ivItemMoneyIcon:SetAlpha(0)
+    self.ivItemLockIcon:SetAlpha(0)
+    self.tvItemTitle:SetText("")
+    self.tvItemUsedText:SetText("")
+end
+
+function GUITokenShopItem:getMoneyIconByMoneyType(Kind)
+    local strMoneyIcon = ""
+    if Kind == Define.MoneyType.SLGolds then
+        --strMoneyIcon = PayHelper.getMoneyIcon(MoneyType.Golds)
+        strMoneyIcon = "set:LiftingSimulatorShop1.json image:gold"
+    end
+    if Kind == Define.MoneyType.DiamondGolds2 then
+        strMoneyIcon = PayHelper.getMoneyIcon(MoneyType.Diamonds)
+        --strMoneyIcon = "set:LiftingSimulatorShop1.json image:DiamondBlues"
+    end
+    if Kind == Define.MoneyType.DiamondGolds1 then
+        strMoneyIcon = PayHelper.getMoneyIcon(MoneyType.Diamonds)
+        --strMoneyIcon = "set:LiftingSimulatorShop1.json image:DiamondGolds"
+    end
+
+    if Kind == Define.MoneyType.Token then
+        strMoneyIcon = "set:TokenShop.json image:token_icon"
+        --strMoneyIcon = "set:LiftingSimulatorShop1.json image:DiamondGolds"
+    end
+
+    
+    return strMoneyIcon
+end
+
+function GUITokenShopItem:initItem(Kind, Value, ItemIcon)
+    self.kind = Kind
+    self.itemId = Value.Id
+    self.itemStatus = Value.Status
+    self.effect = Value.Effect
+    self.moneyType = Value.MoneyType
+
+    self.llItem:SetBackImage("set:LiftingSimulatorShop1.json image:ItemBg2")
+    self.tvItemTitle:SetText(Lang:getString(Value.Name))
+    self.ivItemIcon:SetImage(ItemIcon)
+    self.ivItemIcon:SetArea({ 0, 0 }, { 0, 27 }, { 0, 110}, { 0, 90})
+    self.tvItemStateText:SetText(Lang:getString("used"))
+    self.tvItemMoneyNum:SetText(Utility.toKMBString(tostring(Value.Price),2))
+    if (self.moneyType == Define.MoneyType.DiamondGolds1 or self.moneyType == Define.MoneyType.DiamondGolds2) then
+        self.tvItemMoneyNum:SetText(tostring(Value.Price))
+    end
+    local MoneyIcon = self:getMoneyIconByMoneyType(Value.MoneyType)
+    self.ivItemMoneyIcon:SetImage(MoneyIcon)
+
+    self:setItemStatus()
+
+    if self.kind == TabKind.FitnessEquip then
+        self:initFitnessEquipItem()
+    end
+    if self.kind == TabKind.Gene then
+        self:initGeneItem()
+    end
+    if self.kind == TabKind.Advanced then
+        self:initAdvancedItem()
+    end
+    if self.kind == TabKind.Skill then
+        self:initSkillItem()
+    end
+end
+
+function GUITokenShopItem:setItemStatus()
+    if self.itemId == 111 or self.itemId == 208 then
+        self.ivNotHave:SetVisible(true)
+        self.tvItemMoneyNum:SetVisible(false)
+        self.ivItemMoneyIcon:SetVisible(false)
+    end
+
+    if self.itemStatus == ItemBuyStatus.Lock then
+        self.ivItemState:SetVisible(false)
+        self.tvItemStateText:SetVisible(false)
+        self.tvItemMoneyNum:SetVisible(false)
+        self.ivItemMoneyIcon:SetVisible(false)
+        self.ivItemLockIcon:SetVisible(true)
+    end
+    if self.itemStatus == ItemBuyStatus.Unlock then
+        self.ivItemState:SetVisible(false)
+        self.tvItemStateText:SetVisible(false)
+    end
+    if self.itemStatus == ItemBuyStatus.Buy then
+        self.ivItemState:SetVisible(false)
+        self.tvItemStateText:SetVisible(false)
+        self.tvItemMoneyNum:SetVisible(false)
+        self.ivItemMoneyIcon:SetVisible(false)
+        self.ivNotHave:SetVisible(false)
+    end
+    if self.itemStatus == ItemBuyStatus.Used then
+        self.tvItemMoneyNum:SetVisible(false)
+        self.ivItemMoneyIcon:SetVisible(false)
+        self.ivNotHave:SetVisible(false)
+    end
+end
+
+function GUITokenShopItem:initFitnessEquipItem()
+    if self.itemStatus == ItemBuyStatus.Buy then
+        self.tvItemUsedText:SetVisible(true)
+        self.tvItemUsedText:SetText(Lang:getString("equided"))
+    end
+
+end
+
+function GUITokenShopItem:initGeneItem()
+    self.ivItemIcon:SetArea({ 0, 0 }, { 0, 27 }, { 0, 85}, { 0, 85})
+end
+
+function GUITokenShopItem:initAdvancedItem()
+    self.ivItemIcon:SetArea({ 0, 0 }, { 0, 37 }, { 0, 100}, { 0, 80})
+end
+
+function GUITokenShopItem:initSkillItem()
+    self.ivItemIcon:SetArea({ 0, 0 }, { 0, 27 }, { 0, 100}, { 0, 100})
+end
+
+function GUITokenShopItem:onClickItem()
+    TokenShopItemClickEvent:invoke(self.itemId)
+end
+
+function GUITokenShopItem:changeSelectStatus(Bg, SelectMode)
+    self.llItem:SetBackImage(Bg)
+    self.selectMode = SelectMode
+end
+
+return GUITokenShopItem
+

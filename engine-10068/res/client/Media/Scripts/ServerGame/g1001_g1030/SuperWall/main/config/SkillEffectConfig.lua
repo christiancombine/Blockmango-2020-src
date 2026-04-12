@@ -1,0 +1,47 @@
+---
+--- Created by Jimmy.
+--- DateTime: 2018/4/27 0027 16:29
+---
+
+SkillEffectConfig = {}
+SkillEffectConfig.skillEffects = {}
+
+function SkillEffectConfig:init(skillEffects)
+    self:initSkillEffects(skillEffects)
+end
+
+function SkillEffectConfig:initSkillEffects(skillEffects)
+    for id, skill in pairs(skillEffects) do
+        local item = {}
+        item.id = id
+        item.name = skill.name
+        item.duration = tonumber(skill.duration)
+        item.width = tonumber(skill.width)
+        item.height = tonumber(skill.height)
+        item.density = tonumber(skill.density)
+        local color = StringUtil.split(skill.color or "1#1#1", "#")
+        item.color = VectorUtil.newVector3(color[1] or "1", color[2] or "1", color[3] or "1")
+        self.skillEffects[id] = item
+    end
+    self:prepareSkillEffects()
+end
+
+function SkillEffectConfig:prepareSkillEffects()
+    for id, skill in pairs(self.skillEffects) do
+        HostApi.addSkillEffect(SkillEffectConfig.newSkillEffect(skill))
+    end
+end
+
+function SkillEffectConfig.newSkillEffect(item)
+    local setting = SkillEffect.new()
+    setting.id = item.id
+    setting.name = item.name
+    setting.duration = item.duration
+    setting.width = item.width
+    setting.height = item.height
+    setting.density = item.density
+    setting.color = item.color
+    return setting
+end
+
+return SkillConfig

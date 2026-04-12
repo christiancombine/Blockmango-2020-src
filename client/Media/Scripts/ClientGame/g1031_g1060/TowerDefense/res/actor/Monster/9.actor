@@ -1,0 +1,35 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="9.actor" Originalscale="1 1 1" Skeleton="g2007_youlingqishi.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="body" SlaveName="body" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "g2007_youlingqishi_head.skin" ChangeColor = "2.10195e-44 1.09862e-42 5.54597e+31 0" UVSpeed = "0 0" LocalAlpha = "1">
+				</Skin>
+				<Skin MeshName = "g2007_youlingqishi_body.skin" ChangeColor = "2.10195e-44 1.28779e-42 5.54597e+31 0" UVSpeed = "0 0" LocalAlpha = "1">
+				</Skin>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="attack2" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g2007_youlingqishi_attack_02.anim" BeginTime = "0" Times = "1" Length = "2.233" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g2007_09_idle.anim" BeginTime = "0" Times = "-1" Length = "0.366" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="run" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g2007_youlingqishi_walk.anim" BeginTime = "0" Times = "-1" Length = "1.366" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+				<ActorScaleChange  beginScale = "1.2" endScale = "1.2" >
+				</ActorScaleChange>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g2007_youlingqishi_walk.anim"/>
+				<Anim Name="g2007_youlingqishi_attack_01.anim"/>
+				<Anim Name="g2007_youlingqishi_attack_02.anim"/>
+				<Anim Name="g2007_09_idle.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

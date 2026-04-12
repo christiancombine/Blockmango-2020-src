@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="block_05.actor" Originalscale="1 1 1" Skeleton="bone001.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="gun" SlaveName="block_5" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<StaticMesh>
+					<FileName value="block_05.mesh"/>
+					<SocketName value="bone001"/>
+					<Position_X value="-0.0186956"/>
+					<Position_Y value="0.374971"/>
+					<Position_Z value="-0.0403665"/>
+					<yaw value="45"/>
+					<pitch value="5"/>
+					<roll value="4.28517e-07"/>
+					<scale value="4"/>
+				</StaticMesh>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="bone_001_rotating_idle.anim" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "bone_001_rotating_idle.anim" BeginTime = "0" Times = "-1" Length = "4.033" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="bone_001_rotating_idle.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

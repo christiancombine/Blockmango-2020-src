@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: BirdTest.xml-->
+<behavior name="BirdTest" agenttype="BirdAgent" version="5">
+  <node class="DecoratorLoopUntil" id="0">
+    <property Count="const int -1" />
+    <property DecorateWhenChildEnds="true" />
+    <property Until="true" />
+    <node class="Action" id="1">
+      <property Method="Self.BirdAgent::Attack()" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+  </node>
+</behavior>

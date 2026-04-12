@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: Patrol.xml-->
+<behavior name="Patrol" agenttype="MonsterG1049" version="5">
+  <node class="Selector" id="0">
+    <node class="Sequence" id="6">
+      <node class="Condition" id="7">
+        <property Operator="Equal" />
+        <property Opl="int Self.MonsterG1049::patrolType" />
+        <property Opr="const int 0" />
+      </node>
+      <node class="Noop" id="8" />
+    </node>
+    <node class="IfElse" id="15">
+      <node class="Condition" id="16">
+        <property Operator="Equal" />
+        <property Opl="Self.MonsterG1049::checkNeedPatrolByRandom()" />
+        <property Opr="const bool false" />
+      </node>
+      <node class="Wait" id="17">
+        <property Time="const float 500" />
+      </node>
+      <node class="Sequence" id="1">
+        <node class="Selector" id="10">
+          <node class="Condition" id="9">
+            <property Operator="Equal" />
+            <property Opl="int Self.MonsterG1049::patrolType" />
+            <property Opr="const int 1" />
+          </node>
+          <node class="Condition" id="11">
+            <property Operator="Equal" />
+            <property Opl="int Self.MonsterG1049::patrolType" />
+            <property Opr="const int 2" />
+          </node>
+        </node>
+        <node class="Action" id="2">
+          <property Method="Self.MonsterG1049::selectPatrolTargetPos()" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="3">
+          <property Method="Self.MonsterG1049::startMoveToPatrolPos()" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="5">
+          <property Method="Self.MonsterG1049::waitMoveOver()" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Wait" id="13">
+          <property Time="const float 600" />
+        </node>
+        <node class="Action" id="14">
+          <property Method="Self.MonsterG1049::setIdleAction()" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Action" id="12">
+          <property Method="Self.MonsterG1049::resetPatroTargetPos()" />
+          <property ResultOption="BT_SUCCESS" />
+        </node>
+        <node class="Wait" id="4">
+          <property Time="float Self.MonsterG1049::patrolInterval" />
+        </node>
+      </node>
+    </node>
+  </node>
+</behavior>

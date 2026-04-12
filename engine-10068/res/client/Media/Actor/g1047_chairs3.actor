@@ -1,0 +1,87 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g1047_chairs3.actor" Originalscale="1 1 1" Skeleton="g1047_prop_2034.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="body" SlaveName="2034" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "g1047_prop_2034_01.skin" ChangeColor = "2.10195e-44 9.16449e-43 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1047_prop_2034_02.skin" ChangeColor = "2.10195e-44 2.31915e-42 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1047_prop_2034_03.skin" ChangeColor = "2.10195e-44 2.49992e-42 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1047_prop_2034_04.skin" ChangeColor = "2.10195e-44 3.47242e-42 2.7472e+17 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1047_prop_2034_05.skin" ChangeColor = "2.10195e-44 9.16449e-43 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1047_prop_2034_06.skin" ChangeColor = "2.10195e-44 2.31915e-42 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1047_prop_2034_07.skin" ChangeColor = "2.10195e-44 2.49992e-42 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1047_prop_2034_08.skin" ChangeColor = "2.10195e-44 3.47242e-42 2.7472e+17 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1047_prop_2034_09.skin" ChangeColor = "2.10195e-44 2.49992e-42 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1047_prop_2034_10.skin" ChangeColor = "2.10195e-44 3.47242e-42 2.7472e+17 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1047_prop_2034_11.skin" ChangeColor = "2.10195e-44 9.16449e-43 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1047_prop_2034_12.skin" ChangeColor = "2.10195e-44 2.31915e-42 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1047_prop_2034_13.skin" ChangeColor = "2.10195e-44 2.49992e-42 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1047_prop_2034_14.skin" ChangeColor = "2.10195e-44 3.47242e-42 2.7472e+17 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1047_prop_2034_15.skin" ChangeColor = "2.10195e-44 9.16449e-43 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1047_prop_2034_16.skin" ChangeColor = "2.10195e-44 2.31915e-42 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1047_prop_2034_17.skin" ChangeColor = "2.10195e-44 2.49992e-42 1.4013e-45 0" UVSpeed = "0 0">
+				</Skin>
+				<StaticMesh>
+					<FileName value="g1047_prop_2034.mesh"/>
+					<SocketName value="zhege"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1"/>
+				</StaticMesh>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1047_prop_2034_idle.anim" BeginTime = "0" Times = "-1" Length = "0.7" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+				<Effect>
+					<FileName value="jiayuantexiao01_turnoffTV_ok.effect"/>
+					<SocketName value="BuSuiFu"/>
+					<BeginTime value="0.02"/>
+					<Times value="1"/>
+					<Position_X value="0"/>
+					<Position_Y value="1.09876"/>
+					<Position_Z value="0.369292"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="0.5"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="run" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1047_prop_2034_loop.anim" BeginTime = "0" Times = "-1" Length = "1.666" FadeTime = "0.25" Channel = "" TimeScale = "0.5">
+				</Animation>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g1047_prop_2034_idle.anim"/>
+				<Anim Name="g1047_prop_2034_loop.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

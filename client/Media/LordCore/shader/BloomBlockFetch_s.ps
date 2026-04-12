@@ -1,0 +1,15 @@
+#version 100
+
+precision mediump float;
+
+uniform sampler2D texSampler; 
+varying vec2 texCoord;
+
+void main(void)
+{
+	vec4 finalColor = texture2D(texSampler, texCoord);
+	if(finalColor.a == 0.0)
+		discard;
+		
+	gl_FragColor.rgb = finalColor.rgb;
+}

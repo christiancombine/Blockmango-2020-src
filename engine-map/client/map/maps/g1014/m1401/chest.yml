@@ -1,0 +1,307 @@
+chest:
+#Id分别是 54->219 130->220 146->221
+    -
+    # 警察局补给箱子左
+        name: 0
+        itemId: 146
+        initPos: [310, 62, 255, 0]
+        resetTime: [30, 120]
+        threat: 40
+        merit: 0
+        type: [5]
+    -
+    # 警察局补给箱子右
+        name: 0
+        itemId: 146
+        initPos: [306, 62, 255, 0]
+        resetTime: [30, 120]
+        threat: 40
+        merit: 0
+        type: [5]
+    -
+    # 风险最小，银行箱子左
+        name: 104
+        itemId: 221
+        initPos: [130, 76, 146, 0]
+        resetTime: [300, 300]
+        threat: 40
+        merit: 80
+        type: [1]
+    -
+    # 风险最小，银行箱子右
+        name: 104
+        itemId: 221
+        initPos: [118, 76, 146, 0]
+        resetTime: [300, 300]
+        threat: 40
+        merit: 80
+        type: [1]
+    -
+    # 风险最小，银行箱子中
+        name: 104
+        itemId: 221
+        initPos: [124, 77, 141, 0]
+        resetTime: [300, 300]
+        threat: 40
+        merit: 80
+        type: [1]
+    -
+    # 风险中，商场箱子1
+        name: 105
+        itemId: 221
+        initPos: [350, 65, 489, 0]
+        resetTime: [270, 270]
+        threat: 40
+        merit: 80
+        type: [1]
+    -
+    # 风险中，商场箱子2
+        name: 105
+        itemId: 221
+        initPos: [347, 65, 521, 0]
+        resetTime: [270, 270]
+        threat: 40
+        merit: 80
+        type: [1]
+    -
+    # 风险最大，西南角大厅箱子左，北厅
+        name: 107
+        itemId: 221
+        initPos: [55, 74, 482, 0]
+        resetTime: [300, 300]
+        threat: 40
+        merit: 80
+        type: [1]
+    -
+    # 风险最大，西南角大厅箱子右，南厅
+        name: 107
+        itemId: 221
+        initPos: [55, 74, 518, 0]
+        resetTime: [300, 300]
+        threat: 40
+        merit: 80
+        type: [1]
+    -
+    # 风险最大，西南角大厅箱子中，地下室
+        name: 107
+        itemId: 221
+        initPos: [62, 64, 500, 0]
+        resetTime: [300, 300]
+        threat: 40
+        merit: 80
+        type: [4]
+    -
+    # 711
+        name: 0
+        itemId: 221
+        initPos: [36, 64, 86, 0]
+        resetTime: [60, 120]
+        threat: 10
+        merit: 20
+        type: [3]
+    -
+    # M记箱子
+        name: 0
+        itemId: 221
+        initPos: [231, 64, 161, 0]
+        resetTime: [60, 120]
+        threat: 10
+        merit: 20
+        type: [3]
+    -
+    # 警局前1面包店
+        name: 0
+        itemId: 221
+        initPos: [210, 64, 252, 0]
+        resetTime: [60, 120]
+        threat: 10
+        merit: 20
+        type: [3]
+    -
+    # 警局前2
+        name: 0
+        itemId: 221
+        initPos: [177, 67, 213, 0]
+        resetTime: [60, 120]
+        threat: 10
+        merit: 20
+        type: [3]
+    -
+    # 警局前3，天井房
+        name: 0
+        itemId: 221
+        initPos: [136, 67, 237, 0]
+        resetTime: [60, 120]
+        threat: 10
+        merit: 20
+        type: [3]
+    -
+    # 警局前4，医院旁
+        name: 0
+        itemId: 221
+        initPos: [48, 72, 207, 0]
+        resetTime: [60, 120]
+        threat: 10
+        merit: 20
+        type: [3]
+    -
+    # 医院a
+        name: 106
+        itemId: 221
+        initPos: [65, 64, 271, 0]
+        resetTime: [180, 240]
+        threat: 20
+        merit: 40
+        type: [2]
+    -
+    # 医院b
+        name: 106
+        itemId: 221
+        initPos: [77, 72, 253, 0]
+        resetTime: [180, 240]
+        threat: 20
+        merit: 40
+        type: [2]
+
+
+# items in the inventory, and position of inventory
+# 钻石264，黄金266，绿宝石388
+# 速度药水519 跳跃药水514 隐身药水512 治疗药水517 喷溅型剧毒药水529 喷溅型治疗药水527
+# 面包297 熟牛肉364
+# 铁甲头306 铁甲身307 铁甲腿308 铁甲脚309
+# 钻石甲头310 钻石甲身311 钻石甲腿312 钻石甲脚313
+# 钥匙452
+
+inventory:
+    1:
+    # 纯金钱产出，用于银行商场和大宅，钻石264，黄金266，绿宝石388
+        range: [2, 2]
+        items:
+            -
+                id: 266
+                randomRange: [2, 4]
+                probability: 16
+            -
+                id: 388
+                randomRange: [0, 2]
+                probability: 5
+            -
+                id: 264
+                randomRange: [0, 2]
+                probability: 4
+    2:
+    # 药水，用于医院。速度药水519 跳跃药水514 隐身药水512 治疗药水517 喷溅型剧毒药水529 喷溅型治疗药水527
+        range: [2, 2]
+        items:
+            -
+                id: 519
+                randomRange: [1, 3]
+                probability: 4
+            -
+                id: 514
+                randomRange: [1, 3]
+                probability: 4
+            -
+                id: 512
+                randomRange: [0, 1]
+                probability: 1
+            -
+                id: 517
+                randomRange: [2, 4]
+                probability: 6
+            -
+                id: 266
+                randomRange: [0, 4]
+                probability: 10
+    3:
+    # 普通商店，面包297 熟牛肉364
+        range: [2, 2]
+        items:
+            -
+                id: 297
+                randomRange: [2, 10]
+                probability: 10
+            -
+                id: 364
+                randomRange: [3, 7]
+                probability: 11
+            -
+                id: 266
+                randomRange: [0, 2]
+                probability: 1
+    4:
+    # 产出铁甲，大宅地下室
+        range: [3, 3]
+        items:
+            -
+                id: 306
+                randomRange: [1, 1]
+                probability: 3
+            -
+                id: 307
+                randomRange: [1, 1]
+                probability: 2
+            -
+                id: 308
+                randomRange: [1, 1]
+                probability: 3
+            -
+                id: 309
+                randomRange: [1, 1]
+                probability: 3
+            -
+                id: 364
+                randomRange: [0, 10]
+                probability: 3
+            -
+                id: 266
+                randomRange: [2, 6]
+                probability: 11
+            -
+                id: 264
+                randomRange: [0, 2]
+                probability: 2
+    5:
+    # 警察局补给箱子
+        range: [1, 1]
+        items:
+            -
+                id: 427
+                randomRange: [1, 1]
+                probability: 10
+            -
+                id: 428
+                randomRange: [1, 1]
+                probability: 15
+            -
+                id: 425
+                randomRange: [1, 3]
+                probability: 12
+            -
+                id: 430
+                randomRange: [1, 1]
+                probability: 1
+            -
+                id: 306
+                randomRange: [1, 1]
+                probability: 4
+            -
+                id: 307
+                randomRange: [1, 1]
+                probability: 2
+            -
+                id: 308
+                randomRange: [1, 1]
+                probability: 3
+            -
+                id: 309
+                randomRange: [1, 1]
+                probability: 4
+            -
+                id: 297
+                randomRange: [5, 15]
+                probability: 20
+            -
+                id: 452
+                randomRange: [1, 3]
+                probability: 6

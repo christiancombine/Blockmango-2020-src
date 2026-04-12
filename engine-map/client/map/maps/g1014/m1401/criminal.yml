@@ -1,0 +1,74 @@
+initPos:
+    -
+        x: 318.5
+        y: 62
+        z: 294.5
+
+inventory:
+    -
+        id: 260
+        num: 1
+
+actor: 
+    -
+        first: "clothes_tops"
+        second: 1001
+    -
+        first: "clothes_pants"
+        second: 1001
+
+data:
+    -
+    # Prisoner 囚犯
+        lv: 1
+        name: "Prisoner"
+        nameKey: "Prisoner"
+        threat: 0
+        arrest: 0
+        kill: 0
+    -
+    # Criminal 逃犯
+        lv: 2
+        name: "Criminal"
+        nameKey: "Criminal"
+        threat: 10
+        arrest: 1
+        kill: 1
+    -
+    # 3rd Wanted 三级通缉犯
+        lv: 3
+        name: "3rd Wanted"
+        nameKey: "3rd.Wanted"
+        threat: 100
+        arrest: 1.1
+        kill: 1
+    -
+    # 2nd Wanted 二级通缉犯
+        lv: 4
+        name: "2nd Wanted"
+        nameKey: "2nd.Wanted"
+        threat: 300
+        arrest: 1.15
+        kill: 1
+    -
+    # 1st Wanted 一级通缉犯
+        lv: 5
+        name: "1st Wanted"
+        nameKey: "1st.Wanted"
+        threat: 600
+        arrest: 1.2
+        kill: 1
+    -
+    # Felony 重罪犯
+        lv: 6
+        name: "Felony"
+        nameKey: "Felony"
+        threat: 1400
+        arrest: 1.25
+        kill: 1
+
+#悬赏金额 = 威胁值 * threatMultiple
+threatMultiple: 3
+
+killPoliceThreat: 20
+

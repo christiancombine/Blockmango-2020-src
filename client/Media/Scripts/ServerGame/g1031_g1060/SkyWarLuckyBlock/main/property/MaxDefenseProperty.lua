@@ -1,0 +1,15 @@
+require "property.BaseProperty"
+
+MaxDefenseProperty = class("MaxDefenseProperty", BaseProperty)
+
+function MaxDefenseProperty:onPlayerGet(player)
+    local changeCur = GameMatch.gameType ~= "g1053"
+    player:addMaxDefense(self.config.value, changeCur)
+end
+
+function MaxDefenseProperty:onPlayerRemove(player)
+    local changeCur = GameMatch.gameType ~= "g1053"
+    player:subMaxDefense(self.config.value, changeCur)
+end
+
+return MaxDefenseProperty

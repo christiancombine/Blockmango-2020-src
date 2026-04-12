@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="Cup_fail.actor" Originalscale="1 1 1" Skeleton="g1042_battle.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="battle" SlaveName="win" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<StaticMesh>
+					<FileName value="g1042_battle_cup.mesh"/>
+					<SocketName value="zhege"/>
+					<Position_X value="0"/>
+					<Position_Y value="0.379872"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1"/>
+				</StaticMesh>
+				<StaticMesh>
+					<FileName value="g1042_battle_shield_fail.mesh"/>
+					<SocketName value="zhege001"/>
+					<Position_X value="0"/>
+					<Position_Y value="0.379872"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1"/>
+				</StaticMesh>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1042_battle_star.anim" BeginTime = "0" Times = "1" Length = "2.4" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="quit" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1042_battle_end.anim" BeginTime = "0" Times = "1" Length = "1.533" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g1042_battle_star.anim"/>
+				<Anim Name="g1042_battle_end.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

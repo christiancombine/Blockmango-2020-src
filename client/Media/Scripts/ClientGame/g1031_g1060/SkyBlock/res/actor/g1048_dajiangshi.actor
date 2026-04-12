@@ -1,0 +1,53 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g1048_dajiangshi.actor" Originalscale="1 1 1" Skeleton="g1048_dajiangshi.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1">
+		<BodyParts>
+			<BodyPart MasterName="body" SlaveName="1" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" Group="">
+				<Skin MeshName = "g1048_dajiangshi_body.skin" ChangeColor = "2.10195e-44 9.12245e-43 6.46866e-29 0" UVSpeed = "0 0">
+				</Skin>
+				<Skin MeshName = "g1048_dajiangshi_head.skin" ChangeColor = "2.10195e-44 1.09862e-42 6.46866e-29 0" UVSpeed = "0 0">
+				</Skin>
+				<StaticMesh>
+					<FileName value="g1048_dajiangshi_axe.mesh"/>
+					<SocketName value="b_r_forearm"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1"/>
+				</StaticMesh>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="attack" EnableWound="true" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1048_dajiangshi_attack_01.anim" BeginTime = "0" Times = "1" Length = "1.033" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="attack2" EnableWound="true" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1048_dajiangshi_attack_02.anim" BeginTime = "0" Times = "1" Length = "1.166" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="idle" EnableWound="true" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1048_dajiangshi_idle.anim" BeginTime = "0" Times = "-1" Length = "1.366" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="run" EnableWound="true" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1048_dajiangshi_run.anim" BeginTime = "0" Times = "-1" Length = "0.7" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="walk" EnableWound="true" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g1048_dajiangshi_walk.anim" BeginTime = "0" Times = "-1" Length = "1.7" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g1048_dajiangshi_attack_01.anim"/>
+				<Anim Name="g1048_dajiangshi_attack_02.anim"/>
+				<Anim Name="g1048_dajiangshi_idle.anim"/>
+				<Anim Name="g1048_dajiangshi_run.anim"/>
+				<Anim Name="g1048_dajiangshi_walk.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>
