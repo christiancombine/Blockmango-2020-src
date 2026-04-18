@@ -10,7 +10,7 @@
 setup : https://www.youtube.com/watch?v=gxGYVBVoLvE 
 and yea
 
-# WEBSITE SOURCE IS NOT LEAKED!
+# https://github.com/christiancombine/AIO-Blockmango-Api/ WEB APIS HERE
 
 # u dont have to download multiple files this is the project thing now
 # Dependecies:
